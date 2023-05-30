@@ -1,0 +1,33 @@
+
+
+
+@media  (max-width : 1990.5px){
+}
+
+@media  (max-width : 991px){
+    
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0%;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        overflow-y: auto;
+        transition: all 0.5s;
+        background-color:  rgb(25 40 56);
+      }
+      .navbar-collapse.show {
+        left: 0;
+      }
+      .header_wrapper .nav-item .nav-link{
+        font-size: 1.125;
+        font-weight: 600;
+        color: wheat;
+        display: inline-block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+     
+     }
+  }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container mt-4">
+    <form>
+      <div class="form-group">
+        <label for="heightRange">Height Range:</label>
+        <input type="range" class="form-control-range" id="heightRange" min="0" max="100" step="1">
+      </div>
+      <div class="form-group">
+        <label for="heightValue">Selected Height:</label>
+        <input type="text" class="form-control" id="heightValue" readonly>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const heightRange = document.getElementById('heightRange');
+    const heightValue = document.getElementById('heightValue');
+
+    // Update the height value display when the range input value changes
+    heightRange.addEventListener('input', function() {
+      heightValue.value = this.value;
+    });
+  </script>
+</body>
+
+</html>
