@@ -8,26 +8,27 @@
     <link rel="icon" type="image/png" href="">
     <link rel="stylesheet"  href="css/style.css">
     <link rel="stylesheet"  href="css/responsive.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
 
+ 
+    </style>
 </head>
 <body  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
-  <section class="topSection" id="home">
-     <!-- NAVBAR SECTION -->
-   <header  class="header_wrapper">
-    <nav class="navbar sticky-top navbar-expand-md ">
-      <div class="container">
-      <div class="logobackground">  <img class="navbar-brand" src="/images/logo/EMBOSSED.png" alt="logo"></div>
-        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <section class="topSection section" id="home">
+  
+    <nav class="navbar fixed-top  navbar-expand-lg">
+      <div class="container-fluid">
+      
+        <a class="navbar-brand logobackground" href="#" style="margin-left: 4rem;">  <img style="height: 7rem;" class="navbar-brand" src="/images/logo/EMBOSSED.png" alt="logo"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
-          <!-- <i class="fa-sharp fa-solid fa-bars-staggered"></i> -->
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto"> <!-- Add ml-auto class here -->
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"  onclick="closeNavbar()">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About US</a>
@@ -36,79 +37,138 @@
               <a class="nav-link" href="#">Programs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="#">Services <i class="fa-solid fa-arrow-right"></i></a>
+              
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Book Appointment</a>
+              <button class="glow-button">Book Appointment</button>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-   
-   </header>
+    
+
+ 
+   <!-- </header> -->
    <!-- navbar ended  -->
   
    <!-- <section class="midsection"> -->
     <div class=" banner_wrapper wrapper">
-          <div class="container">
-                  <div class="row align-items-center">
-                        <div class="col-md-8 order-md-1 ">
-                          <span class="banner_content">The Care and Compassion </span>
-                          <br>
-                          <span class="banner_content">you </span><span class="banner_content" style="color: grey;">need!</span><br>
-                          <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In laudantium aut enim magni perspiciatis illum rem excepturi inventore nihil. Eveniet neque ipsa qui. Sequi, quam atque voluptate debitis est tempore?</p> -->
-                          <a href="#" class="main-btn mt-4 fill-btn"> Call now</a>
-                      </div>
+        <div class="container">
+            <div class="row" id="temp">
+              <div class="col-md-8  d-flex flex-column justify-content-center left-div reveal paralax-title">
+                <div class="" style="padding: 160px 0px 0px 88px;
+                font-size: 67px;">
+                    <span class="banner_content">The Care and Compassion </span>
+                    <br>
+                    <span class="banner_content">you </span><span class="banner_content" style="color: grey;">need!</span><br>
+                    <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In laudantium aut enim magni perspiciatis illum rem excepturi inventore nihil. Eveniet neque ipsa qui. Sequi, quam atque voluptate debitis est tempore?</p> -->
+                    <a href="#" class="main-btn mt-4 fill-btn"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex justify-content-end right-div reveal paralax-title1" >
+                <div class="bmi-calculator">
+                    <div class="card bmi_wrapper" style="    width: 25rem;
+                    height: 39rem;
+                    padding: 22px;
+                    border-radius: 56px;
+                    box-shadow: 0px 13px #0b1522c4;">
                       
-                  <div class="col-md-4 order-md-1 bmi_wrapper">
-                            <div class="card" style="    width: 25rem;
-                            height: 39rem;
-                            padding: 22px;
-                            border-radius: 23px;
-                            box-shadow: 0px 13px #0b1522c4;">
-                              
-                            <form>
-                                                    <div class="input-group mb-3">
-                                                    <h2 style="margin: auto; align-items: center; text-align: center; padding-left: 1px; color:rgba(22,68,117,1); font-weight: 700;">BMI Calculator</h1>
-                                                    </div>
-                                          <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">Name</span>
-                                            <input   id="bmiUsername" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                                          </div>
-                                          <div class="input-group mb-3">
-                                            <span class="input-group-text" id="inputGroup-sizing-default">PH:No</span>
-                                            <input id="bmiUserPhoneNo" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="heightRange">Height Range (cms):</label>
-                                            <input type="range" class="form-control-range" id="heightRange" min="0" max="100" step="1">
-                                            <input type="text" class="form-control" id="heightValue" >
-                                          </div>
-                                          <div class="form-group">
-                                            <label for="heightRange">Weight Range (Kgs):</label>
-                                            <input type="range" class="form-control-range" id="weightRange" min="0" max="100" step="1">
-                                            <input type="text" class="form-control" id="weightValue" >
-                                          </div>
-                                          <button id="calculate"  style="width: 100%; margin: auto;" type="button" class="btn btn-secondary"> Custom tooltip
-                                  </button> <br>
-                                  <div style="width: 100%; margin: auto;"class="bmi_outp">
+                    <form>
+                                            <div class="input-group mb-3">
+                                            <h2 style="margin: auto; align-items: center; text-align: center; padding-left: 1px; color:rgba(22,68,117,1); font-weight: 700;">BMI Calculator</h1>
+                                            </div>
 
-                              <div class="statement">Your_BMI is </div>
-                              <div class="bmi_output" id="result"></div>
-                              <div class="stage">
-                                <!-- <div id="bmi_Content" class="heart-shape"></div> -->
-                                <div id="bmi_Content" class="box bounce-2"></div>
-                            </div>
+
+                                  <div class="input-group mb-3">
+                                    <span class="label" id="inputGroup-sizing-default">Name</span>
+                                    <input   id="bmiUsername" type="text" class="form-control inputBoxBorder" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                                   </div>
-                                  <!-- <span class="badge rounded-pill bg-danger">Danger</span> -->
-                    
-                            </form>
-                            
+                                  <div class="input-group mb-3">
+                                    <span class="label" id="inputGroup-sizing-default">Ph.no</span>
+                                    <input id="bmiUserPhoneNo" type="text" class="form-control inputBoxBorder" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                                  </div>
+
+                                  <div class="input-group mb-3">
+                                    <span class="label" id="inputGroup-sizing-default">Gender</span>
+                                    <!-- <label for="gender" class="form-label">Gender</label> -->
+                                        <select id="gender" class="form-select mb-1 inputBoxBorder" aria-label="Select gender">
+                                          <option selected disabled>Select Gender</option>
+                                          <option value="male">Male</option>
+                                          <option value="female">Female</option>
+                                          <option value="other">Other</option>
+                                        </select>
+                                        <span class="label"  style="padding: 5px;" id="inputGroup-sizing-default">Age</span>
+                                        <!-- <label for="gender" class="form-label">Gender</label> -->
+                                        <!-- <label for="age" class="form-label">Age</label> -->
+                                        <select id="age" class="form-select inputBoxBorder" aria-label="Select age">
+                                          <option selected disabled>Select Age</option>
+                                          <option value="18-24">18-24</option>
+                                          <option value="25-34">25-34</option>
+                                          <option value="35-44">35-44</option>
+                                          <option value="45+">45+</option>
+                                        </select>
+                                  </div>
+
+                                  <div class="input-group mb-3">
+                                    <span class="label" id="inputGroup-sizing-default">Height</span>
+                                      <input type="range" style="padding: 0px 57px 0 44px; width: 54%;" id="heightRange" min="150" max="200" step="1" value="170">
+                                      <input type="text" class="form-control" style="border: none;" id="heightValue" placeholder="(cms)" >
+                                     
+                                  </div>
+                                  <div class="input-group mb-3">
+                                    <span class="label" id="inputGroup-sizing-default">Weight</span>
+                                      <input type="range" style="padding: 0px 57px 0 44px; width: 54%;" id="weightRange" min="150" max="200" step="1" value="170">
+                                      <input type="text" class="form-control" style="border: none;" id="weightValue" placeholder="(Kgs)" >
+                                      
+                                  </div>
+
+                                  
+                                 
+                                  <button id="calculate"  style="width: 100%; margin: auto;" type="button" class="btn btn-secondary"> Custom tooltip
+                          </button> <br>
+                          <div style="width: 100%; margin: auto;"class="bmi_outp">
+
+                                    <div class="bmi_output">Your_BMI is </div>
+                                    <div class="bmi_output" id="result"></div>
+                                    
+                                    <div class="stage">
+                                      <div class="row">
+                                        <div class="col custom-col">
+                                          <div class="bmi_output_box red">
+                                            <p>This is some text</p>
+                                          </div>
+                                        </div>
+                                        <div class="col custom-col">
+                                          <div class="bmi_output_box blue">
+                                            <p>This is some text</p>
+                                          </div>
+                                        </div>
+                                        <div class="col custom-col">
+                                          <div class="bmi_output_box green">
+                                            <p>This is some text</p>
+                                          </div>
+                                        </div>
+                                        <div class="col custom-col">
+                                          <div class="bmi_output_box yellow">
+                                            <p>This is some text</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- <div id="bmi_Content" class="box bounce-2"></div> -->
+                                  </div>
                           </div>
-                    </div>
+                          <!-- <span class="badge rounded-pill bg-danger">Danger</span> -->
+            
+                    </form>
+                    
                   </div>
-        </div>
+                  <!-- Add your BMI calculator form or content here -->
+                </div>
+              </div>
+            </div>
+          </div>
        
     
   </div>
@@ -125,34 +185,34 @@
 
   <!-- section2 -->
 
-  <div class="about_container" id="about">
-    <div class="about-section">
-      <h2 class="about_header">About Us</h2>
-      <div class="line"></div>
-      <span class="about_p">Udhaivi is built on the rock-solid foundation of INTEGRITY &amp; HONESTY.<br>The company has developed a healthcare system that facilitates<br>medical services that are not confined to its origins. Our organization<br>is also well-furnished with US equipment and is praised for its <br>state-of-the-art healthcare service establishments, not just around <br>the country, but also on&nbsp;a&nbsp;global&nbsp;scale.</span><br>
-      <button class="knowmore_btn">Know More</button>
-     
+  <section class="aboutcontainerwrapper section" id="about">
+   
+
+    <div class="aboutcontainer">
+      <div class="abouttext-div">
+        <!-- Add your text content here -->
+        
+        <h1 style="font-weight: 700;">About Us</h1>
+        <div class="line"></div>
+        <p style="font-size: 30px;">Udhaivi is built on the rock-solid foundation of INTEGRITY &amp; HONESTY.<br>The company has developed a healthcare system that facilitates<br>medical services that are not confined to its origins. Our organization<br>is also well-furnished with US equipment and is praised for its <br>state-of-the-art healthcare service establishments, not just around <br>the country, but also on&nbsp;a&nbsp;global&nbsp;scale.</p>
+      </div>
+      <div class="aboutimage-div">
+        <!-- Add your image here -->
+        <img src="/images/about/Group_144.png" alt="Image">
+      </div>
     </div>
-    <div class="animation_container"  >
-      <div class="ball"></div>
-      <div class="ball"></div>
-      <div class="ball"></div>
-      <div class="ball"></div>
-    </div>
-    <div class="image-section">
-      <img class="about_img" src="/images/about/Group_144.png" alt="Image">
-    </div>
-  </div>
+  </section>
  <!-- end of section2 -->
 
  <!-- section3 -->
- <section id="team">
+ <section id="team" class="section">
   <div class="team_header" ><h2 class="team-heading">MEET THE TEAM</h2>
   <div class="team_line"></div></div>
 
   <div class="team-container">
     
     <div class="team_card">
+      <div class="team_card-overlay"></div>
       <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
       <div class="team_card-content">
         <h3 class="team_card-title">John Doe</h3>
@@ -161,6 +221,7 @@
     </div>
 
     <div class="team_card">
+      <div class="team_card-overlay"></div>
       <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
       <div class="team_card-content">
         <h3 class="team_card-title">John Doe</h3>
@@ -169,6 +230,7 @@
     </div>
 
     <div class="team_card">
+      <div class="team_card-overlay"></div>
       <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
       <div class="team_card-content">
         <h3 class="team_card-title">John Doe</h3>
@@ -179,10 +241,10 @@
   
     <!-- Add more team member cards as needed -->
   </div>
-
-    <div class="team-container">
+  <div class="team-container">
     
     <div class="team_card">
+      <div class="team_card-overlay"></div>
       <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
       <div class="team_card-content">
         <h3 class="team_card-title">John Doe</h3>
@@ -191,6 +253,7 @@
     </div>
 
     <div class="team_card">
+      <div class="team_card-overlay"></div>
       <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
       <div class="team_card-content">
         <h3 class="team_card-title">John Doe</h3>
@@ -199,6 +262,7 @@
     </div>
 
     <div class="team_card">
+      <div class="team_card-overlay"></div>
       <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
       <div class="team_card-content">
         <h3 class="team_card-title">John Doe</h3>
@@ -209,13 +273,15 @@
   
     <!-- Add more team member cards as needed -->
   </div>
+    
 
  </section>
 
  <!-- end of team section -->
 
  <!-- midsvg -->
-   <img src="/images/banner/Component 1 (1).svg" alt="">
+ <div class="midsvg"></div>
+   <!-- <img src="/images/banner/Component 1 (1).svg" alt=""> -->
  <!-- end of mid svg -->
 
 
@@ -226,7 +292,7 @@
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   

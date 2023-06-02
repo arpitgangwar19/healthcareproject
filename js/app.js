@@ -111,3 +111,209 @@ function getBmiCategory(bmi) {
     return "Obese";
   }
 }
+
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 200;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+// window.addEventListener("scroll", reveal);
+
+
+// var fadeBox = document.querySelector('.left-div');
+// var lastScrollPosition = 0;
+
+// window.addEventListener('scroll', function() {
+//   var currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+//   if (currentScrollPosition > lastScrollPosition) {
+//     // Scroll down
+//     fadeBox.classList.remove('fade-left');
+//     fadeBox.classList.add('fade-right');
+//     window.addEventListener("scroll", reveal);
+//   } else {
+//     // Scroll up
+//     fadeBox.classList.remove('fade-right');
+//     fadeBox.classList.add('fade-left');
+//     window.addEventListener("scroll", reveal);
+//   }
+
+//   lastScrollPosition = currentScrollPosition;
+// });
+// var lastScrollPosition = 0;
+// window.addEventListener('scroll', function() {
+//   var homeSection = document.getElementById('home');
+//   var aboutSection = document.getElementById('about');
+
+//   // var fadeBox = document.querySelector('.left-div');
+
+  
+//   var homeLeft = this.document.querySelector('.left-div');
+//   var homeRight = this.document.querySelector('.right-div');
+//   var aboutLeft = this.document.querySelector('.about-section');
+//   var aboutRight = this.document.querySelector('.image-section');
+  
+//   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+//   var homeHeight = 363;
+  
+//   if (scrollPosition > homeHeight && scrollPosition > lastScrollPosition) {
+//     var aboutOffset = scrollPosition - homeHeight;
+
+//     homeLeft.classList.add('fadeout-left');
+//     homeLeft.classList.add('active');
+//     homeLeft.classList.remove('active');
+
+//     homeRight.classList.add('fadeout-right');
+//     homeRight.classList.add('active');
+//     homeRight.classList.remove('active');
+    
+//     aboutLeft.classList.remove('fade-right');
+//     aboutLeft.classList.remove('fade-left');
+//     aboutLeft.classList.add('fade-left');
+//     aboutLeft.classList.add('active');
+//     aboutLeft.classList.remove('active');
+    
+//     aboutRight.classList.remove('fade-left');
+//     aboutRight.classList.remove('fade-right');
+//     aboutRight.classList.add('fade-right');
+//     aboutRight.classList.add('active');
+//     aboutRight.classList.remove('active');
+//     // window.addEventListener("scroll", reveal);
+//   }
+//      else{
+
+//       aboutLeft.classList.add('fadeout-left');
+//       aboutLeft.classList.add('active');
+//       aboutLeft.classList.remove('active');
+  
+//       aboutRight.classList.add('fadeout-right');
+//       aboutRight.classList.add('active');
+//       aboutRight.classList.remove('active');
+      
+//       homeLeft.classList.remove('fade-right');
+//       homeLeft.classList.remove('fade-left');
+//       homeLeft.classList.add('fade-right');
+//       homeLeft.classList.add('active');
+//       homeLeft.classList.remove('active');
+      
+//       homeRight.classList.remove('fade-left');
+//       homeRight.classList.remove('fade-right');
+//       homeRight.classList.add('fade-left');
+//       homeRight.classList.add('active');
+//       homeRight.classList.remove('active');
+//       // window.addEventListener("scroll", reveal);
+      
+//         // homeLeft.classList.remove('fade-left');
+//         // homeLeft.classList.remove('fade-right');
+//         // homeLeft.classList.add('fade-right');
+//         // aboutRight.classList.remove('active');
+//         // window.addEventListener("scroll", reveal);
+//         // homeRight.classList.remove('fade-right');
+//         // homeRight.classList.remove('fade-left');
+//         // homeRight.classList.add('fade-left');
+//         // window.addEventListener("scroll", reveal);
+//         // aboutLeft.classList.remove('fade-left');
+//         // aboutLeft.classList.remove('fade-right');
+//         // aboutLeft.classList.add('fade-right');
+//         // window.addEventListener("scroll", reveal);
+//         // aboutRight.classList.remove('fade-right');
+//         // aboutRight.classList.remove('fade-left');
+//         // aboutRight.classList.add('fade-left');
+//         // window.addEventListener("scroll", reveal);
+   
+//   }
+//   window.addEventListener("scroll", reveal);
+//   lastScrollPosition = scrollPosition;
+// });
+
+
+
+
+// active section
+
+let section = document.querySelectorAll("section");
+let menu = document.querySelectorAll("header nav a");
+
+window.onscroll = () => {
+  section.forEach((i) => {
+    let top = window.scrollY;
+    let offset = i.offsetTop - 150;
+    let height = i.offsetHeight;
+    let id = i.getAttribute("id");
+
+    if (top >= offset && top < offset + height) {
+      menu.forEach((link) => {
+        link.classList.remove("active");
+        document
+          .querySelector("header nav a[href*=" + id + "]")
+          .classList.add("active");
+      });
+    }
+  });
+};
+
+
+// scroll view 
+// var sections = document.querySelectorAll('.section');
+// var currentSectionIndex = 0;
+// var isScrolling = false;
+
+// function scrollToNextSection(event) {
+//   if (isScrolling) return;
+//   isScrolling = true;
+
+//   if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+//     currentSectionIndex++;
+//     sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+//   } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+//     currentSectionIndex--;
+//     sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+//   }
+
+//   setTimeout(function() {
+//     isScrolling = false;
+//   }, 1000);
+// }
+
+// window.addEventListener('wheel', scrollToNextSection);
+
+//scroll view test 
+
+let didScroll = false;
+let paralaxTitles = document.querySelectorAll('.paralax-title1');
+// let paralaxTitles1 = document.querySelectorAll('.paralax-title1');
+
+const scrollInProgress = () => {
+  didScroll = true
+}
+
+const raf = () => {
+  if(didScroll) {
+    paralaxTitles.forEach((element, index) => {
+      element.style.transform = "translateX("+ window.scrollY / 10 + "%)";
+      
+    })
+    // paralaxTitle1.forEach((element, index) => {
+    //   element.style.transform = "translateX("+ window.scrollY / 10 + "%)"
+    // })
+    didScroll = false;
+  }
+  requestAnimationFrame(raf);
+}
+
+
+
+requestAnimationFrame(raf);
+window.addEventListener('scroll', scrollInProgress)
