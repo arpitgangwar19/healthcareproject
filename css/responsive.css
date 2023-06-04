@@ -1,107 +1,99 @@
-
-
-
-@media  (max-width : 1990.5px){
-}
-
-@media  (max-width : 991px){
-    
-}
-
-@media (max-width: 768px) {
-
-  .navbar-toggler {
-    display: inline-block; /* Show the navbar toggle button for smaller screens */
-  }
-
-  .navbar-nav {
-    display: none; /* Hide the navbar links by default on smaller screens */
-  }
-
-  .navbar-nav.show {
-    display: flex; /* Show the navbar links when toggled */
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem;
-  }
-
-  .navbar-nav .nav-link {
-    margin-bottom: 0.5rem;
-  }
-    .navbar-collapse {
-        position: fixed;
-        top: 0%;
-        left: -100%;
-        width: 80%;
-        height: 100%;
-        overflow-y: auto;
-        transition: all 0.5s;
-        background-color:  rgb(25 40 56);
-      }
-      .navbar-collapse.show {
-        left: 0;
-      }
-      .header_wrapper .nav-item .nav-link{
-        font-size: 1.125;
-        font-weight: 600;
-        color: wheat;
-        display: inline-block;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-     
-     }
-    
-      .herocontainer {
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .left img {
-        width: 100%;
-        margin-left: 0;
-      }
-    
-      .left .image-text {
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 36px;
-      }
-    
-      .right {
-        margin-top: 50px;
-      }
-    
-      .bmi-calculator {
+@media  (max-width : 1400px){
+    .herocontainer .left {
+        width: 55%;
+        /* max-width: 50%; */
+        text-align: center;
+        background-image: url(/images/about/girl\ background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 6px;
+        margin-left: 0px;
         position: relative;
-        top: 0;
-        right: 0;
-        transform: none;
-        width: 100%;
-        max-width: none;
-        margin: 0 auto;
+        background-position: inherit;
+        height: 33rem;
+    }
+}
+@media  (max-width : 1235px){
+    .herocontainer .left {
+        width: 48%;
+        /* max-width: 50%; */
+        text-align: center;
+        background-image: url(/images/about/girl\ background.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-left: 6px;
+        margin-left: 0px;
+        position: relative;
+        background-position: inherit;
+        height: 28rem;
+        font-size: -14px;
+    }
+    .left .image-text {
+        position: relative;
+        top: 52%;
+        left: 16%;
+        /* transform: translate(-50%, -50%); */
+        color: white;
+        font-size: 43px;
+        font-weight: bold;
+    }
+}
+@media  (max-width : 1030px)
+{
+
+    .glow-button {
+        display: inline-block;
+        padding: 3px 12px 6px 17px;
+        font-size: 14px;
+        background-color: rgb(87 117 150);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 0 10px rgb(60, 155, 209);
+        cursor: pointer;
+        animation: glow 0.2s infinite alternate;
+    }
+    .bmi-calculator .input-group label {
+        flex: 0 0 18%;
+        text-align: left;
+        /* margin-right: -4px; */
+        padding: 0px 8px 0px 17px;
+        padding: auto;
+        font-weight: 700;
+        color: rgb(0 38 78);
+        font-size: 11px;
+    }
+
+    .input-group-append .input-group-text select {
+        -webkit-appearance: none;
+        appearance: none;
+        /* background: transparent; */
+        border: none;
+        /* padding: 0 0.5rem; */
+        cursor: pointer;
+        height: 32px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+        border-radius: -1px;
+        margin-right: 6px;
+        border: var(--bs-border-width) solid var(--bs-border-color);
+        font-size: 11px;
+        width: 8px;
+    }
+    .bmi-calculator input[type="text"], .bmi-calculator input[type="number"], .bmi-calculator input[type="tel"], .bmi-calculator select {
+        /* border: 1px solid #ccc; */
+        border-radius: 10px;
+        height: 34px;
+        font-size: 10px;
+    }
+    .slider{
+        padding: 0px 57px 0 44px;
+         width: 40%;
       }
-      
-      .bmi-calculator input[type="number"] {
-        width: 100%;
-        max-width: none;
-      }
+      .logobackground {
+        background: #ffffff;
+        align-items: center;
+        border-radius: 50%;
+        /* padding-left: 0.5%; */
+        width: auto;
     }
-    
-  
-
-
-  /* about section css */
-
-  @media (max-width: 768px) {
-    .aboutcontainer {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    .abouttext-div,
-    .aboutimage-div {
-      position: static;
-      flex-basis: 100%;
-      text-align: left;
-    }
-  }
+}

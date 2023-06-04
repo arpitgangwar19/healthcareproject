@@ -1,978 +1,100 @@
-/* Table of content */
-
-/* imports of fonts */
-
-h1 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
 
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-@font-face {
-  font-family: 'Segoe UI';
-  src: url('/css/fonts/segmdl2.ttf') format('truetype'),
-       url('path/to/segoe.woff') format('woff'),
-       url('path/to/segoe.woff2') format('woff2');
-}
-:root{
-  
-    /* background-color: ; */
+@media (min-width: 2000px) {
+  /* Adjust styles for larger screens here */
 
-    --primary-color : rgb(25 40 56);
-    --secondary-color: red;
-    --bg-white : #fff;
-    --bg-dark : rgb(25 40 56);
-    
-    --btn-primary-color : #ffff;
-
-
-    /* text font-style: ; */
-
-    --primary-font:'Roboto Slab', serif;
-    --secondary-font :'Roboto Slab', serif; 
-    --primary-font-color :  rgb(25 40 56);
-
-    --secondary-font-color : #FFFFF;
-
-}
-a{
-    text-decoration: none;
-}
-body{
-    
-    /* font-family: var(--primary-font); */
-    background-color:  rgb(25 40 56) !important;
-    color: var(--secondary-font-color) !important;
-    font-family: "Segoe UI";
-
-}
-
-::-webkit-scrollbar{
-    width: .375rem;
-    
-}
-::-webkit-scrollbar-track{
-    background: black;
-
-}
-::-webkit-scrollbar-thumb{
-    background: red;
-
-}
-
-
-/* .bannercurve{
-    filter: drop-shadow(0px -15px 5px #ebe7a1fc);
-}.banner_content{
-    
-    font-weight: 900;
-    float: left;
-} */
-
-
-@keyframes movebounce{
-    0%{
-        -webkit-transform: translateY(0);
-     transform: translateY();
-    }
-    50%{
-        -webkit-transform: translateY(0);
-        transform: translateY(); 
-    }
-    100%{
-        -webkit-transform: translateY(0);
-        transform: translateY(); 
-    }
-}
-
-
-.stage {
-    border-bottom: 3px solid #444;
-    display: flex;
-    height: 222px;
-    width: 100%;
-}
-/* .box {
-  align-self: flex-end;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  background-color: #F44336;
-  height: 74px;
-  margin: 0 auto 0 auto;
-  transform-origin: bottom;
-  width: 200px;
-  text-align: center;
-  align-items: center;
-  margin: auto;
-  padding: 7%;
-  border-radius: 5%;
-} */
-
-.bounce-2 {
-    animation-name: bounce-2;
-    animation-timing-function: ease;
-}
-@keyframes bounce-2 {
-    0%   { transform: translateY(0); }
-    50%  { transform: translateY(-100px); }
-    100% { transform: translateY(0); }
-}
-
-.heart-shape{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background-color: rgba(250,184,66, 1);
-  }
-  .heart-shape:before,
-  .heart-shape:after{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    content: '';
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-radius: 50%;
-    background-color: rgba(250,184,66, 1);
-  }
-  .heart-shape:before{
-    bottom: 0px;
-    left: -100px;
-  }
-  .heart-shape:after{
-    top: -100px;
-    right: 0px;
-  }
-
-
-
-  /* about css  */
-
-  .aboutcontainer {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  .abouttext-div {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-left: 6rem;
-    color: white;
-  }
-
-  .aboutimage-div {
-    position: absolute;
-    right: 5px;
-    top: 0;
-    padding: 5px;
-    box-sizing: border-box;
-    text-align: right;
-  }
-
-  .aboutimage-div img {
-    max-width: 91%;
-    height: auto;
-  }
-  .aboutcontainerwrapper
-  {
-    margin-bottom: 25rem;
-  } 
- 
-  .line {
-    width: 55%;
-    height: 7px;
-    background-color: #5c64fe;
-    margin-bottom: 13px;
-  }
-  
-   .knowmore_btn {
-    background-color: #fff;
-    color: rgba(22,68,117,1);
-    border: none;
-    padding: 10px 20px;
-    font-size: 30px;
-    border-radius: 45px;
-    cursor: pointer;
-    /* margin-top: 20px; */
-    /* position: revert; */
-    width: 353px;
-    height: 101px;
-    font-weight: 700;
-    margin: inherit;
-  }
-  
-  .animation_container {
-    height: 200px;
-    position: relative;
-    margin-bottom: 20rem;
-    /* margin-left: 120%; */
-  }
-  
-  .ball {
-    width: 30px;
-    height: 30px;
-    background-color: #ff5c5c;
-    border-radius: 50%;
-    position: absolute;
-    animation: jump 2s infinite;
-    margin-right: 10px;
-  }
-  
-  @keyframes jump {
-    0% {
-      bottom: 0;
-    }
-    50% {
-      bottom: 100px;
-    }
-    100% {
-      bottom: 0;
-    }
-  }
-  
-  .ball:nth-child(2) {
-    background-color: #4aa9e9;
-    left: 40px;
-    animation-delay: 0.25s;
-  }
-  
-  .ball:nth-child(3) {
-    background-color: #a9e94a;
-    left: 80px;
-    animation-delay: 0.5s;
-  }
-  
-  .ball:nth-child(4) {
-    background-color: #e94aa9;
-    left: 120px;
-    animation-delay: 0.75s;
-  }
-  
-  .image-section {
-    flex-basis: 48%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  
-  .about_img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-
-  /* team_card css  */
-
-  .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 80px;
-    margin: 36px;
-  }
-  
-  .team_card {
-    width: 270px;
-    background-color: #f9f9f900;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    /* overflow: hidden; */
-    position: relative;
-  }
-  .team_card-overlay {
-    position: absolute;
-    top: 12%;
-    left: -1%;
-    width: 80%;
-    height: 65%;
-    background-color: rgb(252 192 179);
-    z-index: 1;
-    border-radius: 20px
-  }
-  
-  .team_card-img {
-    width: 100%;
-  height: auto;
-  object-fit: cover;
-  position: relative;
-  z-index: 2;
-    /* position: absolute; */
-  }
-  
-  .team_card-content {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .team_card-title {
-    margin: 0;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .team_card-description {
-    margin: 5px 0;
-    font-size: 16px;
-    color: #777;
-  }
-
-.team_heading{
-  font-size: 71px;
-    font-weight: 700;
-}
-  .team_header{
-    width: 100%;
-    margin: auto;
-    text-align: center;
-    padding: 90px;
-    color: white;
-  }
-  .team_line{
-    width: 69%;
-    height: 4px;
-    background-color: #ccc;
-    margin-left: 16%;
-    float: left;
-  }
-
-
-/* fading css */
-
-  .reveal {
-    position: relative;
-    opacity: 1;
-  }
-
-  .reveal.active {
-    opacity: 1;
-  }
-  .active.fade-bottom {
-    animation: fade-bottom 3s ease-in;
-  }
-  .active.fade-left {
-    animation: fade-left 3s ease-in;
-  }
-  .active.fade-right {
-    animation: fade-right 3s ease-in;
-  }
-  .active.fadeout-left {
-    animation: fadeout-left 3s ease-in;
-  }
-  .active.fadeout-right {
-    animation: fadeout-right 3s ease-in;
-  }
-  @keyframes fade-bottom {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes fade-left {
-    0% {
-      transform: translateX(-1500px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  @keyframes fade-right {
-    0% {
-      transform: translateX(1500px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  @keyframes fadeout-left {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(-1500px);
-      opacity: 0;
-    }
-  }
-  
-  @keyframes fadeout-right {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateX(1500px);
-      opacity: 0;
-    }
-  }
-
-
-  /* navbar css  */
-
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    z-index: 1000;
-
-  }
-  .navbar .nav-item {
-    font-size: 30px;
-    
-    margin-right: 1rem;
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-weight: 700;
-    padding: 9px 0 0px 57px;
-
-  }
-  
-  .navbar-brand {
-    margin-left: 15px;
-  }
-  
-  .navbar-nav {
-    margin-right: 15px;
-  }
-  
-  .navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar-nav .btn {
-    margin-left: 15px;
-  }
-  .navbar .nav-link {
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .nav-link.nav-link-scroll {
-    color: #fff;
-  }
-
-
-  @keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-  
-  .blinking-button {
-    animation: blink 1s infinite;
-    padding: 4px;
-    margin-top: 6px;
-    border-radius: 5%;
-    border: none;
-    /* width: 111%; */
-    font-weight: 700;
-    color: #192838;
-    background-color: #888812;
-  }
-
-  .label{
-    padding: 7px 9px 0px 0px;
-    font-weight: 600;
-  }
-
-  .slider-container {
-    width: 300px;
-  }
-  
-  #heightLabel {
-    margin-top: 10px;
-  }
-  
-  #heightDropdown {
-    margin-top: 10px;
-  }
-
-  @keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px) rotate(-5deg); }
-    75% { transform: translateX(5px) rotate(5deg); }
-    100% { transform: translateX(0); }
-  }
-  
-  .fa-shakeee {
-    animation: shake 0.5s infinite;
-  }
-
-  .wrapper{
-    padding: 18.25rem 0;
-  }
-  .main-btn{
-      display: inline-block;
-      border: 8pxpx solid var(--bg-white);
-      color: var(rgba(22,68,117,1));
-      padding: 0.75rem 3.375rem;
-      text-align: left;
-      font-size: 1rem;
-      background: transparent;
-      text-transform: capitalize;
-      border-radius: 0.1875rem;
-      transition: all 0.3s ease-in-out;
-      white-space: nowrap;
-      font-family: Segoe UI;
-      /* font-style: normal; */
-      font-weight: bold;
-      font-size: 26px;
-      border-radius: 16px;
-  }
-  .main-btn:hover{
-      background-color: var(--btn-primary-color);
-      color: var(--primary-font-color);
-  }
-  .fill-btn{
-      background-color: rgba(146,231,213,1);
-      border-color: var(--secondary-color);
-      color: var(--secondary-font-color);
-      text-decoration: none;
-  }
-  .fill-btn:hover{
-      background-color: var(--bg-white);
-      background-color: var(--bg-dark);
-  }
-  .banner_wrapper .left-div{
-    background-image: url("/images/about/girl\ background.png");
-    background-position: center;
-    background-size: cover;
-   }
-  
   .topSection{
-      background-image: url(/images/banner/Group\ 362.svg);
-    
-      background-position: center;
-      background-size: cover;
-      width: 100%;
-      height: 60rem; 
-      margin-bottom:10px ;
-      /* border-radius: 0 0 50% 50%/0 0 50% 50%; */
-  }
-  
-  .navbar .header-scrolled{
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: var(--bg-white);
-    box-shadow:  .508 1.1419rem 2.5rem 0  rgb(0, 0, 0); 
-    transition: 0.3 ease-in-out;
-  
-  
-  }
-  
-  .header_wrapper .nav-item .nav-link:hover,
-  .header_wrapper .nav-item .nav-link:focus,
-  .header_wrapper .nav-item .nav-link:active
-  {
-     color: var(--secondary-font-color);
-  
-  }
-  .navbar .nav-link .nav-link-scroll {
-    color: #fff;
-  }
-  
-  .logobackground{
-    background: #ffffff;
-    align-items: center;
-    border-radius: 50%;
-    /* padding-left: 0.5%; */
-    width: auto;
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* Bmi Out css  */
-
-  .row {
-    display: flex;
-  }
-  
-  .col {
-    flex: 1;
-  }
-  
-  .bmi_output_box {
-    height: 76px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  margin: auto;
-  /* width: 70px; */
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  }
-  
- 
-  .box-container {
-    display: flex;
-      /* justify-content: space-between; */
-      margin: auto;
-      margin: 6px 0 16px 43px;
-  }
-  
-  .box {
-    flex-basis: 23%;
-      height: 100px;
-      border-radius: 8px;
-      height: 97px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 12px;
-  }
-  
-  .box-red {
-    background-color: rgba(252,205,129,1);
-  }
-  
-  .box-blue {
-    background-color: rgba(108,203,109,1);
-  }
-  
-  .box-green {
-    background-color: rgba(238,145,105,1);
-  }
-  
-  .box-yellow {
-    background-color: rgba(204,76,84,1);
-  }
-  
-
-  /* navbar  */
-
-  .navbar {
-    background-color: transparent/* Replace #f00 with your desired background color */
-  }
-
-  .navbar .navbar-brand {
-    color: var(--primary-font-color);
-    font-weight: 700;
-    /* Replace #fff with your desired text color */
-  }
-
-  .navbar .navbar-nav .nav-link {
-    color:rgba(22,68,117,1); /* Replace #fff with your desired text color */
-  }
-
-
-  .glow-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: rgb(59, 151, 212); /* Replace with your desired button background color */
-    color: #fff; /* Replace with your desired button text color */
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 0 10px rgb(60, 155, 209); /* Initial glow effect */
-    cursor: pointer;
-    animation: glow 0.2s infinite alternate;
-  }
-
-  
-
-  @keyframes glow {
-    0% {
-      box-shadow: 0 0 10px rgb(15, 63, 109); /* Initial glow effect */
-    }
-    100% {
-      box-shadow: 0 0 20px rgb(100, 131, 197); /* Enhanced glow effect */
-    }
-  }
-
-  @keyframes innerGlow {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .herocontainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* align-items: center; */
-  }
-  
-  .herocontainer .left {
-    width: 65%;
-    /* max-width: 50%; */
-    text-align: center;
-    background-image: url(/images/about/girl\ background.png);
-    background-repeat: no-repeat;
+    background-image: url(/images/banner/Group\ 362.svg);
+    background-position: center center;
     background-size: cover;
-    padding-left: 6px;
-    margin-left: 0px;
-    height: 56rem;
-
-  }
-  
-  /* .left img {
-    width: 167%;
-    height: auto;
-    margin-left: 125px;
-  } */
-  
-  .left .image-text {
-    position: absolute;
-    top: 55%;
-    left: 8%;
-    /* transform: translate(-50%, -50%); */
-    color: white;
-    font-size: 71px;
-    font-weight: bold;
-  }
-  
-  .right {
-    width: 35%;
-    /* max-width: 35%; */
-    text-align: center;
-    position: relative;
-  }
-  
-  /* .bmi-calculator {
-    position: absolute;
-    top: 30%;
-    right: 0;
+    background-repeat: repeat;
     width: 100%;
-    max-width: 507px;
-    height: auto;
-    padding: 10px;
-    background-color: #ffffff;
-    border-radius: 58px;    
-    margin-right: 75px;
-    padding-right: 28px;
-    box-shadow:inset 0px 3px 6px rgba(0, 0, 0, 0.161);
-    
-  } */
-  .bmi-calculator {
-    position: relative;
-    top: 30%;
+    height: 100vh;
+    margin-bottom: 10px;
+}
+.logobackground img{
+  height: 13rem;
+}
+.herocontainer .left {
+  width: 65%;
+  /* max-width: 50%; */
+  text-align: center;
+  background-image: url(/images/about/girl\ background.png);
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  padding-left: 6px;
+  margin-left: 0px;
+  /* height: 83vh; */
+  /* margin-top: 244px; */
+  /* position: relative; */
+}
+.bmi-calculator {
+  position: relative;
     right: 0;
     /* transform: translate(50%, -50%); */
-    width: 100%;
-    max-width: 507px;
-    height: auto;
-    /* padding: 10px; */
+    /* width: 100vh; */
+    max-width: 597px;
+    /* height: auto; */
+    /* padding: 13px; */
     background-color: #ffffff;
-    border-radius: 58px;
+    border-radius: 98px;
     margin-right: 75px;
-    padding-right: 28px;
-    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161);
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 12px 72px 72px rgba(15, 0, 96, 0.161);
     float: right;
-    
-  }
-
-  .bmi-calculator .input-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  .custom-row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .bmi-calculator .input-group label {
-    flex: 0 0 18%;
-    text-align: left;
-    /* margin-right: -4px; */
-    padding: 0px 15px 0px 26px;
-    padding: auto;
-    font-weight: 700;
-    color: rgb(0 38 78);
-    font-size: 24px;
-  }
-  
-  /* .bmi-calculator .input-group input {
-    flex: 1;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 13px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 28%);
-  } */
-  .inputBox{
-    flex: 1;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 18px;
-    box-shadow:inset 0px 3px 6px rgba(0, 0, 0, 0.161);
-  }
-  
-  .bmi-calculator input[type="text"]{
-    opacity: 1;
-  }
-  
-  .bmi-calculator input[type="text"],
-.bmi-calculator input[type="number"],
-.bmi-calculator select {
+    /* max-height: 54rem; */
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+.bmi-calculator input[type="text"], .bmi-calculator input[type="number"], .bmi-calculator select {
   /* border: 1px solid #ccc; */
   border-radius: 10px;
-  height: 64px;
-  
+  height: 76px;
+}
+.left .image-text {
+  position: absolute;
+  top: 55%;
+  left: 9%;
+  /* transform: translate(-50%, -50%); */
+  color: white;
+  font-size: 8vh;
+  font-weight: bold;
 }
 
-
-.bmi_output{
-  height: 60px;
-  /* width: 67px; */
-  margin: auto;
-  /* margin: 25px 50px 75px 100px; */
-  background-color: transparent;
+.input-group-dropwon{
+  position: absolute;
+  z-index: 1;
+  height: 73px;
+  width: 70px;
+  margin-top: -37px;
+  border: 0px solid;
+  color: #00264e;
+  /* background-color: transparent; */
+  font-weight: 800;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161);
+}
+.main-btn {
+  color: var(rgba(22,68,117,1));
+  border-radius: 0.1875rem;
+  transition: all 0.3s ease-in-out;
+  font-family: Segoe UI;
+  font-weight: bold;
+  font-size: 43px;
   border-radius: 16px;
-  /* padding: 14px; */
-  text-align: center;
-  font-weight: 900;
-  font-size: 33px;
+  padding: 12px;
+  background-color: rgba(146,231,213,1);
+  color: rgba(22,68,117,1);
+  border: none;
+  padding: 10px 20px;
+  font-size: 30px;
+  border-radius: 45px;
+  cursor: pointer;
+  width: 263px;
+  height: 92px;
+  font-weight: 800;
+  margin: inherit;
+  font-size: 38px;
 }
-
-
-  .bmi-calculator select[type="number"] {
-    width: 100%;
-    max-width: 100px;
-}
-  
-  
-  .input-group-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .input-group-row .input-group {
-    flex: 1;
-    margin-right: 10px;
-  }
-  
-  .input-group-row .input-group:last-child {
-    margin-right: 0;
-  }
-  
-  .input-group-row .input-group label {
-    display: block;
-    margin-bottom: 5px;
-
-  }
- 
-  input[type="number"] {
-    -moz-appearance: textfield; /* Firefox */
-  }
-  
-  .input-group-row .input-group input[type="number"],
-  .input-group-row .input-group select {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px 12px;
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.3s ease;
-  }
-  
-  .input-group-row .input-group select {
-    appearance: none;
-    background-color: transparent;
-    background-image: url("path-to-down-arrow-icon");
-    background-position: right 8px center;
-    background-repeat: no-repeat;
-    padding-right: 30px;
-    flex: 1;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 28%);
-  }
-
-   
-  .input-group-row .input-group select::-ms-expand {
-    display: none;
-  }
-  
-  .input-group-row .input-group input[type="number"]:focus,
-  .input-group-row .input-group select:focus {
-    border-color: #007bff;
-  }
- 
-
-  
-
-
-
-
-
-
-
-
-
-  /* mid svg section  */
-
-.midsvg{
+.midsvg {
   background-image: url(/images/logo/footer.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -980,118 +102,111 @@ body{
   width: 100%;
   height: 69rem;
   margin-top: 0px;
-  padding-top: 36rem;
+  padding-top: 58vh;
+  font-family: Segoe UI;
+  /* font-size: 0rem; */
 }
-
-
-
-
-
-/* footer css */
-
-
-
-
-
-
-
-.footer-column {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 30px;
-}
-
-
-
-
-
-
-.footer {
-  background-color: transparent;
-  padding: 20px;
-  /* text-align: center; */
-  font-family: Arial, sans-serif;
-}
-
-.footer-left {
-  float: left;
-  margin: 0 0 0 86px;
-  color: white;
-  font-size: 22px;
-}
-
-
-
-.footer-left h3 {
-  font-size: 30px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
-
-.footer-left ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-left ul li {
-  margin-bottom: 21px;
-  font-size: 24px;
-  font-weight: 400;
 
 }
 
-.footer-right {
- float: right;
- color: #ffff;
+@media  (max-width : 991px){
+    
 }
 
-.footer-right .footer-column h3
-{
-  margin: 0;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 18px;
-}
+@media (max-width: 768px) {
 
-
-
- .footer-column ul li {
-  margin-bottom: 30px;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-
-
-
-.footer-right .follow-us {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.store-icons{
-  margin-top: 8rem;
-}
-
-.footer-right .footer-column .social-icons a{
-  padding: 0px 14px 0px 15px;
-}
-
-/* Responsive styles */
-@media only screen and (max-width: 600px) {
-  .footer-left, .footer-right {
-    width: 100%;
-    text-align: center;
+  .navbar-toggler {
+    display: inline-block; /* Show the navbar toggle button for smaller screens */
   }
+
+  .navbar-nav {
+    display: none; /* Hide the navbar links by default on smaller screens */
+  }
+
+  .navbar-nav.show {
+    display: flex; /* Show the navbar links when toggled */
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    margin-bottom: 0.5rem;
+  }
+    .navbar-collapse {
+        position: fixed;
+        top: 0%;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        overflow-y: auto;
+        transition: all 0.5s;
+        background-color:  rgb(25 40 56);
+      }
+      .navbar-collapse.show {
+        left: 0;
+      }
+      .header_wrapper .nav-item .nav-link{
+        font-size: 1.125;
+        font-weight: 600;
+        color: wheat;
+        display: inline-block;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+     
+     }
+    
+      .herocontainer {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .left img {
+        width: 100%;
+        margin-left: 0;
+      }
+    
+      .left .image-text {
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+      }
+    
+      .right {
+        margin-top: 50px;
+      }
+    
+      .bmi-calculator {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+      }
+      
+      .bmi-calculator input[type="number"] {
+        width: 100%;
+        max-width: none;
+      }
+    }
+    
   
-  .footer-right .section {
-    margin-bottom: 10px;
+
+
+  /* about section css */
+
+  @media (max-width: 768px) {
+    .aboutcontainer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .abouttext-div,
+    .aboutimage-div {
+      position: static;
+      flex-basis: 100%;
+      text-align: left;
+    }
   }
-  
-  .footer-right .follow-us {
-    justify-content: space-around;
-  }
-}

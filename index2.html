@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Document</title>
     <link rel="icon" type="image/png" href="">
     <link rel="stylesheet"  href="css/style.css">
     <link rel="stylesheet"  href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   </head>
     <style>
 .input-group .btn{
@@ -21,37 +23,50 @@
     </style>
 </head>
 <body  data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
-  <section class="topSection section" id="home">
+ 
+  <div class="con" id="headerNav"></div>
+   <!-- <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <a class="navbar-brand ml-auto" href="">  <img src="/images/logo/Group 3 (1).svg" width="236" height="50" alt="Logo" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuProgram" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Program
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuProgram">
+            <a class="dropdown-item" href="#">Program 1</a>
+            <a class="dropdown-item" href="#">Program 2</a>
+            <a class="dropdown-item" href="#">Program 3</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuServices">
+            <a class="dropdown-item" href="#">Service 1</a>
+            <a class="dropdown-item" href="#">Service 2</a>
+            <a class="dropdown-item" href="#">Service 3</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link glow-button" href="#">Book Free Consultation</a>
+        </li>
+      </ul>
+   
+    </div>
+  </nav> -->
+  <section class="topSection section container-fluid" id="home">
   
-    <nav class="navbar fixed-top  navbar-expand-lg">
-      <div class="container-fluid">
-      
-        <a class="navbar-brand logobackground" href="#" style="margin-left: 8rem;">  <img style="height: 7rem;" class="navbar-brand" src="/images/logo/EMBOSSED.png" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto"> <!-- Add ml-auto class here -->
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Programs</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services <i class="fa-solid fa-arrow-right"></i></a>
-              
-            </li>
-            <li class="nav-item">
-              <button class="glow-button">Book Appointment</button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     
 
  
@@ -60,8 +75,8 @@
   
    <!-- <section class="midsection"> -->
     
-    <div class="herocontainer">
-      <div class="left">
+    <div class="herocontainer container-fluid">
+      <div class="left col-lg-7 " data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;">
         <!-- <img src="/images/about/girl background.png" alt="Image"> -->
         <div class="image-text"> <span class="banner_content">The Care and Compassion </span>
           <br>
@@ -70,45 +85,51 @@
           <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In laudantium aut enim magni perspiciatis illum rem excepturi inventore nihil. Eveniet neque ipsa qui. Sequi, quam atque voluptate debitis est tempore?</p> -->
           <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a></div>
       </div>
-      <div class="right">
+      <div class="right col-lg-4" data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:200px;">
         
         <div class="bmi-calculator">
-          <h2 style="color: rgb(0 38 78); padding: 20px 0 20px 0; font-weight: 700;">BMI Calculator</h2>
+          <h2 style="color: rgb(0 38 78);
+          padding: 16px 0 12px 31px;
+          font-weight: 700;
+          font-size: 20px;">BMI Calculator</h2>
           <form>
             <div class="input-group">
               <label for="name">Name:</label>
               <input class="inputBox form-control rounded" type="text" id="bmiUsername" required>
             </div>
+            <!-- <div class="input-group">
+              <label for="phone">Ph.No:</label>
+             
+              <input id="phone" type="tel">
+               
+             
+            </div> -->
             <div class="input-group">
               <label for="phone">Ph.No:</label>
-              <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" style=" position: absolute;
-                z-index: 1;
-                height: 60px;
-                width: 70px;
-                margin-top: -30px;
-                border: 0px solid;
-                color: #00264e;
-                background-color: transparent;
-                font-weight: 800;
-                box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161)" aria-expanded="false">+91</button>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Country 1</a></li>
-                  <li><a class="dropdown-item" href="#">Country 2</a></li>
-                  <li><a class="dropdown-item" href="#">Country 3</a></li>
-                  <!-- Add more country options as needed -->
-                </ul>
+
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <select id="country-select" class="form-select form-control inputBox rounded">
+                    <option value="+1" data-flag="us">+1</option>
+                    <option value="+44" data-flag="gb">+44</option>
+                    <option value="+91" data-flag="in">+91</option>
+                    <!-- Add more country codes and flags as needed -->
+                  </select>
+                </span>
               </div>
-              <input class="inputBox form-control rounded" type="text" id="bmiUserPhoneNo" required>
+              <input type="tel" class="inputBox form-control rounded" id="bmiUserPhoneNo" placeholder="Phone Number">
             </div>
+            
             <div class="input-group">
               <label for="gender">Gender:</label>
-              <select id="gender" style=" flex: 1;
-                      width: 100%;
-                      border: none;
-                      border-radius: 5px;
-                      padding: 8px;
-                      box-shadow:inset 0px 3px 6px rgba(0, 0, 0, 0.161);" required>
+              <select id="gender" class="form-control inputBox rounded" style="flex: 1;
+              width: 100%;
+              border: none;
+              border-radius: 5px;
+              padding: 8px;
+              box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
+              border: var(--bs-border-width) solid var(--bs-border-color);
+              " required>
                 <option value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -119,27 +140,55 @@
           
             <div class="input-group">
               <label for="weight">Weight (kg):</label>
-              <input type="range" class="slider2" style="padding: 0px 57px 0 44px; width: 43%;" id="weightRange" min="150" max="200" step="1" value="170">
-              <input class="inputBox form-control rounded" style="margin-left: 13px;" type="number" id="weightValue" required>
+              <input type="range" class="slider" style="border-radius: 6px;"  id="weightRange" min="20" max="180" step="1" value="170">
+              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="weightValue" required>
             </div>
             <div class="input-group">
-              <label for="height">Height (m):</label>
-              <input type="range" class="slider1" style="padding: 0px 57px 0 44px; width: 43%;" id="heightRange" min="150" max="200" step="1" value="170">
-              <input class="inputBox form-control rounded" style="margin-left: 13px;" type="number" id="heightValue" required>
+              <label for="height">Height (cm):</label>
+              <input type="range" class="slider" style="border-radius: 6px;"  id="heightRange" min="100" max="300" step="1" value="170">
+              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="heightValue" required>
+            </div>
+            <div class="outputContainer">
+              <button id="calculate" class="button">Calculate</button>
+              <div class="text-row">
+              
+                <p>Your BMI</p>
+                <h3 id="result">0.00</h3> 
+               
+              </div>
             </div>
           </form>
-          
+          <!-- <div class="input-group">
             <button id="calculate"  style="width: 50%;
             /* margin: auto; */
-            margin: 17px 48px 13px 79px;
-            padding: 15px;
-            background-color: #132f4e;" type="button" class="btn btn-secondary"> Calculate
+            margin: 9px 47px 10px 57px;
+            padding: 10px;
+            background-color: #132f4e;
+        " type="button" class="btn btn-secondary"> Calculate
             </button>
+            <div class="bmi_output" id="result" style="">0.00</div>
+            <div class="bmi_output">Your BMI</div>
+          </div> -->
+          <!-- <div class="outputContainer">
+            <button id="calculate" class="button">Calculate</button>
+            <div class="text-row">
+            
+              <p>Your BMI</p>
+              <h3 id="result">0.00</h3> 
+             
+            </div>
+          </div> -->
+          
 
            
-            <div class="bmi_output" id="result" style="">0.00</div>
-             <div class="bmi_output">Your BMI</div>
-            
+        
+             <div class="color-line">
+              <div class="color yellow"></div>
+              <div class="color green"></div>
+              <div class="color orange"></div>
+              <div class="color red"></div>
+              <div class="color-point"></div>
+            </div>
              <div class="box-container">
     <div class="box box-red">Under weight < 18.5</div>
     <div class="box box-blue">Normal weight  18.5 - 25</div>
@@ -190,20 +239,21 @@
   <section class="aboutcontainerwrapper section" style="margin-top: 20rem;" id="about">
    
 
-    <div class="aboutcontainer">
-      <div class="abouttext-div" data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:500px;" >
+    <div class="aboutcontainer container-fluid">
+      <div class="abouttext-div" data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;" >
         <!-- Add your text content here -->
         
         <h1 style="    font-weight: 800;
         font-size: 70px;">About Us</h1>
         <div class="line"></div>
-        <p style="font-size: 30px;
-        line-height: 55px;
+        <p style="    font-size: 25px;
+        line-height: 50px;
         font-weight: 600;
+        font-family: 'Segoe UI';  
     ">Udhaivi is built on the rock-solid foundation of INTEGRITY &amp; HONESTY.<br>The company has developed a healthcare system that facilitates<br>medical services that are not confined to its origins. Our organization<br>is also well-furnished with US equipment and is praised for its <br>state-of-the-art healthcare service establishments, not just around <br>the country, but also on&nbsp;a&nbsp;global&nbsp;scale.</p>
-        <button class="knowmore_btn">Know More</button>        
+        <button onclick="location.href='about.html'" class="knowmore_btn" style="z-index: 1000000;">Know More</button>        
       </div>
-      <div class="aboutimage-div"  >
+      <div class="aboutimage-div" data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:500px;" >
         <!-- Add your image here -->
         <img src="/images/about/Group_144.png" alt="Image">
       </div>
@@ -211,126 +261,171 @@
   </section>
  <!-- end of section2 -->
 
- <!-- section3 -->
- <section id="team" class="section">
-  <div class="team_header" ><h2 class="team-heading">MEET THE TEAM</h2>
-  <div class="team_line"></div></div>
 
-  <div class="container-fluid team-container">
-    
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
+ <!-- Our services Section  -->
+
+
+
+ <section id="services" class="py-5" >
+
+   <div class="team_header" ><h2 class="team-heading">OUR SERVICES</h2>
+    <div class="team_line"></div></div> 
+  <div class="container-fluid">
+    <!-- <h2 class="text-center mb-5">Our Services</h2> -->
+    <!-- <div class="team_line"></div> -->
+    <div class="row justify-content-center "  data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:500px;">
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
+          <h4>Service 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/prohealth.svg" alt="Service 2" class="service-image">
+          <h4>Service 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/care.svg" alt="Service 3" class="service-image">
+          <h4>Service 3</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
       </div>
     </div>
 
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
+    <div class="row justify-content-center" data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;">
+     
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/brain.svg" alt="Service 2" class="service-image">
+          <h4>Service 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/package.svg" alt="Service 3" class="service-image">
+          <h4>Service 3</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
       </div>
     </div>
-
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
-      </div>
-    </div>
-    
-  
-    <!-- Add more team member cards as needed -->
   </div>
-  <div class="team-container">
-    
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
-      </div>
-    </div>
+</section>
 
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
-      </div>
-    </div>
+ <!-- end of our service section  -->
 
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
+ <!-- Start of Our Programs -->
+ <section id="programs" class="py-5">
+  <div class="team_header" ><h2 class="team-heading">OUR PROGRAMS</h2>
+    <div class="team_line"></div></div> 
+ <div class="container-fluid">
+ 
+  <div id="programSlider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#programSlider" data-slide-to="0" class="active"></li>
+      <li data-target="#programSlider" data-slide-to="1"></li>
+      <!-- Add more indicators here if needed -->
+    </ol>
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card program-box">
+              <img src="/images/ourprogram/7xm.xyz116523.svg" class="card-img-top" alt="Program 1">
+              <div class="card-body">
+                <h3 class="card-title">Program 1</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card program-box">
+              <img src="/images/ourprogram/7xm.xyz342649.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Program 4</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card program-box">
+              <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Program 4</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+        </div>
       </div>
+      
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card program-box">
+              <img src="/images/ourprogram/7xm.xyz342649.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Program 4</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+        </div>
+      </div>
+      
+      <!-- Add more carousel items here -->
+      
     </div>
     
-  
-    <!-- Add more team member cards as needed -->
+    <a class="carousel-control-prev" href="#programSlider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#programSlider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    
   </div>
-    
-  <div class="team-container">
-    
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
-      </div>
-    </div>
+</div>
 
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
-      </div>
-    </div>
+</section>
 
-    <div class="team_card">
-      <div class="team_card-overlay"></div>
-      <img class="team_card-img" src="/images/teamMates/IMG_8806_db.png" alt="Team Member 1">
-      <div class="team_card-content">
-        <h3 class="team_card-title">John Doe</h3>
-        <p class="team_card-description">Web Developer</p>
-      </div>
-    </div>
-    
-  
-    <!-- Add more team member cards as needed -->
-  </div>
 
- </section>
 
- <!-- end of team section -->
 
+
+
+
+ <!-- End  of Our Programs -->
+
+
+
+
+
+<div id="footer"></div>
   <!-- midsvg -->
-  <!-- <div class="midsvg"> -->
+  <!-- <div class="midsvg">
 
    
    
 
-  <!-- </div> -->
+  </div>  -->
 
   <!-- <img src="/images/logo/footer.svg" alt=""> -->
 <!-- end of mid svg -->
 
 
-<footer class="midsvg">
+<!-- <footer class="">
   <div class="footer-left">
     <h3>Our Programs</h3>
     <ul>
@@ -361,11 +456,11 @@
     <div class="footer-column">
       <h3>Follow Us On</h3>
       <div class="social-icons">
-        <a href="#"><i class="fa-brands fa-instagram fa-2xl" style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-youtube fa-2xl" style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter fa-2xl" style="color: #ffffff;"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in fa-2xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-square-facebook fa-xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube fa-xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in fa-xl" style="color: #ffffff;"></i></a>
       </div>
       <div class="store-icons">
         <a href="#"><img src="playstore.png" alt="Google Play Store"></a>
@@ -373,7 +468,7 @@
       </div>
     </div>
   </div>
-</footer>
+</footer> -->
 
 <script type="text/javascript" src="/js/skrollr.js  "></script>
 	<script type="text/javascript">
@@ -386,42 +481,56 @@
 <script>
  
 </script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   
      
          <script>
             $(document).ready(function() {
-           $(".navbar-nav .nav-link").click(function() {
-             $(".navbar-collapse").collapse('hide');
-           });
 
-          
+            // for loading navbar and foorter pages
+                $("#headerNav").load("navbar.html"); 
+                $("#footer").load("footer.html"); 
+              
+                $(".navbar-nav .nav-link").click(function() {
+                  $(".navbar-collapse").collapse('hide');
+                });
+       
+            // for calculating BMI and fetching feilds      
+               const heightRange = document.getElementById('heightRange');
+               const heightValue = document.getElementById('heightValue');
 
+                // Update the height value display when the range input value changes
+                heightRange.addEventListener('input', function() {
+                  heightValue.value = this.value;
+                });
 
-           const heightRange = document.getElementById('heightRange');
-         const heightValue = document.getElementById('heightValue');
+                
+                const weightRange = document.getElementById('weightRange');
+                      const weightValue = document.getElementById('weightValue');
+                      weightRange.addEventListener('input', function() {
+                      weightValue.value = this.value;
+                });
 
-  // Update the height value display when the range input value changes
-  heightRange.addEventListener('input', function() {
-    heightValue.value = this.value;
-  });
+              
 
-   
-  const weightRange = document.getElementById('weightRange');
-         const weightValue = document.getElementById('weightValue');
-         weightRange.addEventListener('input', function() {
-         weightValue.value = this.value;
-  });
+                      });
 
+          //tanslating scaler 
+          // var number = 3;
 
+          // var colorLine = document.querySelector('.color-line');
+          // var colorPoint = document.querySelector('.color-point');
 
-         });
+          // var positions = [0, 25, 50, 75]; // Positions for each color
 
-
+          // var position = positions[number];
+          // colorPoint.style.transform = `translateX(${position}%)`;
          </script>
 
 

@@ -1,3 +1,10 @@
+
+// Attach scroll event listener
+// window.addEventListener('scroll', handleScroll);
+
+// Attach scroll event listener
+// window.addEventListener('scroll', handleScroll);
+
 // const heightRange = document.getElementById('heightRange');
 // const heightValue = document.getElementById('heightValue');
 
@@ -5,6 +12,24 @@
 // heightRange.addEventListener('input', function() {
 //   heightValue.value = this.value;
 // });
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
 
 
 // var age = document.getElementById("age");
@@ -59,9 +84,9 @@
 
 
 
-// // resultArea.style.display = "block";
-// // document.querySelector(".comment").innerHTML = `You are <span id="comment">${result}</span>`;
-// // document.querySelector("#result").innerHTML = bmi.toFixed(2);
+// resultArea.style.display = "block";
+// document.querySelector(".comment").innerHTML = `You are <span id="comment">${result}</span>`;
+// document.querySelector("#result").innerHTML = bmi.toFixed(2);
 // document.querySelector("#result").innerHTML = result;
 
 // }
@@ -84,52 +109,48 @@
 
 
 document.getElementById('calculate').addEventListener('click', function() {
-  var name = parseFloat(document.getElementById('bmiUsername').value);
-  var phoneNo = parseFloat(document.getElementById('bmiUserPhoneNo').value);
+  var name = document.getElementById('bmiUsername').value;
+  var phoneNo = document.getElementById('bmiUserPhoneNo').value;
   var weight = parseFloat(document.getElementById('weightValue').value);
   var height = parseFloat(document.getElementById('heightValue').value) / 100;
 
-  if (weight && height) {
+  if (weight && height && name && phoneNo) {
     var bmi = weight / (height * height);
-    var category = getBmiCategory(bmi);
-
+    // var category = getBmiCategory(bmi);
+       getBmiCategory(bmi)
     document.getElementById('result').innerText = bmi.toFixed(2);
-    document.getElementById('bmi_Content').innerText =category;
+    // document.getElementById('bmi_Content').innerText =category;
   } else {
-    document.getElementById('bmi_Content').innerText = "Please enter valid weight and height.";
+    alert("All fields are required!");
+    // document.getElementById('bmi_Content').innerText = "Please enter valid weight and height.";
   }
 });
 
+
+
 function getBmiCategory(bmi) {
   if (bmi < 18.5) {
-    return "Underweight";
+    // return "Underweight";
+    scaleScaler(0);
   } else if (bmi >= 18.5 && bmi < 25) {
-    return "Normal weight";
+    scaleScaler(1);
   } else if (bmi >= 25 && bmi < 30) {
-    return "Overweight";
+    scaleScaler(2);
   } else {
-    return "Obese";
+    scaleScaler(3);
   }
 }
+function scaleScaler(pos)
+{
 
+  var colorLine = document.querySelector('.color-line');
+  var colorPoint = document.querySelector('.color-point');
 
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
+  var positions = [-7, -2, 2, 7]; // Positions for each color
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 200;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
+  var position = positions[pos];
+  colorPoint.style.transform = `translateX(${position}rem)`;
 }
-
-// window.addEventListener("scroll", reveal);
 
 
 // var fadeBox = document.querySelector('.left-div');
@@ -317,3 +338,68 @@ const raf = () => {
 
 requestAnimationFrame(raf);
 window.addEventListener('scroll', scrollInProgress)
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+ 
+// });
+document.addEventListener("DOMContentLoaded", function() {
+  const select = document.getElementById("country-select");
+  select.addEventListener("change", function() {
+    const flag = this.options[this.selectedIndex].getAttribute("data-flag");
+    this.style.backgroundImage = `url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/${flag}.svg')`;
+  });
+
+
+
+
+  const navbar = document.querySelector('.navbar');
+  const navbarLinks = navbar.querySelectorAll('.nav-link');
+
+  function updateNavText() {
+    const homeSection = document.querySelector('#home');
+    const homeSectionRect = homeSection.getBoundingClientRect();
+
+    if (homeSectionRect.top > 0 || homeSectionRect.bottom < window.innerHeight) {
+      navbarLinks.forEach(function(link) {
+        link.classList.remove('white-text');
+      });
+    } else {
+      navbarLinks.forEach(function(link) {
+        link.classList.add('white-text');
+      });
+    }
+  }
+
+  updateNavText();
+  window.addEventListener('scroll', updateNavText);
+});
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   const navbar = document.querySelector('.navbar');
+//   const navbarLinks = navbar.querySelectorAll('.nav-link');
+
+//   function updateNavText() {
+//     const homeSection = document.querySelector('#home');
+//     const homeSectionRect = homeSection.getBoundingClientRect();
+//     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+//     if (scrollPosition > homeSectionRect.bottom) {
+//       navbarLinks.forEach(function(link) {
+//         link.classList.add('white-text');
+//       });
+//     } else {
+//       navbarLinks.forEach(function(link) {
+//         link.classList.remove('white-text');
+//       });
+//     }
+//   }
+
+//   updateNavText();
+//   window.addEventListener('scroll', updateNavText);
+// });
+
+

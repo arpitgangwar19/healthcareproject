@@ -1,0 +1,110 @@
+
+/* Add your custom CSS styles here */
+@font-face {
+    font-family: 'Segoe UI';
+    src: url('/css/fonts/segmdl2.ttf') format('truetype'),
+         url('path/to/segoe.woff') format('woff'),
+         url('path/to/segoe.woff2') format('woff2');
+  }
+/* Example styles for the body */
+body {
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Example styles for a container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Example styles for a heading */
+  h1 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Example styles for a paragraph */
+  p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+
+  /* 1. navBar Css  */
+
+/* Custom CSS styles for the navbar */
+.navbar {
+    background-color: #ffffff; /* White background */
+  }
+  
+  .navbar-brand {
+    color: rgb(22, 68, 117); /* Dark blue text */
+    font-size: 27px; /* Font size */
+    font-family: "SegoeUI-Bold", "Segoe UI"; /* Font family */
+    font-weight: 600; /* Font weight */
+  }
+  
+  .navbar-nav .nav-link {
+    color: rgb(22, 68, 117) !important; /* Dark blue text */
+    font-size: 18px; /* Font size */
+    font-family: "SegoeUI-Bold", "Segoe UI"; /* Font family */
+    font-weight: 600; /* Font weight */
+  }
+  
+  .dropdown-menu {
+    background-color: #ffffff; /* White background for dropdown menu */
+  }
+  
+  .glowing-button {
+    background-color: #87cefa; /* Light blue button color */
+    color: #ffffff; /* White button text color */
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px rgba(255, 153, 0, 0.5);
+    font-weight: 500; /* Font weight */
+    font-size: 16px; /* Font size */
+  }
+  
+  .nav-item {
+    padding: 0 10px; /* Padding between navigation items */
+  }
+  
+
+  .logo {
+    padding-left: 10px;
+  }
+
+
+
+  /* hero section  */
+  .herosection{
+    background-image: url("/images/banner/Group\ 362.svg");
+    background-position: bottom center;
+    background-size: cover;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 10px;
+    /* border-radius: 0 0 50% 50%/0 0 50% 50%; */
+    position: relative;
+  }
+
+  .left-column{
+    width: 64%;
+    /* max-width: 50%; */
+    text-align: center;
+    background-image: url(/images/about/girl\ background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 6px;
+    margin-left: 0px;
+    position: relative;
+    background-position: inherit;
+    height: 40rem;
+  }
