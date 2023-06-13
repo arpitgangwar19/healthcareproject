@@ -1,0 +1,262 @@
+ <div class="container-fluid">
+    <!-- <h2 class="text-center mb-5">Our Services</h2> -->
+    <!-- <div class="team_line"></div> -->
+    <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:500px;" -->
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
+          <h4>Service 1</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/prohealth.svg" alt="Service 2" class="service-image">
+          <h4>Service 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/care.svg" alt="Service 3" class="service-image">
+          <h4>Service 3</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    
+    </div>
+    <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px; -->
+    <div class="row justify-content-center">
+     
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/brain.svg" alt="Service 2" class="service-image">
+          <h4>Service 2</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="service-card">
+          <img src="/images/ourservices/package.svg" alt="Service 3" class="service-image">
+          <h4>Service 3</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container-fluid"  style="    margin-top: 4rem;">
+ 
+  <div id="programSlider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <!-- <li data-target="#programSlider" data-slide-to="0" class="active"></li> -->
+      <!-- <li data-target="#programSlider" data-slide-to="1"></li> -->
+      <!-- Add more indicators here if needed -->
+    </ol>
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card program-box">
+              <img src="/images/ourprogram/7xm.xyz116523.svg" class="card-img-top" alt="Program 1">
+              <div class="card-body">
+                <h3 class="card-title">Program 1</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card program-box">
+              <img src="/images/ourprogram/7xm.xyz342649.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Program 4</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card program-box swiper-slide">
+              <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Program 4</h3>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Add more cards here -->
+
+          </div>
+      </div>
+      
+          
+      <!-- Add more carousel items here -->
+      
+    </div>
+    <a class="carousel-control-prev" href="#programSlider" role="button" data-slide="prev">
+      <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+      <!-- <i class="fa-solid fa-circle-arrow-left fa-2xl"></i> -->
+      <div style="    width: 35px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </div>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#programSlider" role="button" data-slide="next">
+      <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+      <!-- <i class="fa-solid fa-circle-arrow-right fa-2xl"></i> -->
+      <!-- <i class="fa-solid fa-circle-chevron-right fa-2xl" style="color: #0a1429;"></i> -->
+      <div style="    width: 35px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </div>
+      <span class="sr-only">Next</span>
+    </a>
+    
+   
+    
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- midsvg -->
+ <!-- <div class="midsvg">
+
+   
+   
+
+ </div>  -->
+
+ <!-- <img src="/images/logo/footer.svg" alt=""> -->
+<!-- end of mid svg -->
+
+
+
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="-105.774" y="165" width="2100.344" height="1080" fill="none"/>
+    </clipPath>
+    <filter id="Path_374" x="-137.993" y="70.999" width="2066.993" height="1130.88" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_375" x="-10.431" y="290.645" width="1964.851" height="821.221" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-Home_7">
+      <rect width="1920" height="1080"/>
+    </clipPath>
+  </defs>
+  <g id="Home_7" data-name="Home – 7" clip-path="url(#clip-Home_7)">
+    <g id="Scroll_Group_1" data-name="Scroll Group 1" transform="translate(-35 -165)" clip-path="url(#clip-path)" style="isolation: isolate">
+      <g id="Group_362" data-name="Group 362" transform="translate(0 -4056)">
+        <path id="Path_372" data-name="Path 372" d="M1956,3979.084h0Z" transform="translate(27 1323.227)" fill="#192838"/>
+        <g transform="matrix(1, 0, 0, 1, 35, 4221)" filter="url(#Path_374)">
+          <path id="Path_374-2" data-name="Path 374" d="M6271.027-233.924c-17,11.617-34.154,22.909-51.883,33.312-85.235,50.017-175.77,87.416-270.906,113.885a1123.562,1123.562,0,0,1-156.975,31.9c-35.3,4.572-70.763,7.265-106.356,8.667-28.914,1.14-57.794.826-86.646-.476a1084.414,1084.414,0,0,1-245.294-39.03c-78.524-22.068-154.532-51.252-230.364-80.957-64.995-25.459-129.861-51.264-196.421-72.486-55.709-17.761-112.265-31.95-170.323-39.52a648.706,648.706,0,0,0-111.249-5.324c-80.966,3.407-158.336,22.287-232.438,54.874a860.242,860.242,0,0,0-80.24,40.639c-3.916,2.236-5.658,4.506-5.655,9.3q.21,353.107-.039,706.216c-.005,6.274,1.972,7.174,7.556,7.174q960.042-.18,1920.083,0c5.6,0,7.568-.953,7.6-7.177.227-43.888.9-87.774,1.494-131.66q1.291-95.714,2.664-191.426,1.348-96.386,2.7-192.77,1.346-96.049,2.655-192.1C6271.214-198.333,6271.027-215.786,6271.027-233.924Z" transform="translate(-4318.39 -318.81) rotate(9)" fill="#dfad0c"/>
+        </g>
+        <rect id="Rectangle_79" data-name="Rectangle 79" width="1960" height="539.953" transform="translate(34.569 4762.358)" fill="#192838"/>
+        <g transform="matrix(1, 0, 0, 1, 35, 4221)" filter="url(#Path_375)">
+          <path id="Path_375-2" data-name="Path 375" d="M6271.027-235c-17,11.368-34.154,22.419-51.883,32.6-85.235,48.948-175.77,85.549-270.906,111.452a1145.151,1145.151,0,0,1-156.975,31.216c-35.3,4.474-70.763,7.11-106.356,8.482-28.914,1.115-57.794.808-86.646-.466a1106.208,1106.208,0,0,1-245.294-38.2c-78.524-21.6-154.532-50.157-230.364-79.227-64.995-24.915-129.861-50.169-196.421-70.937-55.709-17.382-112.265-31.268-170.323-38.675a662.721,662.721,0,0,0-111.249-5.21c-80.966,3.334-158.336,21.811-232.438,53.7a867.651,867.651,0,0,0-80.24,39.771c-3.916,2.188-5.658,4.41-5.655,9.1q.21,345.563-.039,691.127c-.005,6.14,1.972,7.021,7.556,7.021q960.042-.176,1920.083,0c5.6,0,7.568-.932,7.6-7.023.227-42.951.9-85.9,1.494-128.847q1.291-93.669,2.664-187.336,1.348-94.327,2.7-188.652,1.346-94,2.655-187.993C6271.214-200.174,6271.027-217.254,6271.027-235Z" transform="translate(-4326.67 582.11)" fill="#192838" stroke="#dfad0c" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg> -->

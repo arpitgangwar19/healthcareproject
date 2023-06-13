@@ -2,8 +2,8 @@
 
 /* imports of fonts */
 
-h1 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
-
+/* h1 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+ */
 
 *{
     box-sizing: border-box;
@@ -12,10 +12,8 @@ h1 { font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Hel
     position: relative;
 }
 @font-face {
-  font-family: 'Segoe UI';
-  src: url('/css/fonts/segmdl2.ttf') format('truetype'),
-       url('path/to/segoe.woff') format('woff'),
-       url('path/to/segoe.woff2') format('woff2');
+  font-family: 'MyCustomFont';
+  src: url('fonts/segoeui.ttf') format('truetype');
 }
 :root{
   
@@ -44,9 +42,9 @@ a{
 body{
     
     /* font-family: var(--primary-font); */
-    background-color:  rgb(25 40 56) !important;
+    background-color:  #192838 !important;
     color: var(--secondary-font-color) !important;
-    font-family: "Segoe UI";
+    font-family: 'MyCustomFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
 
 }
@@ -104,10 +102,10 @@ body{
 }
 .fill-btn:hover{
     background-color: var(--bg-white);
-    background-color: var(--bg-dark);
+    background-color: white
 }
 .banner_wrapper .left-div{
-  background-image: url("/images/about/girl\ background.png");
+  /* background-image: url("/images/about/girl\ background.png"); */
   background-position: center;
   background-size: cover;
   /* width: 100%; */
@@ -116,7 +114,9 @@ body{
 }
 
 .topSection{
-  background-image: url(/images/banner/Group\ 362.svg);
+  /* background-image: url(/images/banner/Group\ 362.svg); */
+  background-image: url(/images/logo/hero\ page\ svg\ \(1\).svg);
+  /* background-image: url(/images/banner/grassbackground.svg); */
   background-position: bottom center;
   background-size: cover;
   background-repeat: repeat;
@@ -160,13 +160,10 @@ body{
 .bannercurve{
     filter: drop-shadow(0px -15px 5px #ebe7a1fc);
 }.banner_content{
-               /* margin: 0; */
-    /* padding: 0px; */
-    /* box-sizing: border-box; */
-    /* color: white; */
-    /* font-size: 52px; */
-    font-weight: 900;
-    float: left;
+  font-weight: 900;
+  float: left;
+  text-align: left;
+  line-height: 1;
 }
 
 
@@ -218,6 +215,8 @@ body{
     100% { transform: translateY(0); }
 }
 
+
+
   /* about css  */
 
   .aboutcontainer {
@@ -226,6 +225,9 @@ body{
     flex-wrap: wrap;
     align-items: flex-start;
   }
+  .aboutustext{
+    width: 50%;
+  }
 
   .abouttext-div {
     flex: 1;
@@ -233,6 +235,18 @@ body{
     box-sizing: border-box;
     margin-left: 6rem;
     color: white;
+   
+  }
+  .abouttext-div h1{
+    font-weight: 800;
+        font-size: 70px;
+  }
+  .abouttext-div p
+  {
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: 600;
+    font-family: 'Segoe UI';
   }
 
   .aboutimage-div {
@@ -252,7 +266,7 @@ body{
   }
   .aboutcontainerwrapper
   {
-    margin-bottom: 25rem;
+    margin-bottom: 10rem;
   } 
  
   .line {
@@ -353,7 +367,7 @@ body{
     width: 270px;
     background-color: #f9f9f900;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
     /* overflow: hidden; */
     position: relative;
   }
@@ -402,15 +416,17 @@ body{
     width: 100%;
     margin: auto;
     text-align: center;
-    padding: 90px;
+    /* padding: 90px; */
     color: white;
   }
+  .team_header h2{
+    font-size: 3rem;
+  }
   .team_line {
-    width: 47%;
-    height: 4px;
+    width: 27%;
+    height: 5px;
     background-color: #387488;
-    margin-left: 26%;
-    float: left;
+    margin-left: 36%;
 }
 
 
@@ -493,43 +509,6 @@ body{
   }
 
 
-  /* navbar css  */
-
-  /* .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    z-index: 1000;
-
-  } */
-  
-  
-  /* .navbar-brand {
-    margin-left: 15px;
-  } */
-  
-  /* .navbar-nav {
-    margin-right: 15px;
-  } */
-  
-  /* .navbar-nav .nav-link {
-    font-size: 19px;
-  }
-  
-  .navbar-nav .btn {
-    margin-left: 15px;
-  }
-  .navbar .nav-link {
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar .nav-link.nav-link-scroll {
-    color: #fff;
-  } */
-
 
   @keyframes blink {
     0% { opacity: 1; }
@@ -607,46 +586,106 @@ body{
  
   .box-container {
     display: flex;
-      /* justify-content: space-between; */
-      margin: auto;
-      margin: 6px 0 16px 43px;
+    /* justify-content: space-between; */
+    margin: auto;
+    margin: 12px 0 16px 43px;
   }
   
   .box {
-    flex-basis: 24%;
+    flex-basis: 26%;
     height: 100px;
     border-radius: 8px;
-    height: 63px;
+    height: 73px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-size: 11px;
-    padding: inherit;
+    padding: 15px;
     margin-bottom: 10px;
+    width: 103px;
   }
   
   .box-red {
-    background-color: rgba(252,205,129,1);
+    background-color: #FCCD81;
   }
   
   .box-blue {
-    background-color: rgba(108,203,109,1);
+    background-color: #6CCB6D;
   }
   
   .box-green {
-    background-color: rgba(238,145,105,1);
+    background-color: #EE9169;
   }
   
   .box-yellow {
-    background-color: rgba(204,76,84,1);
+    background-color: #CC4C54;
   }
   
 
   /* navbar  */
-  .navbar {
-    background-color: #ffffff; /* White background */
+
+  .logo {
+    /* left: 5.5rem; */
+    /* top: -17px; */
   }
+  .navbar {
+    
+    /* background: linear-gradient(to right, #f7f14378,#f7f14369, #fffff5); */
+    background-color: white;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    /* margin-top: 0.5rem; */
+    transform: translateY(-7px);
+  }
+
+  .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+
+  .dropdown:hover .dropdown-toggle::after {
+    transform: rotate(2deg);
+  }
+
+  .dropdown .dropdown-menu{
+    background-color:#2e4761;
+    border-radius: 12px;
+  }
+ 
+  .dropdown .dropdown-menu .dropdown-item
+  {
+    color: white;
+  }
+  /* .dropdown-toggle::after{
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;} */
+
+    .dropdown-toggle::after{
+      
+      transform:  rotate(270deg);}
+
+  .dropdown .dropdown-menu .dropdown-item:hover
+  {
+    background-color: #7f9dbe;
+ 
+    
+  }
+  
+  .dropdown .dropdown-menu .dropdown-item:active
+  {
+    background-color:   #4b637d !important;
+  }
+
+
   
   .navbar-brand {
     color: rgb(22, 68, 117); /* Dark blue text */
@@ -654,7 +693,8 @@ body{
     font-family: "SegoeUI-Bold", "Segoe UI"; /* Font family */
     font-weight: 600; /* Font weight */
   }
-  
+  .navbar-brand img
+  { margin-left: 6rem;}
   .navbar-nav .nav-link {
     color: rgb(22, 68, 117) !important;
     font-size: 25px;
@@ -688,7 +728,7 @@ body{
 
 
   .glow-button {
-    display: inline-block;
+    display: block;
     padding: 10px 21px 14px 27px;
     font-size: 21px;
     background-color: rgb(87 117 150);
@@ -733,17 +773,18 @@ body{
   }
   
   .herocontainer .left {
-    width: 64%;
-    /* max-width: 50%; */
-    text-align: center;
-    background-image: url(/images/about/girl\ background.png);
+    /* width: 64%; 
+    max-width: 50%; */
+    /* text-align: center; */
+    /* background-image: url(/images/about/girl\ background.png); */
     background-repeat: no-repeat;
     background-size: cover;
     padding-left: 6px;
     margin-left: 0px;
     position: relative;
-    background-position: inherit;
+    background-position: left center;
     height: 40rem;
+    /* margin-top: 3rem; */
 
   }
   
@@ -790,12 +831,229 @@ body{
     width: 44%;
     -webkit-appearance: none;
     border-radius: 60%;
-    background-color: #132f4e;
+    background-color: #132f4e00;
     color: #132f4e;
     border-radius: 59px;
     height: 5px;
+    border: 1px solid #132f4e;
     
   }
+
+
+  .bmi-calculatormobileDesign.minimized {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .toggle-button {
+    display: none;
+  }
+  
+  .toggle-button .button-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    /* Add styles for your icon, such as font-size, color, or background-image */
+  }
+  
+  .toggle-button .button-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #00264e;
+  }
+  
+  .toggle-button .button-arrow {
+    display: block;
+    margin-top: 5px;
+    /* Add styles for your arrow icon, such as font-size, color, or background-image */
+  }
+
+ 
+  @media only screen and (max-width: 768px) {
+
+    
+    .toggle-button {
+      display: block;
+      position: relative;
+      border: 1px solid #000000;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 101;
+      margin: auto;
+      width: 21rem;
+      background-color: white;
+      border-radius: 14px;
+    }
+  
+    .toggle-button .button-icon {
+      /* Adjust the styles for the icon on mobile */
+      float: left;
+      margin-top: 1rem;
+    }
+     .button-text p {
+      color: #00264e !important;
+      font-size: 16px;
+
+
+    }
+  
+    .toggle-button .button-text {
+      /* Adjust the styles for the text on mobile */
+      
+    font-size: 21px;
+    }
+  
+    .toggle-button .button-arrow {
+      display: block;
+    margin-top: -4px;
+    color: #000000;
+    font-size: 18px;
+
+    }
+    
+
+    .bmi-calculatormobileDesign {
+      position: relative;
+    /* top: 25%; */
+    /* right: 0; */
+    /* transform: translate(50%, -50%); */
+    /* width: 100%; */
+    max-width: 326px;
+    height: auto;
+    /* padding: 10px; */
+    background-color: #ffffff;
+    border-radius: 51px;
+    margin-right: 16px;
+    padding-right: 28px;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
+    /* float: right; */
+    display: block;
+    margin: auto;
+    animation: fadeIn 1s;
+    }
+
+
+    .bmi-calculatormobileDesign h2{
+      color: rgb(0 38 78);
+      padding: 16px 0 12px 105px;
+            font-weight: 700;
+            font-size: 17px;
+    }
+  
+    .bmi-calculatormobileDesign .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .bmi-calculatormobileDesign .input-group label {
+      flex: 0 0 18%;
+      text-align: left;
+      /* margin-right: -4px; */
+      padding: 0px 15px 0px 26px;
+      padding: auto;
+      font-weight: 700;
+      color: rgb(0 38 78);
+      font-size: 13px;
+    }
+    
+    .bmi-calculatormobileDesign input[type="text"]{
+      opacity: 1;
+    }
+    
+    .bmi-calculatormobileDesign input[type="text"],
+  .bmi-calculatormobileDesign input[type="number"],
+  .bmi-calculatormobileDesign input[type="tel"],
+  .bmi-calculatormobileDesign select {
+    /* border: 1px solid #ccc; */
+    border-radius: 10px;
+    height: 41px;
+    
+  }
+  
+    .bmi-calculatormobileDesign select[type="number"] {
+      width: 100%;
+      max-width: 100px;
+      height: 53px;
+  }
+    
+    
+    .input-group-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    
+    .input-group-append .input-group-text {
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+    
+    .input-group-append .input-group-text select {
+      -webkit-appearance: none;
+      appearance: none;
+      /* background: transparent; */
+      border: none;
+      /* padding: 0 0.5rem; */
+      cursor: pointer;
+      height: 42px;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+      border-radius: -1px;
+      margin-right: 4px;
+      border: var(--bs-border-width) solid var(--bs-border-color);
+      width: 65px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    
+    .flag-icon {
+      width: 1.5em;
+      height: 1em;
+      background-size: contain;
+      background-position: 50%;
+      background-repeat: no-repeat;
+    }
+    .input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
+      position: relative;
+      flex: 1 1 auto;
+      width: 1%;
+      min-width: 0;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161) !important;
+  }
+    
+    .input-group-row .input-group input[type="number"]  input[type="tel"],
+    .input-group-row .input-group select {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 8px 12px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .cross-button{
+      padding-left: 3rem;
+    }
+   
+  }
+  
+
+  /* bmi css  */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
   .bmi-calculator {
     position: relative;
     top: 25%;
@@ -811,16 +1069,20 @@ body{
     padding-right: 28px;
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
     float: right;
+    display: block;
+    animation: fadeIn 1s;
+  }
+  .bmi-calculator h2{
+    color: rgb(0 38 78);
+          padding: 16px 0 12px 31px;
+          font-weight: 700;
+          font-size: 20px;
   }
 
   .bmi-calculator .input-group {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
-  .custom-row {
-    display: flex;
-    justify-content: space-between;
   }
   
   .bmi-calculator .input-group label {
@@ -832,23 +1094,6 @@ body{
     font-weight: 700;
     color: rgb(0 38 78);
     font-size: 16px;
-  }
-  
-  /* .bmi-calculator .input-group input {
-    flex: 1;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 13px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 28%);
-  } */
-  .inputBox{
-    flex: 1;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 18px;
-    box-shadow:inset 0px 3px 6px rgba(0, 0, 0, 0.161);
   }
   
   .bmi-calculator input[type="text"]{
@@ -865,21 +1110,6 @@ body{
   
 }
 
-
-.bmi_output{
-  height: 33px;
-  /* width: 67px; */
-  margin: auto;
-  /* margin: 25px 50px 75px 100px; */
-  /* background-color: transparent; */
-  /* border-radius: 16px; */
-  /* padding: 14px; */
-  text-align: center;
-  font-weight: 900;
-  font-size: 19px;
-}
-
-
   .bmi-calculator select[type="number"] {
     width: 100%;
     max-width: 100px;
@@ -892,34 +1122,7 @@ body{
     justify-content: space-between;
     align-items: center;
   }
-  
-  
-  
-  .input-group-row .input-group label {
-    display: block;
-    margin-bottom: 5px;
 
-  }
- 
-  input[type="number"] {
-    -moz-appearance: textfield; /* Firefox */
-  }
-
-  .input-group-dropwon {
-    position: absolute;
-    z-index: 1;
-    height: 44px;
-    width: 56px;
-    margin-top: -25px;
-    border: 0px solid;
-    color: #00264e;
-    /* background-color: transparent; */
-    font-weight: 800;
-    box-shadow:  0px 3px 6px rgba(0, 0, 0, 0.161);
-    position: fixed;
-    border-radius: 10%;
-  }
-  
   
   .input-group-append .input-group-text {
     padding: 0;
@@ -959,13 +1162,6 @@ body{
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161) !important;
 }
   
-  
-  
-  
-  
-  
-  
-  
   .input-group-row .input-group input[type="number"]  input[type="tel"],
   .input-group-row .input-group select {
     width: 100%;
@@ -977,26 +1173,10 @@ body{
     transition: border-color 0.3s ease;
   }
   
-  .input-group-row .input-group select {
-    appearance: none;
-    background-color: transparent;
-    background-image: url("path-to-down-arrow-icon");
-    background-position: right 8px center;
-    background-repeat: no-repeat;
-    padding-right: 30px;
-    flex: 1;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 28%);
-  }
+ 
 
    
-  .input-group-row .input-group select::-ms-expand {
-    display: none;
-  }
-  
+
   /* .input-group-row .input-group input[type="number"]:focus,
   .input-group-row .input-group select:focus {
     border-color: #007bff;
@@ -1025,6 +1205,13 @@ body{
   bottom: 0;
 }
 
+.footerback{
+  background-color: #192838;
+  width: 100%;
+  height: 26rem;
+  position: absolute;
+}
+
 
 
 
@@ -1042,6 +1229,8 @@ body{
   vertical-align: top;
   margin-right: 4px;
   font-family: 'Segoe UI';
+  margin-left: 20px;
+  margin-right: 25px;
 }
 
 
@@ -1061,7 +1250,14 @@ body{
   float: left;
   margin: 0 0 0 86px;
   color: white;
+  transform: translateY(-145px);
   /* font-size: 22px; */
+}
+#FaQS{
+  transform: translateY(53px);
+}
+.bottomlogo{
+  margin-left: 14px;
 }
 
 
@@ -1089,6 +1285,11 @@ body{
  float: right;
  color: #ffff;
 }
+.footer-right ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
 .footer-right .footer-column h3
 {
@@ -1101,10 +1302,9 @@ body{
 
 
  .footer-column ul li {
-  margin-bottom: 30px;
+  margin-bottom: 21px;
   font-size: 16px;
-  font-weight: 600;
-  font-family: "Segoe UI";
+  font-weight: 500;
 }
 
 
@@ -1118,31 +1318,17 @@ body{
   margin-bottom: 20px;
 }
 .store-icons{
-  margin-top: 8rem;
+  margin: 32px 0 43px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-right .footer-column .social-icons a{
   padding: 0px 14px 0px 15px;
 }
 
-/* Responsive styles */
-@media only screen and (max-width: 600px) {
-  .footer-left, .footer-right {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .footer-right .section {
-    margin-bottom: 10px;
-  }
-  
-  .footer-right .follow-us {
-    justify-content: space-around;
-  }
-}
-.white-text {
-  color: white !important;
-}
+/* Existing CSS code */
+
 
 
 
@@ -1165,24 +1351,24 @@ body{
 
 .color.yellow {
   width: 25%;
-  background-color: yellow;
+  background-color: #FCCD81;
 }
 
 .color.green {
   width: 25%;
-  background-color: green;
+  background-color: #6CCB6D;
   left: 25%;
 }
 
 .color.orange {
   width: 25%;
-  background-color: orange;
+  background-color: #EE9169;
   left: 50%;
 }
 
 .color.red {
   width: 25%;
-  background-color: red;
+  background-color: #CC4C54;
   left: 75%;
 }
 
@@ -1195,7 +1381,7 @@ body{
   height: 10px;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 10px solid black;
+  border-top: 23px solid black;
 }
 
 
@@ -1254,6 +1440,10 @@ body{
 
 
 /* Our Services Css  */
+
+#services{
+  margin-bottom: 4rem;
+}
 .service-card {
   text-align: center;
   padding: 20px;
@@ -1304,7 +1494,7 @@ body{
     /* border: 1px solid rgba(0,0,0,.125); */
     border-radius: 0.25rem;
     color: white;
-    font-family: SegoeUI-Semibold, "Segoe UI";
+    /* font-family: SegoeUI-; */
     font-size: 18px;
     width: 350px;
 }
@@ -1327,6 +1517,114 @@ body{
 .carousel-control-next-icon {
   filter: invert(100%);
 }
+.carousel-control-next{
+
+  transform: translate3d(58px, 10px, 2px);
+}
+.carousel-control-prev{
+
+  transform: translate3d(-60px, 10px, 10px);
+}
+.slide-container{
+  max-width: 80%;
+  width: 100%;
+  padding: 40px 0 !important;
+}
+
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+  padding: 20px;
+}
+.cardsw{
+  font-family: 'MyCustomFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+ .swiper-navBtnNext{
+  /* color: white !important; */
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #192838;
+  right: 10px;
+    left: auto;
+
+}
+.swiper-navBtnPrev{
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #192838;
+  left: 10px;
+  right: auto;
+}
+.swiper-arrow-icon{
+  width: 35px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button-next-2{
+ 
+
+}
+.swiper-button-prev-2{
+  position: absolute;
+  top: 50%;
+  width: calc(var(--swiper-navigation-size)/ 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #192838;
+  right: 10px;
+    left: auto;
+
+
+}
+.swiper-navBtn:hover{
+  color: #4070F4;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 35px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: #6E93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active{
+  background-color: #4070F4;
+}
+
+
 
 
 
@@ -1337,7 +1635,7 @@ body{
 /* about hero css  */
 
 .hero-banner {
-  background-image: url("/images/banner/Group\ 404\ \(1\).svg");
+  background-image: url("/images/banner/aboutbanner.svg");
   background-size: cover;
   background-position: center center;
   padding: 100px 0;
@@ -1360,10 +1658,11 @@ body{
 }
 
 .hero-paragraph {
-  font-size: 18px;
+  font-size: 21px;
   margin-bottom: 20px;
   color: white;
   line-height: 40px;
+  font-family: 'MyCustomFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .custom-container{
@@ -1383,30 +1682,32 @@ body{
 }
 .container .row .card {
   position: relative;
-  height: 315px;
+  height: 341px;
   width: 250px;
   color: #00264e;
   font-family: 'Segoe UI';
   font-weight: 900;
-
+  margin: auto;
+  text-align: left;
   /* opacity: 0;
   animation: fadeIn 1s ease-in-out forwards; */
 }
 .card-number {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 8px;
   left: 0;
-  margin-top: -15px;
-  margin-left: -15px;
-  width: 40px;
-  height: 40px;
-  background-color: #fab84a;
   color: #fff;
-  font-size: 18px;
+  font-size: 45px;
   font-weight: bold;
   text-align: center;
   line-height: 40px;
-  border-radius: 50%;
+  color: #E1C877;
+  padding: 2px 0 0 20px;
+  text-align: left;
+}
+.card-paragraph{
+  font-weight: 400;
+    font-size: 16px;
 }
 
 
@@ -1419,6 +1720,15 @@ body{
   /* padding: 6px; */
   border-radius: 8px;
 }
+.aboutwhychoseline .card-body{
+  flex: 1 1 auto;
+  min-height: 1px;
+  /* padding: 0.25rem; */
+  top: 20px;
+  align-items: flex-end;
+  text-align: left ;
+
+}
 
 
 @keyframes fadeIn {
@@ -1430,4 +1740,298 @@ body{
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+
+
+
+
+
+
+/* // pro health css  */
+.prohealth-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin: 36px;
+}
+
+.prohealth_card {
+  width: 284px;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.prohealth_card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.prohealth_card:hover .prohealth_card-inner {
+  transform: rotateY(180deg);
+}
+
+.prohealth_card-front,
+.prohealth_card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 38px;
+}
+
+.prohealth_card-front {
+  background-color: #f9f9f9;
+  z-index: 2;
+}
+
+.prohealth_card-back {
+  background-color: rgb(250 184 74);
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.prohealth_card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 38px;
+}
+
+.prohealth_card-content {
+  padding: 10px;
+  text-align: center;
+}
+
+.prohealth_card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.prohealth_card-description {
+  margin: 5px 0;
+  font-size: 22px;
+  color: #164475;
+  font-weight: 600;
+}
+
+.prohealth_heading {
+  font-size: 71px;
+  font-weight: 700;
+}
+
+.prohealth_header {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.prohealth_header h2 {
+  font-size: 3rem;
+}
+
+.prohealth_line {
+  width: 27%;
+  height: 5px;
+  background-color: #387488;
+  margin-left: 36%;
+}
+
+/* enquirybackground */
+.enquirybackground{
+  background-image: url("/images/about/enquiry.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.enquiry-form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 136%;
+  /* max-height: 519px; */
+  /* align-items: center; */
+  background: white;
+  width: 70rem;
+  height: 35rem;
+  color: #192838;
+  font-family: 'MyCustomFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.yellow-box {
+  background-color: #FFA000;
+  flex-basis: 40%;
+  /* max-width: 100%; */
+  transform: translate(-87px, 38px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+  height: 30rem;
+}
+
+.form-container {
+  flex-basis: 60%;
+  padding: 35px 42px 0px 0px;
+}
+
+.enquiry-form h2 {
+  /* text-align: left; */
+  font-weight: 800;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  position: relative;
+}
+label.required::after {
+  content: "*";
+  color: red;
+  position: absolute;
+  top: 0;
+  right: -10px;
+}
+
+/* input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 5px;
+  border: none; 
+  background-color: #E6E6E6; 
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+} */
+.inputcheck{
+  width: 100%;
+  padding: 5px;
+  border: none; 
+  background-color: #E6E6E6; 
+  color: white;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.enquiryBotton{
+  padding: 10px 20px;
+  background-color: #192838;
+  color: white;
+  border: none;
+  border-radius: 10px ;
+  cursor: pointer;
+  width: 150px;
+  font-size: large;
+}
+
+@media (max-width: 600px) {
+  .enquiry-form {
+    flex-direction: column;
+  }
+  
+  .yellow-box,
+  .form-container {
+    flex-basis: 100%;
+  }
+}
+
+
+ /* .section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+} */
+
+#hiddedMobile{
+  display: none;
+  }
+
+
+
+  /* Style for the chat button */
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #2ecc71;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+/* Style for the chat container */
+.chat-container {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  display: none;
+  z-index: 9999;
+}
+
+
+/* ... Previous CSS styles ... */
+
+/* Style for the chat content */
+.chat-content {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+/* Style for individual chat messages */
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.incoming {
+  background-color: #e2e2e2;
+  color: #000;
+}
+
+.outgoing {
+  background-color: #2ecc71;
+  color: #fff;
+  align-self: flex-end;
 }

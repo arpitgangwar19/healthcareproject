@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    .section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+#section1 {
+  background-color: #f1f1f1;
+}
+
+#section2 {
+  background-color: #e1e1e1;
+}
+
+#section3 {
+  background-color: #d1d1d1;
+}
+
+#section4 {
+  background-color: #c1c1c1;
+}
+
+  </style>
+</head>
+<body>
+  <div class="section" id="section1">
+    <h1>Section 1</h1>
+  </div>
+  
+  <div class="section" id="section2">
+    <h1>Section 2</h1>
+  </div>
+  
+  <div class="section" id="section3">
+    <h1>Section 3</h1>
+  </div>
+  
+  <div class="section" id="section4">
+    <h1>Section 4</h1>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  let sections = document.querySelectorAll(".section");
+  let currentSectionIndex = 0;
+  let isScrolling = false;
+  
+  function scrollToNextSection() {
+    if (isScrolling) return;
+    isScrolling = true;
+    
+    currentSectionIndex++;
+    if (currentSectionIndex >= sections.length) {
+      currentSectionIndex = 0;
+    }
+    
+    sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+    
+    setTimeout(function() {
+      isScrolling = false;
+    }, 1000);
+  }
+  
+  document.addEventListener("wheel", scrollToNextSection);
+});
+
+</script>
+</html>

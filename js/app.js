@@ -1,17 +1,4 @@
 
-// Attach scroll event listener
-// window.addEventListener('scroll', handleScroll);
-
-// Attach scroll event listener
-// window.addEventListener('scroll', handleScroll);
-
-// const heightRange = document.getElementById('heightRange');
-// const heightValue = document.getElementById('heightValue');
-
-// // Update the height value display when the range input value changes
-// heightRange.addEventListener('input', function() {
-//   heightValue.value = this.value;
-// });
 
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
@@ -32,80 +19,46 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 
-// var age = document.getElementById("age");
-// var height = document.getElementById("heightRange");
-// var weight = document.getElementById("weightRange");
-// var male = document.getElementById("m");
-// var female = document.getElementById("f");
-// var form = document.getElementById("form");
-// let resultArea = document.querySelector(".comment");
-
-// modalContent = document.querySelector(".modal-content");
-// modalText = document.querySelector("#modalText");
-// var modal = document.getElementById("myModal");
-// var span = document.getElementsByClassName("close")[0];
 
 
-// function calculate(){
- 
-//   if(height.value=='' || weight.value==''){
-//     // modal.style.display = "block";
-//     modalText.innerHTML = `All fields are required!`;
-
-//   }else{
-//     countBmi();
-//   }
-
-// }
-
-
-// function countBmi(){
-//   var p = [height.value, weight.value];
-//   // if(male.checked){
-//   //   p.push("male");
-//   // }else if(female.checked){
-//   //   p.push("female");
-//   // }
-
-//   var bmi = Number(parseFloat(p[2]))/(Number(parseFloat(p[1]))/100*Number(parseFloat(p[1]))/100);
-      
-//   var result = '';
-//   if(bmi<18.5){
-//     result = 'Underweight';
-//      }else if(18.5<=bmi&&bmi<=24.9){
-//     result = 'Healthy';
-//      }else if(25<=bmi&&bmi<=29.9){
-//     result = 'Overweight';
-//      }else if(30<=bmi&&bmi<=34.9){
-//     result = 'Obese';
-//      }else if(35<=bmi){
-//     result = 'Extremely obese';
-//      }
+const calculator = document.querySelector('.bmi-calculatormobileDesign');
+const toggleButton = document.getElementById('toggle-bmi-calculator');
+const crossbutton = document.getElementById('cross-button');
 
 
 
-// resultArea.style.display = "block";
-// document.querySelector(".comment").innerHTML = `You are <span id="comment">${result}</span>`;
-// document.querySelector("#result").innerHTML = bmi.toFixed(2);
-// document.querySelector("#result").innerHTML = result;
+if (window.innerWidth >1) {
+  calculator.classList.add('minimized');
+}
 
-// }
+toggleButton.addEventListener('click', () => {
+  calculator.classList.toggle('minimized');
+  toggleButton.style.display="none";
+});
+crossbutton.addEventListener('click', () => {
+  calculator.classList.toggle('minimized');
+  toggleButton.style.display="block";
+});
 
 
 
+document.getElementById('calculate1').addEventListener('click', function() {
+  var name = document.getElementById('bmiUsername1').value;
+  var phoneNo = document.getElementById('bmiUserPhoneNo1').value;
+  var weight = parseFloat(document.getElementById('weightValue1').value);
+  var height = parseFloat(document.getElementById('heightValue1').value) / 100;
 
-
-// // When the user clicks on <span> (x), close the modal
-// // span.onclick = function() {
-// //   modal.style.display = "none";
-// // }
-
-// // // When the user clicks anywhere outside of the modal, close it
-// // window.onclick = function(event) {
-// //   if (event.target == modal) {
-// //     modal.style.display = "none";
-// //   }
-// // }
+  if (weight && height && name && phoneNo) {
+    var bmi = weight / (height * height);
+    // var category = getBmiCategory(bmi);
+       getBmiCategory(bmi)
+    document.getElementById('result1').innerText = bmi.toFixed(2);
+    // document.getElementById('bmi_Content').innerText =category;
+  } else {
+    alert("All fields are required!");
+    // document.getElementById('bmi_Content').innerText = "Please enter valid weight and height.";
+  }
+});
 
 
 document.getElementById('calculate').addEventListener('click', function() {
@@ -264,80 +217,87 @@ function scaleScaler(pos)
 
 // active section
 
-let section = document.querySelectorAll("section");
-let menu = document.querySelectorAll("header nav a");
-
-window.onscroll = () => {
-  section.forEach((i) => {
-    let top = window.scrollY;
-    let offset = i.offsetTop - 150;
-    let height = i.offsetHeight;
-    let id = i.getAttribute("id");
-
-    if (top >= offset && top < offset + height) {
-      menu.forEach((link) => {
-        link.classList.remove("active");
-        document
-          .querySelector("header nav a[href*=" + id + "]")
-          .classList.add("active");
-      });
-    }
-  });
-};
+// document.addEventListener("DOMContentLoaded", function() {
+//   let sections = document.querySelectorAll(".section");
+//   let currentSectionIndex = 0;
+//   let isScrolling = false;
+  
+//   function scrollToNextSection() {
+//     if (isScrolling) return;
+//     isScrolling = true;
+    
+//     currentSectionIndex++;
+//     if (currentSectionIndex >= sections.length) {
+//       currentSectionIndex = 0;
+//     }
+    
+//     sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
+    
+//     setTimeout(function() {
+//       isScrolling = false;
+//     }, 1000);
+//   }
+  
+//   document.addEventListener("wheel", scrollToNextSection);
+// });
 
 
 // scroll view 
-// var sections = document.querySelectorAll('.section');
-// var currentSectionIndex = 0;
-// var isScrolling = false;
+// document.addEventListener("DOMContentLoaded", function() {
+//   const sections = document.querySelectorAll("section");
+//   const navLinks = document.querySelectorAll("nav a");
 
-// function scrollToNextSection(event) {
-//   if (isScrolling) return;
-//   isScrolling = true;
+//   window.addEventListener("scroll", function() {
+//     let current = "";
 
-//   if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-//     currentSectionIndex++;
-//     sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
-//   } else if (event.deltaY < 0 && currentSectionIndex > 0) {
-//     currentSectionIndex--;
-//     sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
-//   }
+//     sections.forEach(function(section) {
+//       const sectionTop = section.offsetTop;
+//       const sectionHeight = section.clientHeight;
 
-//   setTimeout(function() {
-//     isScrolling = false;
-//   }, 1000);
-// }
+//       if (pageYOffset >= sectionTop - sectionHeight / 3) {
+//         current = section.getAttribute("id");
+//       }
+//     });
 
-// window.addEventListener('wheel', scrollToNextSection);
+//     navLinks.forEach(function(link) {
+//       link.classList.remove("active");
+//       if (link.classList.contains(current)) {
+//         link.classList.add("active");
+//       }
+//     });
+//   });
+// });
+
+
 
 //scroll view test 
 
-let didScroll = false;
-let paralaxTitles = document.querySelectorAll('.paralax-title1');
+// let didScroll = false;
+// let paralaxTitles = document.querySelectorAll('.paralax-title1');
 // let paralaxTitles1 = document.querySelectorAll('.paralax-title1');
 
-const scrollInProgress = () => {
-  didScroll = true
-}
+// const scrollInProgress = () => {
+//   didScroll = true
+// }
 
-const raf = () => {
-  if(didScroll) {
-    paralaxTitles.forEach((element, index) => {
-      element.style.transform = "translateX("+ window.scrollY / 10 + "%)";
+// const raf = () => {
+//   if(didScroll) {
+//     paralaxTitles.forEach((element, index) => {
+//       element.style.transform = "translateX("+ window.scrollY / 10 + "%)";
       
-    })
-    // paralaxTitle1.forEach((element, index) => {
-    //   element.style.transform = "translateX("+ window.scrollY / 10 + "%)"
-    // })
-    didScroll = false;
-  }
-  requestAnimationFrame(raf);
-}
+//     })
+//     // paralaxTitle1.forEach((element, index) => {
+//     //   element.style.transform = "translateX("+ window.scrollY / 10 + "%)"
+//     // })
+//     didScroll = false;
+//   }
+//   requestAnimationFrame(raf);
+// }
 
 
 
-requestAnimationFrame(raf);
-window.addEventListener('scroll', scrollInProgress)
+// requestAnimationFrame(raf);
+// window.addEventListener('scroll', scrollInProgress)
 
 
 
@@ -403,3 +363,70 @@ document.addEventListener("DOMContentLoaded", function() {
 // });
 
 
+
+
+
+
+
+
+
+// swipper js 
+
+
+var swiper = new Swiper(".slide-content1", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
+  pagination: {
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-1",
+    prevEl: ".swiper-button-prev-1",
+  },
+
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      520: {
+          slidesPerView: 2,
+      },
+      950: {
+          slidesPerView: 3,
+      },
+  },
+});
+
+var swiper = new Swiper(".slide-content", {
+  slidesPerView: 3,
+  spaceBetween: 25,
+  loop: true,
+  centerSlide: 'true',
+  fade: 'true',
+  grabCursor: 'true',
+  pagination: {
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-2",
+    prevEl: ".swiper-button-prev-2",
+  },
+
+  breakpoints:{
+      0: {
+          slidesPerView: 1,
+      },
+      520: {
+          slidesPerView: 2,
+      },
+      950: {
+          slidesPerView: 3,
+      },
+  },
+});
