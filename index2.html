@@ -4,13 +4,12 @@
           <meta charset="UTF-8">
           <meta http-equiv="X-UA-Compatible" content="IE=edge">
           <meta name="viewport" content="width=device-width, initial-scale=1">
-          <title>Document</title>
+          <title>Udhaivi</title>
           <link rel="icon" type="image/png" href="">
           <link rel="stylesheet"  href="css/style.css">
           <link rel="stylesheet"  href="css/responsive.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-          <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
           <link rel="stylesheet" href="css/swiper-bundle.min.css">
@@ -22,7 +21,16 @@
           height: 60px;
           width: 70px;
       }
+      .navbar {
+  background: linear-gradient(to right, #f7f14378, #f7f14369, #fffff5);
+  transition: background-color 0.3s ease-in-out;
+}
 
+.navbar-scrolled {
+  background-color: white;
+}
+    
+    
 
           </style>
 </head>
@@ -30,8 +38,9 @@
  
         <!-- <div class="con" id="headerNav"></div> -->
        
-        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light  custom-navcolor" style="background:linear-gradient(to right, #f7f14378,#f7f14369, #fffff5); ;">
-          <a class="navbar-brand mx-auto" href="">  
+        <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light  custom-navcolor"  id="navbar"
+        >
+          <a class="navbar-brand mr-auto" href="index.html">  
             <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="65" viewBox="0 0 236 95">
               <defs>
                 <pattern id="pattern" width="1" height="1" viewBox="0 0 236 95">
@@ -50,21 +59,21 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto justify-content-end">
               <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="about.html">About Us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuProgram" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Program
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuProgram">
-                  <a class="dropdown-item" href="#">Corporate wellness program</a>
-                  <a class="dropdown-item" href="#">Community wellness program</a>
-                  <a class="dropdown-item" href="#">Institution wellness program</a>
-                  <a class="dropdown-item" href="#">Individual plans</a>
-                  <a class="dropdown-item" href="#">Clubs</a>
+                  <a class="dropdown-item" href="corporate-welness-program.html">Corporate wellness program</a>
+                  <a class="dropdown-item" href="community-wellness-program.html">Community wellness program</a>
+                  <a class="dropdown-item" href="institution-wellness.html">Institution wellness program</a>
+                  <a class="dropdown-item" href="memberships.html">Individual plans</a>
+                  <a class="dropdown-item" href="clubs.html">Clubs</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -72,150 +81,140 @@
                   Services
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuServices">
-                  <a class="dropdown-item" href="#">Pro Health</a>
-                  <a class="dropdown-item" href="#">Fitness</a>
-                  <a class="dropdown-item" href="#">Advance Care</a>
-                  <a class="dropdown-item" href="#">Mind Training</a>
-                  <a class="dropdown-item" href="#">Package <i class="fa-sharp fa-solid fa-crown" style="color: #ffd43b;"></i></a>
+                  <a class="dropdown-item" href="prohealth.html">Pro Health</a>
+                  <a class="dropdown-item" href="fitnes.html">Fitness</a>
+                  <a class="dropdown-item" href="advancecare.html">Advance Care</a>
+                  <a class="dropdown-item" href="mindtraining.html">Mind Training</a>
+                  <a class="dropdown-item" href="memberships.html">Package <i class="fa-sharp fa-solid fa-crown" style="color: #ffd43b;"></i></a>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link glow-button" href="#">Book Free Consultation</a>
+                <a class="nav-link glow-button" href="enquiry.html">Book Free Consultation</a>
               </li>
             </ul>
          
           </div>
         </nav>
 
-
-
-        <section class="topSection section container-fluid" id="home">
-            <!-- <section class="midsection"> -->
-              <div class="herocontainer container-fluid">
-                  <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;" -->
-                  <div class="left col-lg-7 ">
-                    <!-- <img src="/images/about/girl background.png" alt="Image"> -->
-                    
-                    <div class="image-text"> 
-                      <p class="banner_content">
-                        The Care and Compassion <br>
-                        you <span style="    color: #00264e;
-                        margin-left: 25px;">need!</span><br>
-                          <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a>
-                      </p>  
-                    
-                      <!-- <span class="banner_content">The Care and Compassion </span>
+        <section class="" id="home">
+          <!-- <section class="midsection"> -->
+            
+            <div class="herocontainer">
+                <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;" -->
+                <div class="left">
+                  <!-- <img src="/images/about/girl background.png" alt="Image"> -->
+                  
+                  <div class="image-text"> 
+                    <p class="banner_content">
+                      The Care and Compassion <br>
+                      you <span style="    color: #00264e;">need!</span><br>
+                        <a href="#" class="main-btn mt-3 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a>
+                    </p>  
+                  
+                    <!-- <span class="banner_content">The Care and Compassion </span>
+                    <br>
+                    <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
+                    margin-left: 25px;">need!</span><br> -->
+                  
+                  </div>
+                    <!-- <div class="image-text"> <span class="banner_content">The Care and Compassion </span>
                       <br>
                       <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
-                      margin-left: 25px;">need!</span><br> -->
-                    
-                    </div>
-                      <!-- <div class="image-text"> <span class="banner_content">The Care and Compassion </span>
-                        <br>
-                        <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
-                        margin-left: 25px;">need!</span><br>
-                        <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a></div> -->
-                  </div>
-                  <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:200px;" -->
-                  <div class="right col-lg-4" >
-                    
-                    <div class="bmi-calculator">
-                          <h2 >BMI Calculator</h2>
-                          <form>
-                            <div class="input-group">
-                              <label for="name">Name:</label>
-                              <input class="inputBox form-control rounded" type="text" id="bmiUsername" required>
-                            </div>
-                            <!-- <div class="input-group">
-                              <label for="phone">Ph.No:</label>
-                            
-                              <input id="phone" type="tel">
-                              
-                            
-                            </div> -->
-                            <div class="input-group">
-                              <label for="phone">Ph.No:</label>
-
-                              <div class="input-group-append">
-                                <span class="input-group-text">
-                                  <select id="country-select1" class="form-select form-control inputBox rounded">
-                                    <option value="+1" data-flag="us">+1</option>
-                                    <option value="+44" data-flag="gb">+44</option>
-                                    <option value="+91" data-flag="in">+91</option>
-                                    <!-- Add more country codes and flags as needed -->
-                                  </select>
-                                </span>
-                              </div>
-                              <input type="tel" class="inputBox form-control rounded" id="bmiUserPhoneNo" placeholder="Phone Number">
-                            </div>
-                            
-                            <div class="input-group">
-                              <label for="gender">Gender:</label>
-                              <select id="gender" class="form-control inputBox rounded" style="flex: 1;
-                              width: 100%;
-                              border: none;
-                              border-radius: 5px;
-                              padding: 8px;
-                              box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
-                              border: var(--bs-border-width) solid var(--bs-border-color);
-                              " required>
-                                <option value="">Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                              </select>
-                              <label for="age">Age:</label>
-                              <input class="inputBox form-control rounded" type="number" id="age" required>
-                            </div>
-                          
-                            <div class="input-group">
-                              <label for="weight">Weight (kg):</label>
-                              <input type="range" class="slider" style="border-radius: 6px;"  id="weightRange" min="20" max="180" step="1" value="170">
-                              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="weightValue" required>
-                            </div>
-                            <div class="input-group">
-                              <label for="height">Height (cm):</label>
-                              <input type="range" class="slider" style="border-radius: 6px;"  id="heightRange" min="100" max="300" step="1" value="170">
-                              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="heightValue" required>
-                            </div>
-                          
-                          </form>
-                          <div class="outputContainer">
-                            <button id="calculate" class="button">Calculate</button>
-                            <div class="text-row">
-                            
-                              <p>Your BMI</p>
-                              <h3 id="result">0.00</h3> 
-                            
-                            </div>
+                      margin-left: 25px;">need!</span><br>
+                      <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a></div> -->
+                </div>
+                <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:200px;" -->
+                <div class="right col-lg-4" >
+                  
+                  <div class="bmi-calculator">
+                        <h2 >BMI Calculator</h2>
+                        <form name="submit-to-google-sheet">
+                          <div class="input-group">
+                            <label for="name">Name:</label>
+                            <input class="inputBox form-control rounded" type="text" id="bmiUsername" required>
                           </div>
-                      
+                          <!-- <div class="input-group">
+                            <label for="phone">Ph.No:</label>
                           
+                            <input id="phone" type="tel">
+                            
+                          
+                          </div> -->
+                          <div class="input-group">
+                            <label for="phone">Ph.No:</label>
 
-                          
-                        
-                            <div class="color-line">
-                              <div class="color yellow"></div>
-                              <div class="color green"></div>
-                              <div class="color orange"></div>
-                              <div class="color red"></div>
-                              <div class="color-point"></div>
+                            <div class="input-group-append">
+                              <span class="input-group-text">
+                                <select id="country-select1" class="form-select form-control inputBox rounded">
+                                  <option value="+1" data-flag="in">+91</option>
+                                  <option value="+44" data-flag="gb">+44</option>
+                                  <option value="+91" data-flag="us">+1</option>
+                                  <!-- Add more country codes and flags as needed -->
+                                </select>
+                              </span>
                             </div>
-                            <div class="box-container">
-                    <div class="box box-red">Under weight < 18.5</div>
-                    <div class="box box-blue">Normal weight  18.5 - 25</div>
-                    <div class="box box-green">Over weight
-                      25 - 30</div>
-                    <div class="box box-yellow">Obese
-                      >30</div>
-                  </div>
-                        
-                      
-                          
-                      </div>
-                    </div>
-               </div>
-        </section>
+                            <input type="tel" class="inputBox form-control rounded" id="bmiUserPhoneNo" placeholder="Phone Number" data-bs-toggle="tooltip" data-bs-placement="right" title="">
 
+                            
+                          </div>
+                          
+                          <div class="input-group">
+                            <label for="gender">Gender:</label>
+                            <select id="gender" class="form-control inputBox rounded" style="margin-right: 15px; font-size: 13px;" required>
+                              <option value="">Select</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                            </select>
+                            <label for="age">Age:</label>
+                            <input class="inputBox form-control rounded" type="number" id="age" required>
+                          </div>
+                        
+                          <div class="input-group">
+                            <label for="weight">Weight (kg):</label>
+                            <input type="range" class="slider" style="margin-left: 6px;  margin-right: 6px;   border-radius: 6px;"  id="weightRange" min="20" max="180" step="1" value="170">
+                            <input class="inputBox form-control rounded" style="" type="number" id="weightValue" required>
+                          </div>
+                          <div class="input-group">
+                            <label for="height">Height (cm):</label>
+                            <input type="range" class="slider" style="margin-left: 8px;  margin-right: 6px;   border-radius: 6px;"  id="heightRange" min="100" max="300" step="1" value="170">
+                            <input class="inputBox form-control rounded" style="" type="number" id="heightValue" required>
+                          </div>
+                        
+                        </form>
+                        <div class="outputContainer">
+                          <button id="calculate" class="button">Calculate</button>
+                          <div class="text-row">
+                          
+                            <p>Your BMI</p>
+                            <h3 id="result">0.00</h3> 
+                          
+                          </div>
+                        </div>
+                      
+                          <div class="color-line">
+                            <div class="color yellow"></div>
+                            <div class="color green"></div>
+                            <div class="color orange"></div>
+                            <div class="color red"></div>
+                            <div class="color-point"></div>
+                          </div>
+                          <div class="box-container">
+                  <div class="box box-red" id="box-red" >Under weight <br>< 18.5</div>
+                  <div class="box box-blue" id="box-blue">Normal weight <br> 18.5 - 25</div>
+                  <div class="box box-green" id="box-green">Over weight <br>
+                    25 - 30</div>
+                  <div class="box box-yellow" id="box-yellow" >Obese <br>
+                    >30</div>
+                </div>
+                      
+                    
+                        
+                    </div>
+                  </div>
+             </div>
+      </section>
+
+     
         <div class="bmi-calculatormobileDesign">
           <h2 >BMI Calculator  <i class="fa-solid fa-circle-xmark fa-lg cross-button" id="cross-button"></i></h2>
           <form>
@@ -236,9 +235,10 @@
               <div class="input-group-append">
                 <span class="input-group-text">
                   <select id="country-select" class="form-select form-control inputBox rounded">
+                    <option value="+91" data-flag="in">+91</option>
                     <option value="+1" data-flag="us">+1</option>
                     <option value="+44" data-flag="gb">+44</option>
-                    <option value="+91" data-flag="in">+91</option>
+                   
                     <!-- Add more country codes and flags as needed -->
                   </select>
                 </span>
@@ -248,14 +248,7 @@
             
             <div class="input-group">
               <label for="gender">Gender:</label>
-              <select id="gender" class="form-control inputBox rounded" style="flex: 1;
-              width: 100%;
-              border: none;
-              border-radius: 5px;
-              padding: 8px;
-              box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
-              border: var(--bs-border-width) solid var(--bs-border-color);
-              " required>
+              <select id="gender" class="form-control inputBox rounded" style="margin-right: 15px; font-size: 13px;" required>
                 <option value="">Select</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
@@ -266,13 +259,13 @@
           
             <div class="input-group">
               <label for="weight">Weight (kg):</label>
-              <input type="range" class="slider" style="border-radius: 6px;"  id="weightRange1" min="20" max="180" step="1" value="170">
-              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="weightValue1" required>
+              <input type="range" class="slider" style="margin-left: 6px;  margin-right: 6px;   border-radius: 6px;"  id="weightRange1" min="20" max="180" step="1" value="170">
+              <input class="inputBox form-control rounded" style="" type="number" id="weightValue1" required>
             </div>
             <div class="input-group">
               <label for="height">Height (cm):</label>
-              <input type="range" class="slider" style="border-radius: 6px;"  id="heightRange1" min="100" max="300" step="1" value="170">
-              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="heightValue1" required>
+              <input type="range" class="slider" style="margin-left: 6px;  margin-right: 6px;   border-radius: 6px;"  id="heightRange1" min="100" max="300" step="1" value="170">
+              <input class="inputBox form-control rounded" style="" type="number" id="heightValue1" required>
             </div>
           
           </form>
@@ -295,16 +288,16 @@
               <div class="color green"></div>
               <div class="color orange"></div>
               <div class="color red"></div>
-              <div class="color-point"></div>
+              <div class="color-point1" id="color-point"></div>
             </div>
             <div class="box-container">
-    <div class="box box-red">Under weight < 18.5</div>
-    <div class="box box-blue">Normal weight  18.5 - 25</div>
-    <div class="box box-green">Over weight
-      25 - 30</div>
-    <div class="box box-yellow">Obese
-      >30</div>
-  </div>
+              <div class="box box-red" id="box-red1" >Under weight <br>< 18.5</div>
+              <div class="box box-blue" id="box-blue1">Normal weight <br>  18.5 - 25</div>
+              <div class="box box-green" id="box-green1">Over weight <br>
+                25 - 30</div>
+              <div class="box box-yellow" id="box-yellow1" >Obese <br>
+                >30</div>
+            </div>
         
       
           
@@ -331,7 +324,7 @@
               <div class="abouttext-div" >
                 <!-- Add your text content here -->
                 <h1 >About Us</h1>
-                <div class="line"></div>
+                <div class="line" style="background-color:#164475"></div>
                 <div class="aboutustext"><p >Udhaivi is built on the rock-solid foundation of INTEGRITY &amp; HONESTY.The company has developed a healthcare system that facilitates medical services that are not confined to its origins. Our organization is also well-furnished with US equipment and is praised for its state-of-the-art healthcare service establishments, not just around the country, but also on&nbsp;a&nbsp;global&nbsp;scale.</p></div>
                 <button onclick="location.href='about.html'" class="knowmore_btn">Know More</button>        
               </div>
@@ -349,7 +342,7 @@
 
       <section id="services" class="section">
       <div class="team_header" ><h2 class="team-heading">OUR SERVICES</h2>
-        <div class="team_line"></div></div> 
+        <div class="team_line" style="background-color: #164475;"></div></div> 
 
 
         <div id="rowItemOurServices">
@@ -361,22 +354,33 @@
               <div class="col-md-4">
                 <div class="service-card">
                   <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
-                  <h4>Service 1</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Fitness</h4>
+                  <p>Preserve your health and enhance your 
+                    general quality of life by being aware
+                     of the advantages of physical fitness and
+                     knowing how active you should be.</p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="service-card swiper-slide">
                   <img src="/images/ourservices/prohealth.svg" alt="Service 2" class="service-image">
-                  <h4>Service 2</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Pro Health</h4>
+                  <p> Having good health is of core importance 
+                    to human happiness. An individual's health 
+                    is a valuable asset that should not be overlooked.
+                     Good health and living a successful life are 
+                    intimately intertwined.</p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="service-card ">
                   <img src="/images/ourservices/care.svg" alt="Service 3" class="service-image">
-                  <h4>Service 3</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Advanced care</h4>
+                  <p>Revolutionizing local healthcare. Healthcare 
+                    that is promptly and professionally delivered
+                     doesn't always require a trip to the hospital.
+                     When you require primary or urgent care let our 
+                    qualified professionals handle it.</p>
                 </div>
               </div>
             
@@ -387,15 +391,26 @@
               <div class="col-md-4">
                 <div class="service-card ">
                   <img src="/images/ourservices/brain.svg" alt="Service 2" class="service-image">
-                  <h4>Service 2</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Mind training</h4>
+                  <p>AKA Cognitive training , a practice that can 
+                    transform your life. Brain cells become healthy and
+                     active through training. Brain fitness takes focused 
+                    work via replication, just as physical fitness. 
+                    Your mental abilities improve as you use your brain
+                     more frequently; brain training exercises are a 
+                    great approach to maintain general brain health.</p>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="service-card">
                   <img src="/images/ourservices/package.svg" alt="Service 3" class="service-image">
-                  <h4>Service 3</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Package</h4>
+                  <p>We provide the most economical health packages,
+                    starting from basic to premium. Our packages
+                    contain a range of tests, doctor consultations,
+                    and much more which covers all demographics
+                    including adults, male & female, children, 
+                   senior citizens etc.</p>
                 </div>
               </div>
             </div>
@@ -409,28 +424,50 @@
                 <div class="card-wrapper swiper-wrapper">
                 <div class="service-card swiper-slide">
                   <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
-                  <h4>Service 1</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Fitness</h4>
+                  <p>Preserve your health and enhance your 
+                    general quality of life by being aware
+                     of the advantages of physical fitness and
+                     knowing how active you should be.</p>
                 </div>
                 <div class="service-card swiper-slide">
                   <img src="/images/ourservices/prohealth.svg" alt="Service 2" class="service-image">
-                  <h4>Service 2</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Pro Health</h4>
+                  <p>Having good health is of core importance 
+                    to human happiness. An individual's health 
+                    is a valuable asset that should not be overlooked.
+                     Good health and living a successful life are 
+                    intimately intertwined.</p>
                 </div>
                 <div class="service-card swiper-slide">
                   <img src="/images/ourservices/care.svg" alt="Service 3" class="service-image">
-                  <h4>Service 3</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Advanced care</h4>
+                  <p>Revolutionizing local healthcare. Healthcare 
+                    that is promptly and professionally delivered
+                     doesn't always require a trip to the hospital.
+                     When you require primary or urgent care let our 
+                    qualified professionals handle it.</p>
                 </div>
                 <div class="service-card swiper-slide">
                   <img src="/images/ourservices/brain.svg" alt="Service 2" class="service-image">
-                  <h4>Service 2</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Mind training</h4>
+                  <p>AKA Cognitive training ,a practice that can 
+                    transform your life. Brain cells become healthy and
+                     active through training. Brain fitness takes focused 
+                    work via replication, just as physical fitness. 
+                    Your mental abilities improve as you use your brain
+                     more frequently; brain training exercises are a 
+                    great approach to maintain general brain health.</p>
                 </div>
                 <div class="service-card swiper-slide">
                   <img src="/images/ourservices/package.svg" alt="Service 3" class="service-image">
-                  <h4>Service 3</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  <h4>Package</h4>
+                  <p>We provide the most economical health packages,
+                    starting from basic to premium. Our packages
+                    contain a range of tests, doctor consultations,
+                    and much more which covers all demographics
+                    including adults, male & female, children, 
+                   senior citizens etc.</p>
                 </div>
 
 
@@ -442,10 +479,10 @@
             </div>
         
             <div class="swiper-button-next-1 swiper-navBtnNext"><div class="swiper-arrow-icon">
-              <i class="fa-solid fa-chevron-right"></i>
+              <i class="fa-solid fa-chevron-right fa-lg"></i>
               </div></div>
-              <div class="swiper-button-next-1 swiper-navBtnPrev"><div class="swiper-arrow-icon">
-                <i class="fa-solid fa-chevron-left"></i>
+              <div class="swiper-button-prev-1 swiper-navBtnPrev"><div class="swiper-arrow-icon">
+                <i class="fa-solid fa-chevron-left fa-lg"></i>
                 </div></div>
 
             <!-- <div class="swiper-button-prev-1 swiper-navBtn-prev"></div> -->
@@ -465,71 +502,72 @@
 
       <section id="programs" class="section">
       <div class="team_header" ><h2 class="team-heading">OUR PROGRAMS</h2>
-        <div class="team_line"></div></div>
+        <div class="team_line" style="background-color: #164475;"></div></div>
 
         <div class="slide-container swiper">
         
           <div class="slide-content">
               <div class="card-wrapper swiper-wrapper">
                 <div class="cardsw program-box swiper-slide">
+                  <img src="/images/ourprogram/corporate-wellness.svg" class="card-img-top" alt="Program 4">
+                  <div class="card-body">
+                    <h3 class="card-title">Corporate Wellness Program</h3>
+                    <p class="card-text">A new dimension to corporate wellness programs! Helping you create a great team culture. Specific / Measurable / Attainable / Realistic / Timely</p>
+                  </div>
+                </div>
+                <div class="cardsw program-box swiper-slide">
+                  <img src="/images/ourprogram/community-wellness.svg" class="card-img-top" alt="Program 4">
+                  <div class="card-body">
+                    <h3 class="card-title">Community Wellness Program</h3>
+                    <p class="card-text">Community Wellness for the best healthcare experience! Partnering with  us can be cost-effective and mutually beneficial.</p>
+                  </div>
+                </div>
+                <div class="cardsw program-box swiper-slide">
+                  <img src="/images/ourprogram/institution-wellness.svg" class="card-img-top" alt="Program 4">
+                  <div class="card-body">
+                    <h3 class="card-title">Institution Wellness Program</h3>
+                    <p class="card-text">Creating healthier and happier campuses. Our advanced technology platform offers  stigma-free therapeutic solutions.</p>
+                  </div>
+                </div>
+                <div class="cardsw program-box swiper-slide">
+                  <img src="/images/ourprogram/individual-plans.svg" class="card-img-top" alt="Program 4">
+                  <div class="card-body">
+                    <h3 class="card-title">Individual Plans</h3>
+                    <p class="card-text">Seamless care at your fingertips now! The use and amalgamation of technology and healthcare is best in the field for  effective intervention.</p>
+                  </div>
+                </div>
+                <div class="cardsw program-box swiper-slide">
+                  <img src="/images/ourprogram/clubs.svg" class="card-img-top" alt="Program 4">
+                  <div class="card-body">
+                    <h3 class="card-title">Clubs</h3>
+                    <p class="card-text">Seamless care at your fingertips now! The use and amalgamation of technology and healthcare is best in the field for  effective intervention.</p>
+                  </div>
+                </div>
+                <div class="cardsw program-box swiper-slide">
+                  <img src="/images/ourprogram/community-wellness.svg" class="card-img-top" alt="Program 4">
+                  <div class="card-body">
+                    <h3 class="card-title">Community Wellness Program</h3>
+                    <p class="card-text">Community Wellness for the best healthcare experience! Partnering with  us can be cost-effective and mutually beneficial.</p>
+                  </div>
+                </div>
+                <!-- <div class="cardsw program-box swiper-slide">
                   <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
                   <div class="card-body">
                     <h3 class="card-title">Program 4</h3>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/7xm.xyz342649.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src=/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
+                </div> -->
                   
               </div>
           </div>
 
           <div class="swiper-button-next-2 swiper-navBtnNext"><div class="swiper-arrow-icon">
-            <i class="fa-solid fa-chevron-right"></i>
+            <i class="fa-solid fa-chevron-right fa-lg"></i>
             </div></div>
-            <div class="swiper-button-next-2 swiper-navBtnPrev"><div class="swiper-arrow-icon">
-              <i class="fa-solid fa-chevron-left"></i>
+            <div class="swiper-button-prev-2 swiper-navBtnPrev"><div class="swiper-arrow-icon">
+              <i class="fa-solid fa-chevron-left fa-lg"></i>
               </div></div>
+
           <div class="swiper-pagination"></div>
       </div>
         
@@ -551,8 +589,8 @@
 
       <div id="footer"></div>
       <!-- end of footer -->
-
-
+     
+     
      <!-- Add the chat button and chatbox container to your HTML -->
 <div id="chatbox">
   <div id="chat-button" class="chat-button">
@@ -574,6 +612,7 @@
   </div>
 </div>
 
+<!-- <i onclick="scrollToTop()" id="scrollToTop" class="fas fa-arrow-up"></i> -->
       <!-- <script type="text/javascript" src="/js/skrollr.js  "></script>
         <script type="text/javascript">
         var s = skrollr.init();
@@ -600,9 +639,6 @@
 <script type="text/javascript" src="/js/app.js"></script>
 <script src="/js/swiper-bundle.min.js"></script>
 
-<script>
- 
-</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -619,96 +655,84 @@
                 $("#headerNav").load("navbar.html"); 
                 $("#footer").load("footer.html"); 
               
-    // Close navbar on link click (mobile)
-    $('.navbar-nav>li>a:not(.dropdown-toggle)').on('click', function() {
-    if ($(window).width() < 992) {
-      $('.navbar-collapse').collapse('hide');
-    }
-  });
+            // Close navbar on link click (mobile)
+            $('.navbar-nav>li>a:not(.dropdown-toggle)').on('click', function() {
+            if ($(window).width() < 992) {
+              $('.navbar-collapse').collapse('hide');
+            }
+          });
 
-  // Close dropdown menu when clicking outside (mobile)
-  $(document).on('click', function(e) {
-    if ($(window).width() < 992) {
-      if (!$(e.target).is('.dropdown-toggle') && !$(e.target).parents().is('.dropdown-toggle')) {
-        $('.navbar-collapse').collapse('hide');
-      }
-    }
-  });
+          // Close dropdown menu when clicking outside (mobile)
+          $(document).on('click', function(e) {
+            if ($(window).width() < 992) {
+              if (!$(e.target).is('.dropdown-toggle') && !$(e.target).parents().is('.dropdown-toggle')) {
+                $('.navbar-collapse').collapse('hide');
+              }
+            }
+          });
 
-  // Toggle dropdown menu when clicking on dropdown toggle (mobile)
-  $('.dropdown-toggle').on('click', function(e) {
-    if ($(window).width() < 992) {
-      e.stopPropagation();
-      $(this).parent().toggleClass('show');
-      $(this).siblings('.dropdown-menu').toggleClass('show');
-    }
-  });
+          // Toggle dropdown menu when clicking on dropdown toggle (mobile)
+          $('.dropdown-toggle').on('click', function(e) {
+            if ($(window).width() < 992) {
+              e.stopPropagation();
+              $(this).parent().toggleClass('show');
+              $(this).siblings('.dropdown-menu').toggleClass('show');
+            }
+          });
 
-  // Close dropdown menu when clicking on "Programs" link (mobile)
-  $('#navbarDropdownMenuProgram').on('click', function() {
-    if ($(window).width() < 992) {
-      $(this).parent().removeClass('show');
-      $(this).siblings('.dropdown-menu').removeClass('show');
-    }
-  });
+          // Close dropdown menu when clicking on "Programs" link (mobile)
+          $('#navbarDropdownMenuProgram').on('click', function() {
+            if ($(window).width() < 992) {
+              $(this).parent().removeClass('show');
+              $(this).siblings('.dropdown-menu').removeClass('show');
+            }
+          });
        
-            // for calculating BMI and fetching feilds      
-               const heightRange = document.getElementById('heightRange');
-               const heightValue = document.getElementById('heightValue');
+          // for calculating BMI and fetching feilds      
+          const heightRange = document.getElementById('heightRange');
+          const heightValue = document.getElementById('heightValue');
+          heightRange.addEventListener('input', function() {
+            heightValue.value = this.value;
+          });
+          const weightRange = document.getElementById('weightRange');
+          const weightValue = document.getElementById('weightValue');
+          weightRange.addEventListener('input', function() {
+          weightValue.value = this.value;
+          });
+          // for calculating BMI and fetching feilds      
+          const heightRange1 = document.getElementById('heightRange1');
+          const heightValue1 = document.getElementById('heightValue1');
+          heightRange1.addEventListener('input', function() {
+            heightValue1.value = this.value;
+          });
+          const weightRange1 = document.getElementById('weightRange1');
+          const weightValue1 = document.getElementById('weightValue1');
+          weightRange1.addEventListener('input', function() {
+          weightValue1.value = this.value;
+          });
 
-                // Update the height value display when the range input value changes
-                heightRange.addEventListener('input', function() {
-                  heightValue.value = this.value;
-                });
-
-                
-                const weightRange = document.getElementById('weightRange');
-                      const weightValue = document.getElementById('weightValue');
-                      weightRange.addEventListener('input', function() {
-                      weightValue.value = this.value;
-                });
 
 
+          $(window).scroll(function() {
+  var scroll = $(window).scrollTop();
 
-    //             $('.dropdown').hover(
-    //   function() {
-    //     $(this).addClass('show');
-    //     $(this).find('.dropdown-menu').addClass('show');
-    //   },
-    //   function() {
-    //     $(this).removeClass('show');
-    //     $(this).find('.dropdown-menu').removeClass('show');
-    //   }
-    // );
+  if (scroll > 600) {
+    $(".navbar").css("background", "white");
+  } else {
+    $(".navbar").css("background", "linear-gradient(to right, #f7f14378, #f7f14369, #fffff5)");
+  }
+});
 
+
+
+
+   
               
 
                       });
 
-          //tanslating scaler 
-          // var number = 3;
 
-          // var colorLine = document.querySelector('.color-line');
-          // var colorPoint = document.querySelector('.color-point');
-
-          // var positions = [0, 25, 50, 75]; // Positions for each color
-
-          // var position = positions[number];
-          // colorPoint.style.transform = `translateX(${position}%)`;
-
-
-//           var swiper = new Swiper('.swiper-container', {
-//   slidesPerView: 'auto',
-//   direction: 'vertical',
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+           
          </script>
 
 

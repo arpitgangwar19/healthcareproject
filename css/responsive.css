@@ -1,29 +1,23 @@
-@media (min-width : 1400px)
-{
+@media  (min-width : 1400px){
   .logo {
     left: 5.5rem;
     /* top: -17px; */
   }
-}
 
+
+
+}
 
 @media  (max-width : 1600px){
 
 
- 
-  .herocontainer .left {
-      /* width: 64%; */
-      max-width: 100%;
-      /* text-align: center; */
-      background-repeat: no-repeat;
-      background-size: cover;
-      padding-left: 6px;
-      margin-left: 0px;
-      position: relative;
-      background-position: left center;
-      height: 35rem;
-      margin-top: 1rem;
-  }
+  .left .image-text {
+    top: 25rem;
+}
+
+/* .footer-column {
+  margin-right: 3rem;
+} */
 
     .aboutimage-div img {
         max-width: 48rem;
@@ -38,50 +32,211 @@
 
 }
 
+@media  (max-width : 1535px){
+
+
+  .left .image-text {
+  
+}
+
+/* .footer-column {
+  margin-left: 25px;
+  
+} */
+
+    .aboutimage-div img {
+        max-width: 48rem;
+        margin-top: 4rem;
+    }
+    .abouttext-div p
+  {
+    font-size: 22px;
+      }
+
+      .bmi-calculator {
+        top: 10rem;
+    }
+
+}
+@media  (max-width : 1510px){
+
+
+  
+      .bmi-calculator {
+        top: 10rem;
+    }
+    .bmi-calculator input[type="text"], .bmi-calculator input[type="number"], .bmi-calculator input[type="tel"], .bmi-calculator select {
+      height: 38px;
+  }
+
+  .bmi-calculator .input-group label {
+    font-size: 15px;
+}
+
+.custom-container{
+  margin-left: 18rem;
+  } 
+
+}
+@media  (max-width : 1490px){
+
+
+
+.service-card h4 {
+  font-size: 1.5rem;
+}
+.card p {
+  font-size: 1rem;
+}
+
+}
+@media  (max-width : 1400px){
+
+.service-card h4 {
+  font-size: 1.5rem;
+}
+
+.about-hero-image img {
+  width: 40%;
+
+}
+.custom-container{
+  margin-left: 13rem;
+  } 
+
+
+}
+@media  (max-width : 1372px){
+
+.aboutimage-div img {
+    max-width: 40rem;
+    margin-top: 5rem;
+}
+
+
+  }
+
 
 
 
 
 @media  (max-width : 1325px){
 
-  .banner_content {
-    font-size: 46px;
-    margin-top: 61px;
-  }
+  
 
-    .aboutimage-div img {
-        max-width: 41rem;
-        margin-top: 6rem;
-    }
+ 
+
+  .abouttext-div h1 {
+    font-size: 55px;
+}
+
+
+  .left .image-text {
+      font-size: 50px;
+  }
+   
     .abouttext-div p
   {
     font-size: 20px;
       }
-    .herocontainer .left {
-      
-        text-align: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-left: 6px;
-        margin-left: 0px;
-        position: relative;
-        background-position: left center;
-        height: 27rem;
-        margin-top: 5rem;
-    
+      .aboutimage-div img {
+        max-width: 35rem;
+        margin-top: 10rem;
     }
+   
 }
+
+@media  (max-width : 1300px){
+
+  .faq-hero .image-container .image-text {
+    top: 6%;
+    left: 65%;
+}
+.faq-hero .image-container .image-text p:last-child {
+  font-size: 30px;
+}
+.faq-hero .image-container img {
+  max-width: 81%;
+  top: 97px;
+}
+.faq-hero .content-container h2 {
+  margin-top: 0;
+  font-size: 1.75rem !important;
+}
+
+.answers h3 {
+  font-size: 27px;
+}
+
+.answers p {
+  font-size: 22px;
+}
+
+
+.first-div h2 {
+  font-size: 28px;
+}
+.blog-card h2 {
+  font-size: 26px;
+  color: #FFA000;
+}
+ 
+   
+}
+
+@media  (max-width : 1225px){
+  .enquiry-form
+  {
+    width: 50rem;
+  }
+  
+  .hero-paragraph {
+    font-size: 20px;
+    line-height: 37px;
+}
+.custom-container{
+  margin-left: 10rem;
+  } 
+
+  .corporate-wellness-section .left-side {
+    width: 55%;
+    margin-left: 6rem;
+
+  }
+
+  .corporate-wellness-section .right-side {
+    width: 36%;
+    padding: 20px;
+    margin-top: 6rem;
+}
+.footer-column {
+  margin-left: 9px;
+  margin-right: 1rem;
+}
+
+  }
+  @media  (max-width : 1200px){
+  
+ 
+    .footer-column {
+      margin-left: 9px;
+      margin-right: 1rem;
+    }
+    .footer-column ul li {
+     
+      font-size: 15px;
+    }
+      }
+
 
 @media  (max-width : 1160px){
+  .navbar {
+    
+    height:auto;
+  }
 
-  .herocontainer .left {
-      
-    height: 30rem;
-
-}
 .left .image-text {
-  top: 57%;
-  font-size: 43px;
+  /* top: 90%; */
 }
   .aboutimage-div img {
     max-width: 38rem;
@@ -96,79 +251,59 @@
   font-size: 18px;
 }
 
-.banner_content {
-  font-size: 38px;
-  margin-top: 53px;
-}
+
 
 .bmi-calculator {
-  top: 26%;
-  max-width: 296px;
-  left: 47px;
-}
-.bmi-calculator .input-group {
-  margin-bottom: 7px;
-}
-.bmi-calculator .input-group label {
-  font-size: 13px;
-}
-.bmi-calculator input[type="text"], .bmi-calculator input[type="number"], .bmi-calculator input[type="tel"], .bmi-calculator select {
-  /* border: 1px solid #ccc; */
-  height: 36px;
-}
-.color-line {
-  width: 228px;
-}
-
-.text-row h3 {
-  font-size: 22px;
+  max-width: 315px;
 }
 
 
 }
 
-@media  (max-width : 1030px)
+@media (max-width: 1080px)
+
 {
 
-    .glow-button {
-      display: none;
-    }
-    .bmi-calculator .input-group label {
-        flex: 0 0 18%;
-        text-align: left;
-        /* margin-right: -4px; */
-        padding: 0px 8px 0px 17px;
-        padding: auto;
-        font-weight: 700;
-        color: rgb(0 38 78);
-        font-size: 11px;
+  .aboutimage-div img {
+    max-width: 32rem;
+    margin-top: 8rem;
+}
+  .enquiry-form
+  {
+    width: 40rem;
+  }
+.corporate-wellness-section .left-side {
+    width: 52%;
+    margin-left: 4rem;
+}
+}
+@media  (max-width : 1030px)
+{
+  .offering-section {
+       padding: 0 12px 0px 12px;
+}
+
+  .community-service-item h3 {
+    font-size: 1.5rem;
+    color: #164475;
+}
+  .herocontainer .right{
+    display: none;
+    
     }
 
-    .input-group-append .input-group-text select {
-        -webkit-appearance: none;
-        appearance: none;
-        /* background: transparent; */
-        border: none;
-        /* padding: 0 0.5rem; */
-        cursor: pointer;
-        height: 40px;
-        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
-        border-radius: -1px;
-        margin-right: 6px;
-        border: var(--bs-border-width) solid var(--bs-border-color);
-        font-size: 11px;
-        /* width: 8px; */
+    .glow-button {
+      display: none !important;
     }
-    .bmi-calculator input[type="text"], .bmi-calculator input[type="number"], .bmi-calculator input[type="tel"], .bmi-calculator select {
-        /* border: 1px solid #ccc; */
-        border-radius: 10px;
-        height: 34px;
-        font-size: 10px;
-    }
-    /* .slider{
-        padding: 0px 57px 0 44px;
-         width: 40%;
-      } */
+    .herocontainer {
+      background-image: url(/images/logo/hero\ page\ svg\ \(1\).svg);
+      background-position: center left;
+      height: 92vh;
+  }
+  .left .image-text {
+    top: 50%;
+}
+   
       .logobackground {
         background: #ffffff;
         align-items: center;
@@ -176,15 +311,133 @@
         /* padding-left: 0.5%; */
         width: auto;
     }
- 
+     .community-wellness-section .left-side  {
+      width: 57%;
+      margin-left: 2rem;
+  }
+  .community-wellness-section .right-side {
+    width: 39%;
+    padding: 20px;
+    margin-top: 14rem;
+}
+    .corporate-wellness-section .left-side {
+      width: 57%;
+      margin-left: 2rem;
+  }
+  .corporate-wellness-section .right-side {
+    width: 39%;
+    padding: 20px;
+    margin-top: 14rem;
+}
    
 }
- 
+@media  (max-width : 1012px){
+  .left-section h2 {
+    font-size: 21px;
+  }
+  .left-section p {
+    font-size: 13px;
+}
+.first-div  h2 {
+  font-size: 21px;
+}
+.first-div  p {
+  font-size: 13px;
+}
+.right-section img {
+  width: 34%;
+  border-radius: 10px;
+  /* margin-right: 20px; */
+  /* height: 185px; */
+  float: left;
+  /* top: 31px; */
+}
+.left-section {
+  flex: 0.9;
+}
+.right-inner-div {
+  margin-right: 20px;
+  padding: 0 0 0 24px;
+}
+
+.first-div {
+margin: 0 0 15px 0;}
+.about-hero-image img {
+  width: 45%;
+}
+
+.custom-container {
+  margin-left: 5rem;
+}
+
+
+
+
+
+
+
+}
 
 
    /* Responsive styles */
    @media  (max-width : 768px){
 
+    .slider-cont2 {
+      display: block;
+  }
+   
+    .footer-column:nth-child(1), .footer-column:nth-child(2) {
+      text-align: center;
+  }
+  .footer-column {
+    text-align: center;
+}
+    
+    .community-wellness-section {
+      margin-top: 7rem;
+  }
+
+    .community-wellness-section .left-side {
+      margin-left: 1rem;
+  }
+  .community-wellness-section .right-side {
+    margin-top: 1.5rem;
+}
+
+    .community-wellness-section .left-side,
+    .community-wellness-section .right-side {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .corporate-wellness-section {
+      margin-top: 7rem;
+  }
+
+    .corporate-wellness-section .left-side {
+      margin-left: 1rem;
+  }
+  .corporate-wellness-section .right-side {
+    margin-top: 1.5rem;
+}
+
+    .corporate-wellness-section .left-side,
+    .corporate-wellness-section .right-side {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .container .row .card {
+    margin-bottom: 2rem;
+  }
+    .copyright {
+      margin-top: 0rem;
+    
+    }
+
+    .text-row p {
+      font-size: 14px;
+  }
 
     .knowmore_btn {
       background-color: #fff;
@@ -207,108 +460,21 @@
       text-align: center;
     }
 
-  .topSection{
-    height: 35rem;
-  }
+  
 
-  .banner_content {
-    font-size: 26px;
-    margin-top: 11%;
-    transform: translateX(-35px);
-  }
-  .herocontainer .left {
-    height: 27rem;
-    text-align: center;
-    background-position: 42%;
-    margin-top: 2rem;
-}
-  .herocontainer .right{
-    display: none;
-    
-    }
-
-  .color-line{
-    width: 265px;
-    margin: 0px 0 0 26px;
-  }
-    .footer-left,
-    .footer-right {
-      width: 100%;
-      text-align: center;
-      margin: 0;
-     
-    }
-  
-    .footer-left {
-      float: none; 
-      text-align: left;
-      padding: 10px;
-      
-    }
-    .footer-left .footer-column{
-      margin-bottom: 25px;
-      flex: 1;
-    
-    }
-  
-    .footer-right {
-      float: none;
-      /* margin-top: 20px; */
-      display: flex;
-      flex-wrap: wrap;
-      padding: 10px;
-    }
-  
-    .footer-right .footer-column {
-      margin-bottom: 25px;
-      flex: 1;
-      text-align: left;
-    }
-  
-    .footer-right .footer-column h3 {
-      margin-top: 0;
-      font-size: 18px; /* Decrease the font size of the right column */
-    }
-  
-    .store-icons {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-    }
-  
-    .store-icons a {
-      margin: 0 5px; /* Adjust the margin to create space between the store icons */
-    }
-  
-    .footer-right .follow-us {
-      flex-direction: column; /* Arrange icons and text in a column */
-      align-items: center;
-      margin-top: 10px; /* Adjust the margin */
-    }
-  
-    .footer-right .follow-us .social-icons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-  
-    .footer-right .follow-us .social-icons a {
-      padding: 5px;
-    }
-  
-    .footer-left ul li,
-    .footer-right ul li {
-      list-style-type: disc;
-      font-size: 12px;
-      margin-bottom: 13px;
-    }
-  
+ 
     
   .footerback{
-    height: 42rem;
-  }
+    height: 58rem;
+  } */
+
+  .line {
+    margin-bottom: 13px;
+    width: 27%;
+    height: 5px;
+    background-color: #387488;
+    margin-left: 36%;
+}
 
   #rowItemOurServices{
     display: none;
@@ -316,7 +482,10 @@
 #hiddedMobile{
     display: block;
 }
-
+.card-text {
+  font-size: 0.9rem;
+  /* font-family: 'Segoe UI'; */
+}
 
 .aboutimage-div{
 display: none;
@@ -327,56 +496,131 @@ margin-left: 0;
 text-align: center;
 
 }
+.abouttext-div h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
 
 
 
-.footer-left {
-    transform: translate(0);
+  .box {
+    flex-basis: 28%;
+    font-size: 11px;
+    padding: 17px;
+    margin-bottom: 10px;
+    width: auto;
+  }
+ 
+
+.herocontainer {
+  background-image: url(/images/logo/hero\ page\ svg\ \(1\).svg);
+  background-position: center center;
+  height: 88vh;
+}
+
+
   }
 
-  #FaQS{
-    transform: translateY(0);
+  @media (max-width: 660px) {
+
+    .left .image-text {
+      left: 3%;
+        font-size: 40px;
   }
 
-  .bottomlogo{
-    font-size: 13px;
-    text-align: left;
+    .left-section h2 {
+      font-size: 18px;
+    }
+   
+  .first-div  h2 {
+    font-size: 18px;
+  }
+  
+    .blog-top-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-section,
+    .right-section {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .right-inner-div {
+      margin-right: 0;
+    }
+    .right-inner-div {
+      margin-right: 0px;
+      padding: 0 0 0 0;
+  }
+  
+    .right-section img {
+      /* width: 100%; */
+    }
   }
 
+  @media  (max-width : 500px)
+  {
 
+    .main-btn {
+      padding: 9px 33px 12px 27px;
+  }
+  .mt-4, .my-4 {
+    margin-top: 1rem!important;
+}
+    .herocontainer {
+      height: 60vh;
+      margin-top: 38px;
+      /* background-size: contain; */
+  }
+  .left .image-text {
+    left: 4%;
+    font-size: 28px;
+      /* top: 40%; */
+}
+.main-btn {
+  font-size: 15px;
+}
   }
 
   @media  (max-width : 400px)
 {
 
-  .herocontainer .left {
-    height: 22rem;
-    background-position: 37%;
-    margin-top: 3rem;
-
+  .herocontainer {
+    background-position: 40% ;
 }
 
 .banner_content {
-  margin-top: 24%;
-  font-size: 17px;
+  font-size: 26px;
 }
+
+.glow-button {
+  display: none ;
+}
+
+.corporate-wellness-section h2 {
+  font-size: 26px;
+}
+.corporate-wellness-section p {
+  font-size: 19px;
+}
+.community-wellness-section h2 {
+  font-size: 26px;
+}
+.community-wellness-section p {
+  font-size: 19px;
+}
+.prohealth_header h2 {
+  font-size: 30px;
+}
+.prohealth_header {
+  margin-bottom: 1rem;
+}
+
 /* .topSection{
-  
-  background-image: url(/images/logo/hero\ page\ svg\ \(1\).svg);
-  background-position: 52% 6%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 115vh;
-  margin-bottom: 10px;
-  position: relative;
-  margin-top: 4rem;
-
-} */
-
-.topSection{
   height: 29rem;
-}
+} */
 }
 
 @media  (max-width : 375px)
@@ -386,14 +630,73 @@ text-align: center;
 
 }
 
-@media(min-width: 628px) and  (max-width: 980px )
-{
-
-    .footerback{
-        height: 32rem;
-      }
+@media (max-width: 950px) {
+.abouttext-div p {
+  font-size: 18px;
+  line-height: 2.2;
+}
+.aboutimage-div img {
+  max-width: 27rem;
+  margin-top: 9rem;
+}
 }
 
 
+@media (max-width: 912px) {
 
+  .about-hero-image img {
+    width: 52%;
+}
+  .custom-container {
+    margin-left: 0rem;
+    margin-top: 0rem;
+}
+  .col-md-3 {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+  .col-md-4 {
+    flex-basis: 50% !important;
+    max-width: 50% !important;
+  }
+}
 
+@media (max-width: 769px) {
+  .col-md-3 {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+  .col-md-4 {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+  
+}
+
+@media (max-width: 600px) {
+
+  .about-hero-image img {
+display: none;
+  }
+  .custom-container {
+  
+    top: 40px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.hero-subheading {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.hero-heading {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.hero-paragraph {
+  font-size: 18px;
+  line-height: 30px;
+}
+}

@@ -1,22 +1,74 @@
+const phoneInput = document.getElementById('bmiUserPhoneNo');
+const phoneInput1 = document.getElementById('bmiUserPhoneNo1');
+const phoneNumberRegex = /^[6897]\d{9}$/;
 
+// bmi validation for one 
+phoneInput.addEventListener('input', function() {
+  const phoneNumber = this.value;
 
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
+  if (phoneNumberRegex.test(phoneNumber)) {
+    this.classList.remove('invalid');
+    this.classList.add('valid');
+    this.setAttribute('data-bs-original-title', '');
+  } else {
+    this.classList.remove('valid');
+    this.classList.add('invalid');
+    this.setAttribute('data-bs-original-title', 'Please enter a valid 10-digit phone number.');
   }
-}
+  
 
-window.addEventListener("scroll", reveal);
+  // Disable the calculate button if phone number is invalid
+  const calculateButton = document.getElementById('calculate');
+  calculateButton.disabled = !phoneNumberRegex.test(phoneNumber);
+
+  // Reinitialize the Bootstrap Tooltip
+  const tooltip = new bootstrap.Tooltip(phoneInput);
+});
+
+
+
+phoneInput1.addEventListener('input', function() {
+  const phoneNumber1 = this.value;
+
+  if (phoneNumberRegex.test(phoneNumber)) {
+    this.classList.remove('invalid');
+    this.classList.add('valid');
+    this.setAttribute('data-bs-original-title', '');
+  } else {
+    this.classList.remove('valid');
+    this.classList.add('invalid');
+    this.setAttribute('data-bs-original-title', 'Please enter a valid 10-digit phone number.');
+  }
+  
+
+  // Disable the calculate button if phone number is invalid
+  const calculateButton1 = document.getElementById('calculate1');
+  calculateButton1.disabled = !phoneNumberRegex.test(phoneNumber1);
+
+  // Reinitialize the Bootstrap Tooltip
+  const tooltip = new bootstrap.Tooltip(phoneInput);
+});
+
+// Prevent form submission if phone number is invalid
+const form = document.querySelector('.bmi-calculator form');
+form.addEventListener('submit', function(event) {
+  const phoneNumber = phoneInput.value;
+
+  if (!phoneNumberRegex.test(phoneNumber)) {
+    event.preventDefault();
+    // Display an error message or take other actions
+    alert('Please enter a valid phone number before submitting the form.');
+  }
+});
+
+
+const cards = document.querySelectorAll('.fitness_card');
+
+cards.forEach(card => {
+  card.addEventListener('click', function() {
+    this.classList.toggle('fitness_card-clickable');
+  });
+});
 
 
 
@@ -42,6 +94,8 @@ crossbutton.addEventListener('click', () => {
 
 
 
+const colorPoint1 = document.querySelector('.color-point1');
+
 document.getElementById('calculate1').addEventListener('click', function() {
   var name = document.getElementById('bmiUsername1').value;
   var phoneNo = document.getElementById('bmiUserPhoneNo1').value;
@@ -51,8 +105,8 @@ document.getElementById('calculate1').addEventListener('click', function() {
   if (weight && height && name && phoneNo) {
     var bmi = weight / (height * height);
     // var category = getBmiCategory(bmi);
-       getBmiCategory(bmi)
-    document.getElementById('result1').innerText = bmi.toFixed(2);
+       getBmiCategory1(bmi)
+    // document.getElementById('result1').innerText = bmi.toFixed(2);
     // document.getElementById('bmi_Content').innerText =category;
   } else {
     alert("All fields are required!");
@@ -60,18 +114,97 @@ document.getElementById('calculate1').addEventListener('click', function() {
   }
 });
 
+function getBmiCategory1(bmi) {
+  const redbox1 = document.getElementById("box-red1");
+  const yellowbox1 = document.getElementById("box-yellow1");
+  const bluebox1 = document.getElementById("box-blue1");
+  const greenbox1 = document.getElementById("box-green1");
+  colorPoint1.style.animation = 'movePoint 4s linear infinite';
+  bluebox1.classList.remove("box-popup");
+  redbox1.classList.remove("box-popup");
+  greenbox1.classList.remove("box-popup");
+  yellowbox1.classList.remove("box-popup");
+  if (bmi < 18.5) {
+    // return "Underweight";
+  
+   
+    setTimeout(function() {
+      // redbox.classList.remove("box-popup"); // Remove the class after 30 seconds
+      colorPoint1.style.animation = '';
+      redbox1.classList.add("box-popup");
+      document.getElementById('result1').innerText = bmi.toFixed(2);
+      scaleScaler1(0);
+    }, 4000);
+ 
+  } else if (bmi >= 18.5 && bmi < 25) {
+   
+    setTimeout(function() {
+      // bluebox.classList.remove("box-popup"); // Remove the class after 30 seconds
+      colorPoint1.style.animation = '';
+      bluebox1.classList.add("box-popup");
+      document.getElementById('result1').innerText = bmi.toFixed(2);
+      scaleScaler1(1);
+    }, 4000);
+   
+  } else if (bmi >= 25 && bmi < 30) {
+   
+    setTimeout(function() {
+      colorPoint1.style.animation = '';
+      greenbox1.classList.add("box-popup");
+      document.getElementById('result1').innerText = bmi.toFixed(2);
+      scaleScaler1(2);
+      // greenbox.classList.remove("box-popup"); // Remove the class after 30 seconds
+    }, 4000);
+   
+  } else {
+  
+    setTimeout(function() {
+      yellowbox1.classList.add("box-popup");
+      colorPoint1.style.animation = '';
+      document.getElementById('result1').innerText = bmi.toFixed(2);
+      scaleScaler1(3);
+      // yellowbox.classList.remove("box-popup"); // Remove the class after 30 seconds
+    }, 4000);
+}
+}
+function scaleScaler1(pos)
+{
 
+  var colorLine = document.getElementById('color-line');
+  var colorPoint = document.getElementById('color-point');
+
+  var positions = [-7, -2, 2, 7]; // Positions for each color
+
+  var position = positions[pos];
+  colorPoint.style.transform = `translate(${position}rem, -0.6rem)`;
+}
+
+
+const colorPoint = document.querySelector('.color-point');
+// inputBox.addEventListener('click', function() {
+//   colorPoint.style.animation = 'movePoint 4s linear infinite';
+// });
 document.getElementById('calculate').addEventListener('click', function() {
   var name = document.getElementById('bmiUsername').value;
   var phoneNo = document.getElementById('bmiUserPhoneNo').value;
   var weight = parseFloat(document.getElementById('weightValue').value);
   var height = parseFloat(document.getElementById('heightValue').value) / 100;
+  var gender = document.getElementById('gender').value;
+  var age = document.getElementById('age').value;
+  var heightInput = document.getElementById('heightValue').value;
+
+
+  // formData.append('result', result);
+  // formData.append('spreadsheetId', spreadsheetId);
+  // formData.append('sheetName', sheetName);
 
   if (weight && height && name && phoneNo) {
     var bmi = weight / (height * height);
     // var category = getBmiCategory(bmi);
        getBmiCategory(bmi)
-    document.getElementById('result').innerText = bmi.toFixed(2);
+       var bmiRounded = bmi.toFixed(2);
+       submitForm(name, phoneNo, gender, age, weight, heightInput,bmiRounded);
+    // document.getElementById('result').innerText = bmi.toFixed(2);
     // document.getElementById('bmi_Content').innerText =category;
   } else {
     alert("All fields are required!");
@@ -80,17 +213,82 @@ document.getElementById('calculate').addEventListener('click', function() {
 });
 
 
+function submitForm(name, phone, gender, age, weight, height,bmi) {
+  // Prepare the form data
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwgB-90FJODNzEbuHoEhDOkgpiljw9jIFmxq0Iqzv8aSJATX3sEF83kGX1Ib1hdqKilHQ/exec'
+    
+  var formData = new FormData();
+  formData.append('Name', name);
+  formData.append('phone', phone);
+  formData.append('gender', gender);
+  formData.append('age', age);
+  formData.append('weight', weight);
+  formData.append('height', height);
+  formData.append('BMI_Result', bmi);
+  // const form = document.forms['submit-to-google-sheet']
+
+    fetch(scriptURL, { method: 'POST', body: formData})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+
+}
+
+
 
 function getBmiCategory(bmi) {
+  const redbox = document.getElementById("box-red");
+  const yellowbox = document.getElementById("box-yellow");
+  const bluebox = document.getElementById("box-blue");
+  const greenbox = document.getElementById("box-green");
+ 
+  // colorPoint.style.animation = ''; 
+  colorPoint.style.animation = 'movePoint 4s linear infinite';
+  bluebox.classList.remove("box-popup");
+  redbox.classList.remove("box-popup");
+  greenbox.classList.remove("box-popup");
+  yellowbox.classList.remove("box-popup");
   if (bmi < 18.5) {
     // return "Underweight";
-    scaleScaler(0);
+  
+   
+    setTimeout(function() {
+      // redbox.classList.remove("box-popup"); // Remove the class after 30 seconds
+      colorPoint.style.animation = '';
+      redbox.classList.add("box-popup");
+      document.getElementById('result').innerText = bmi.toFixed(2);
+      scaleScaler(0);
+    }, 4000);
+ 
   } else if (bmi >= 18.5 && bmi < 25) {
-    scaleScaler(1);
+   
+    setTimeout(function() {
+      // bluebox.classList.remove("box-popup"); // Remove the class after 30 seconds
+      colorPoint.style.animation = '';
+      bluebox.classList.add("box-popup");
+      document.getElementById('result').innerText = bmi.toFixed(2);
+      scaleScaler(1);
+    }, 4000);
+   
   } else if (bmi >= 25 && bmi < 30) {
-    scaleScaler(2);
+   
+    setTimeout(function() {
+      colorPoint.style.animation = '';
+      greenbox.classList.add("box-popup");
+      document.getElementById('result').innerText = bmi.toFixed(2);
+      scaleScaler(2);
+      // greenbox.classList.remove("box-popup"); // Remove the class after 30 seconds
+    }, 4000);
+   
   } else {
-    scaleScaler(3);
+  
+    setTimeout(function() {
+      yellowbox.classList.add("box-popup");
+      colorPoint.style.animation = '';
+      document.getElementById('result').innerText = bmi.toFixed(2);
+      scaleScaler(3);
+      // yellowbox.classList.remove("box-popup"); // Remove the class after 30 seconds
+    }, 4000);
+
   }
 }
 function scaleScaler(pos)
@@ -102,210 +300,15 @@ function scaleScaler(pos)
   var positions = [-7, -2, 2, 7]; // Positions for each color
 
   var position = positions[pos];
-  colorPoint.style.transform = `translateX(${position}rem)`;
+  colorPoint.style.transform = `translate(${position}rem, -0.6rem)`;
 }
 
 
-// var fadeBox = document.querySelector('.left-div');
-// var lastScrollPosition = 0;
-
-// window.addEventListener('scroll', function() {
-//   var currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-//   if (currentScrollPosition > lastScrollPosition) {
-//     // Scroll down
-//     fadeBox.classList.remove('fade-left');
-//     fadeBox.classList.add('fade-right');
-//     window.addEventListener("scroll", reveal);
-//   } else {
-//     // Scroll up
-//     fadeBox.classList.remove('fade-right');
-//     fadeBox.classList.add('fade-left');
-//     window.addEventListener("scroll", reveal);
-//   }
-
-//   lastScrollPosition = currentScrollPosition;
-// });
-// var lastScrollPosition = 0;
-// window.addEventListener('scroll', function() {
-//   var homeSection = document.getElementById('home');
-//   var aboutSection = document.getElementById('about');
-
-//   // var fadeBox = document.querySelector('.left-div');
-
-  
-//   var homeLeft = this.document.querySelector('.left-div');
-//   var homeRight = this.document.querySelector('.right-div');
-//   var aboutLeft = this.document.querySelector('.about-section');
-//   var aboutRight = this.document.querySelector('.image-section');
-  
-//   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-//   var homeHeight = 363;
-  
-//   if (scrollPosition > homeHeight && scrollPosition > lastScrollPosition) {
-//     var aboutOffset = scrollPosition - homeHeight;
-
-//     homeLeft.classList.add('fadeout-left');
-//     homeLeft.classList.add('active');
-//     homeLeft.classList.remove('active');
-
-//     homeRight.classList.add('fadeout-right');
-//     homeRight.classList.add('active');
-//     homeRight.classList.remove('active');
-    
-//     aboutLeft.classList.remove('fade-right');
-//     aboutLeft.classList.remove('fade-left');
-//     aboutLeft.classList.add('fade-left');
-//     aboutLeft.classList.add('active');
-//     aboutLeft.classList.remove('active');
-    
-//     aboutRight.classList.remove('fade-left');
-//     aboutRight.classList.remove('fade-right');
-//     aboutRight.classList.add('fade-right');
-//     aboutRight.classList.add('active');
-//     aboutRight.classList.remove('active');
-//     // window.addEventListener("scroll", reveal);
-//   }
-//      else{
-
-//       aboutLeft.classList.add('fadeout-left');
-//       aboutLeft.classList.add('active');
-//       aboutLeft.classList.remove('active');
-  
-//       aboutRight.classList.add('fadeout-right');
-//       aboutRight.classList.add('active');
-//       aboutRight.classList.remove('active');
-      
-//       homeLeft.classList.remove('fade-right');
-//       homeLeft.classList.remove('fade-left');
-//       homeLeft.classList.add('fade-right');
-//       homeLeft.classList.add('active');
-//       homeLeft.classList.remove('active');
-      
-//       homeRight.classList.remove('fade-left');
-//       homeRight.classList.remove('fade-right');
-//       homeRight.classList.add('fade-left');
-//       homeRight.classList.add('active');
-//       homeRight.classList.remove('active');
-//       // window.addEventListener("scroll", reveal);
-      
-//         // homeLeft.classList.remove('fade-left');
-//         // homeLeft.classList.remove('fade-right');
-//         // homeLeft.classList.add('fade-right');
-//         // aboutRight.classList.remove('active');
-//         // window.addEventListener("scroll", reveal);
-//         // homeRight.classList.remove('fade-right');
-//         // homeRight.classList.remove('fade-left');
-//         // homeRight.classList.add('fade-left');
-//         // window.addEventListener("scroll", reveal);
-//         // aboutLeft.classList.remove('fade-left');
-//         // aboutLeft.classList.remove('fade-right');
-//         // aboutLeft.classList.add('fade-right');
-//         // window.addEventListener("scroll", reveal);
-//         // aboutRight.classList.remove('fade-right');
-//         // aboutRight.classList.remove('fade-left');
-//         // aboutRight.classList.add('fade-left');
-//         // window.addEventListener("scroll", reveal);
-   
-//   }
-//   window.addEventListener("scroll", reveal);
-//   lastScrollPosition = scrollPosition;
-// });
-
-
-
-
-// active section
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   let sections = document.querySelectorAll(".section");
-//   let currentSectionIndex = 0;
-//   let isScrolling = false;
-  
-//   function scrollToNextSection() {
-//     if (isScrolling) return;
-//     isScrolling = true;
-    
-//     currentSectionIndex++;
-//     if (currentSectionIndex >= sections.length) {
-//       currentSectionIndex = 0;
-//     }
-    
-//     sections[currentSectionIndex].scrollIntoView({ behavior: "smooth" });
-    
-//     setTimeout(function() {
-//       isScrolling = false;
-//     }, 1000);
-//   }
-  
-//   document.addEventListener("wheel", scrollToNextSection);
-// });
-
-
-// scroll view 
-// document.addEventListener("DOMContentLoaded", function() {
-//   const sections = document.querySelectorAll("section");
-//   const navLinks = document.querySelectorAll("nav a");
-
-//   window.addEventListener("scroll", function() {
-//     let current = "";
-
-//     sections.forEach(function(section) {
-//       const sectionTop = section.offsetTop;
-//       const sectionHeight = section.clientHeight;
-
-//       if (pageYOffset >= sectionTop - sectionHeight / 3) {
-//         current = section.getAttribute("id");
-//       }
-//     });
-
-//     navLinks.forEach(function(link) {
-//       link.classList.remove("active");
-//       if (link.classList.contains(current)) {
-//         link.classList.add("active");
-//       }
-//     });
-//   });
-// });
-
-
-
-//scroll view test 
-
-// let didScroll = false;
-// let paralaxTitles = document.querySelectorAll('.paralax-title1');
-// let paralaxTitles1 = document.querySelectorAll('.paralax-title1');
-
-// const scrollInProgress = () => {
-//   didScroll = true
-// }
-
-// const raf = () => {
-//   if(didScroll) {
-//     paralaxTitles.forEach((element, index) => {
-//       element.style.transform = "translateX("+ window.scrollY / 10 + "%)";
-      
-//     })
-//     // paralaxTitle1.forEach((element, index) => {
-//     //   element.style.transform = "translateX("+ window.scrollY / 10 + "%)"
-//     // })
-//     didScroll = false;
-//   }
-//   requestAnimationFrame(raf);
-// }
-
-
-
-// requestAnimationFrame(raf);
-// window.addEventListener('scroll', scrollInProgress)
 
 
 
 
 
-// document.addEventListener("DOMContentLoaded", function() {
- 
-// });
 document.addEventListener("DOMContentLoaded", function() {
   const select = document.getElementById("country-select");
   select.addEventListener("change", function() {
@@ -314,53 +317,13 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 
+  const select1 = document.getElementById("country-select1");
+  select1.addEventListener("change", function() {
+    const flag = this.options[this.selectedIndex].getAttribute("data-flag");
+    this.style.backgroundImage = `url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/${flag}.svg')`;
+  });
 
-
-  const navbar = document.querySelector('.navbar');
-  const navbarLinks = navbar.querySelectorAll('.nav-link');
-
-  function updateNavText() {
-    const homeSection = document.querySelector('#home');
-    const homeSectionRect = homeSection.getBoundingClientRect();
-
-    if (homeSectionRect.top > 0 || homeSectionRect.bottom < window.innerHeight) {
-      navbarLinks.forEach(function(link) {
-        link.classList.remove('white-text');
-      });
-    } else {
-      navbarLinks.forEach(function(link) {
-        link.classList.add('white-text');
-      });
-    }
-  }
-
-  updateNavText();
-  window.addEventListener('scroll', updateNavText);
 });
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   const navbar = document.querySelector('.navbar');
-//   const navbarLinks = navbar.querySelectorAll('.nav-link');
-
-//   function updateNavText() {
-//     const homeSection = document.querySelector('#home');
-//     const homeSectionRect = homeSection.getBoundingClientRect();
-//     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-//     if (scrollPosition > homeSectionRect.bottom) {
-//       navbarLinks.forEach(function(link) {
-//         link.classList.add('white-text');
-//       });
-//     } else {
-//       navbarLinks.forEach(function(link) {
-//         link.classList.remove('white-text');
-//       });
-//     }
-//   }
-
-//   updateNavText();
-//   window.addEventListener('scroll', updateNavText);
-// });
 
 
 
@@ -405,11 +368,12 @@ var swiper = new Swiper(".slide-content1", {
 var swiper = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
-  loop: true,
-  centerSlide: 'true',
-  fade: 'true',
-  grabCursor: 'true',
+  loop: 10,
+  centerInsufficientSlides: true,
+  fadeEffect: true,
+  grabCursor: true,
   pagination: {
+    el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: true,
   },
@@ -417,16 +381,52 @@ var swiper = new Swiper(".slide-content", {
     nextEl: ".swiper-button-next-2",
     prevEl: ".swiper-button-prev-2",
   },
-
-  breakpoints:{
-      0: {
-          slidesPerView: 1,
-      },
-      520: {
-          slidesPerView: 2,
-      },
-      950: {
-          slidesPerView: 3,
-      },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    520: {
+      slidesPerView: 2,
+    },
+    950: {
+      slidesPerView: 3,
+    },
   },
 });
+
+
+
+
+
+
+// scroll to top function 
+
+var scrollToTopButton = document.getElementsByClassName(".scrollToTop");
+
+window.addEventListener("scroll", toggleScrollToTopButton);
+
+function toggleScrollToTopButton() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+  if (currentPosition > 0) {
+    window.requestAnimationFrame(scrollToTop);
+    window.scrollTo(0, currentPosition - currentPosition / 8);
+  }
+}
+
+
+
+
+
+
+
+
+
+

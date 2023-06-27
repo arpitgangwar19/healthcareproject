@@ -19,45 +19,63 @@
   }
 
   .membership-section {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 8rem;
-  }
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      margin-top: 8rem;
+    }
 
-  .membership-column {
-    flex-basis: 33.33%;
-    height: 300px;
-    width: 300px;
-    padding: 8px;
-    box-sizing: border-box;
-    background-color: white;
-    margin: 20px;
-    align-items: center;
-    text-align: center;
-    border-radius: 36px;
-  }
+    .membership-column {
+      flex-basis: 33.33%;
+      height: 300px;
+      width: 300px;
+      padding: 8px;
+      box-sizing: border-box;
+      background-color: white;
+      margin: 20px;
+      align-items: center;
+      text-align: center;
+      border-radius: 36px;
+      position: relative;
+      overflow: hidden;
+    }
 
-  .membership-heading {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #7687ab;
-    font-weight: 700;
-    padding: 9px;
+    .membership-heading {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #7687ab;
+      font-weight: 700;
+      padding: 9px;
+    }
 
-  }
+    .membership-image {
+      max-width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
 
-  .membership-image {
-    max-width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-  }
-  .membership-image:hover {
-    transform: scale(1.1);
-  }
+    .membership-image:hover {
+      transform: scale(1.1);
+    }
+
+    .dropdown-content {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      font-size: 14px;
+      transition: bottom 0.3s ease;
+    }
+
+    .membership-column:hover .dropdown-content {
+      bottom: 0;
+    }
 
   /* Media query for mobile devices */
   @media (max-width: 767px) {
@@ -78,14 +96,23 @@
     <div class="membership-column">
       <h3 class="membership-heading">Platinum Membership</h3>
       <img class="membership-image" src="/images/cards/card1.svg" alt="Column 1 Image">
+      <div class="dropdown-content">
+        <p>Additional details about Platinum Membership. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cumque laboriosam deserunt provident vero, quos libero quam incidunt omnis delectus similique maxime autem. Iusto, reprehenderit quia doloribus odio corrupti sint?</p>
+      </div>
     </div>
     <div class="membership-column">
       <h3 class="membership-heading">Gold Membership</h3>
       <img class="membership-image" src="/images/cards/card2.svg" alt="Column 2 Image">
+      <div class="dropdown-content">
+        <p>Additional details about Gold Membership.</p>
+      </div>
     </div>
     <div class="membership-column">
       <h3 class="membership-heading">Silver Membership</h3>
       <img class="membership-image" src="/images/cards/card3.svg" alt="Column 3 Image">
+      <div class="dropdown-content">
+        <p>Additional details about Silver Membership.</p>
+      </div>
     </div>
   </div>
 
@@ -94,10 +121,10 @@
   <div id="footer"></div>
 
    
-<script type="text/javascript" src="/js/skrollr.js  "></script>
+<!-- <script type="text/javascript" src="/js/skrollr.js  "></script>
 <script type="text/javascript">
 var s = skrollr.init();
-</script>
+</script> -->
 
 </body>
 <script type="text/javascript" src="/js/app.js"></script>

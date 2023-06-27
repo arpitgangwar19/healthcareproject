@@ -1,0 +1,124 @@
+  <section class="" id="home">
+            <!-- <section class="midsection"> -->
+              <div class="herocontainer ">
+                  <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;" -->
+                  <div class="left col-lg-7 ">
+                    <!-- <img src="/images/about/girl background.png" alt="Image"> -->
+                    
+                    <div class="image-text"> 
+                      <p class="banner_content">
+                        The Care and Compassion <br>
+                        you <span style="    color: #00264e;
+                        margin-left: 25px;">need!</span><br>
+                          <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a>
+                      </p>  
+                    
+                      <!-- <span class="banner_content">The Care and Compassion </span>
+                      <br>
+                      <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
+                      margin-left: 25px;">need!</span><br> -->
+                    
+                    </div>
+                      <!-- <div class="image-text"> <span class="banner_content">The Care and Compassion </span>
+                        <br>
+                        <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
+                        margin-left: 25px;">need!</span><br>
+                        <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a></div> -->
+                  </div>
+                  <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:200px;" -->
+                  <div class="right col-lg-4" >
+                    
+                    <div class="bmi-calculator">
+                          <h2 >BMI Calculator</h2>
+                          <form name="submit-to-google-sheet">
+                            <div class="input-group">
+                              <label for="name">Name:</label>
+                              <input class="inputBox form-control rounded" type="text" id="bmiUsername" required>
+                            </div>
+                            <!-- <div class="input-group">
+                              <label for="phone">Ph.No:</label>
+                            
+                              <input id="phone" type="tel">
+                              
+                            
+                            </div> -->
+                            <div class="input-group">
+                              <label for="phone">Ph.No:</label>
+
+                              <div class="input-group-append">
+                                <span class="input-group-text">
+                                  <select id="country-select1" class="form-select form-control inputBox rounded">
+                                    <option value="+1" data-flag="us">+1</option>
+                                    <option value="+44" data-flag="gb">+44</option>
+                                    <option value="+91" data-flag="in">+91</option>
+                                    <!-- Add more country codes and flags as needed -->
+                                  </select>
+                                </span>
+                              </div>
+                              <input type="tel" class="inputBox form-control rounded" id="bmiUserPhoneNo" placeholder="Phone Number" data-bs-toggle="tooltip" data-bs-placement="right" title="">
+
+                              
+                            </div>
+                            
+                            <div class="input-group">
+                              <label for="gender">Gender:</label>
+                              <select id="gender" class="form-control inputBox rounded" style="flex: 1;
+                              width: 100%;
+                              border: none;
+                              border-radius: 5px;
+                              padding: 8px;
+                              box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
+                              border: var(--bs-border-width) solid var(--bs-border-color);
+                              " required>
+                                <option value="">Select</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                              </select>
+                              <label for="age">Age:</label>
+                              <input class="inputBox form-control rounded" type="number" id="age" required>
+                            </div>
+                          
+                            <div class="input-group">
+                              <label for="weight">Weight (kg):</label>
+                              <input type="range" class="slider" style="border-radius: 6px;"  id="weightRange" min="20" max="180" step="1" value="170">
+                              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="weightValue" required>
+                            </div>
+                            <div class="input-group">
+                              <label for="height">Height (cm):</label>
+                              <input type="range" class="slider" style="border-radius: 6px;"  id="heightRange" min="100" max="300" step="1" value="170">
+                              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="heightValue" required>
+                            </div>
+                          
+                          </form>
+                          <div class="outputContainer">
+                            <button id="calculate" class="button">Calculate</button>
+                            <div class="text-row">
+                            
+                              <p>Your BMI</p>
+                              <h3 id="result">0.00</h3> 
+                            
+                            </div>
+                          </div>
+                        
+                            <div class="color-line">
+                              <div class="color yellow"></div>
+                              <div class="color green"></div>
+                              <div class="color orange"></div>
+                              <div class="color red"></div>
+                              <div class="color-point"></div>
+                            </div>
+                            <div class="box-container">
+                    <div class="box box-red" id="box-red" >Under weight < 18.5</div>
+                    <div class="box box-blue" id="box-blue">Normal weight  18.5 - 25</div>
+                    <div class="box box-green" id="box-green">Over weight
+                      25 - 30</div>
+                    <div class="box box-yellow" id="box-yellow" >Obese
+                      >30</div>
+                  </div>
+                        
+                      
+                          
+                      </div>
+                    </div>
+               </div>
+        </section>
