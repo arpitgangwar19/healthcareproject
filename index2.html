@@ -62,7 +62,7 @@
                 <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
+                <a class="nav-link" href="about.html">About us</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuProgram" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,13 +83,13 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuServices">
                   <a class="dropdown-item" href="prohealth.html">Pro Health</a>
                   <a class="dropdown-item" href="fitnes.html">Fitness</a>
-                  <a class="dropdown-item" href="advancecare.html">Advance Care</a>
-                  <a class="dropdown-item" href="mindtraining.html">Mind Training</a>
-                  <a class="dropdown-item" href="memberships.html">Package <i class="fa-sharp fa-solid fa-crown" style="color: #ffd43b;"></i></a>
+                  <a class="dropdown-item" href="advancecare.html">Advanced care</a>
+                  <a class="dropdown-item" href="mindtraining.html">Mind training</a>
+                  <!-- <a class="dropdown-item" href="memberships.html">Package <i class="fa-sharp fa-solid fa-crown" style="color: #ffd43b;"></i></a> -->
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link glow-button" href="enquiry.html">Book Free Consultation</a>
+                <a class="nav-link glow-button" href="enquiry-form.html">Book free consultation</a>
               </li>
             </ul>
          
@@ -108,7 +108,8 @@
                     <p class="banner_content">
                       The Care and Compassion <br>
                       you <span style="    color: #00264e;">need!</span><br>
-                        <a href="#" class="main-btn mt-3 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a>
+                        <a id="" href="enquiry-form.html" class="consultation-button  mt-3" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Book free consultation</a>
+                        <!-- <a id="bookfreeconsultation" href="" class="  mt-2 consultation-button" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Book Now</a> -->
                     </p>  
                   
                     <!-- <span class="banner_content">The Care and Compassion </span>
@@ -314,19 +315,23 @@
           <span class="button-text">BMI Calculator</span>
           <p style="color: #00264e !important;
           font-size: 16px;">Body Mass Index</p>
-        <span class="button-arrow"><i class="fas fa-chevron-down"></i></span>
+        <span class="button-arrow"><i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-down"></i></span>
+        <!-- <div class="swiper-button">
+          <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-down"></i>
+        </div> -->
         </button>
         <!-- section2 -->
 
-        <section class="aboutcontainerwrapper section" style="margin-top: 6rem;" id="about">
+        <section class="aboutcontainerwrapper section " style="" id="about">
           <div class="aboutcontainer container-fluid">
               <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;"  -->
               <div class="abouttext-div" >
                 <!-- Add your text content here -->
-                <h1 >About Us</h1>
-                <div class="line" style="background-color:#164475"></div>
-                <div class="aboutustext"><p >Udhaivi is built on the rock-solid foundation of INTEGRITY &amp; HONESTY.The company has developed a healthcare system that facilitates medical services that are not confined to its origins. Our organization is also well-furnished with US equipment and is praised for its state-of-the-art healthcare service establishments, not just around the country, but also on&nbsp;a&nbsp;global&nbsp;scale.</p></div>
-                <button onclick="location.href='about.html'" class="knowmore_btn">Know More</button>        
+                <h1 class="undetline-content-home">About us</h1>
+                <!-- <div class="line" style="background-color:#164475"></div> -->
+                <div class="aboutustext"><p >Udhaivi is built on the rock-solid foundation of INTEGRITY &amp; HONESTY. The company has developed a healthcare system that facilitates medical services that are not confined to its origins. Our organization is also well-furnished with US equipment and is praised for its state-of-the-art healthcare service establishments, not just around the country, but also on&nbsp;a&nbsp;global&nbsp;scale.</p></div>
+                <button onclick="location.href='about.html'" class="knowmore_btn">Know more</button>        
               </div>
               <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:500px;" -->
               <div class="aboutimage-div"  >
@@ -341,8 +346,9 @@
       <!-- Our services Section  -->
 
       <section id="services" class="section">
-      <div class="team_header" ><h2 class="team-heading">OUR SERVICES</h2>
-        <div class="team_line" style="background-color: #164475;"></div></div> 
+      <div class="team_header" ><h2 class="team-heading undetline-content-home">Our services</h2>
+        <!-- <div class="team_line" style="background-color: #164475;"></div> -->
+      </div> 
 
 
         <div id="rowItemOurServices">
@@ -352,17 +358,7 @@
             <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:500px;" -->
             <div class="row justify-content-center">
               <div class="col-md-4">
-                <div class="service-card">
-                  <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
-                  <h4>Fitness</h4>
-                  <p>Preserve your health and enhance your 
-                    general quality of life by being aware
-                     of the advantages of physical fitness and
-                     knowing how active you should be.</p>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="service-card swiper-slide">
+                <div class="service-card" onclick="navigateToPage('prohealth.html')">
                   <img src="/images/ourservices/prohealth.svg" alt="Service 2" class="service-image">
                   <h4>Pro Health</h4>
                   <p> Having good health is of core importance 
@@ -373,7 +369,17 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="service-card ">
+                <div class="service-card" onclick="navigateToPage('fitnes.html')">
+                  <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
+                  <h4>Fitness</h4>
+                  <p>Preserve your health and enhance your quality of life by being aware
+                     of the advantages of physical fitness and
+                     knowing how active you should be.</p>
+                </div>
+              </div>
+              
+              <div class="col-md-4">
+                <div class="service-card" onclick="navigateToPage('advancecare.html')">
                   <img src="/images/ourservices/care.svg" alt="Service 3" class="service-image">
                   <h4>Advanced care</h4>
                   <p>Revolutionizing local healthcare. Healthcare 
@@ -389,10 +395,10 @@
             <div class="row justify-content-center">
             
               <div class="col-md-4">
-                <div class="service-card ">
+                <div class="service-card" onclick="navigateToPage('mindtraining.html')">
                   <img src="/images/ourservices/brain.svg" alt="Service 2" class="service-image">
                   <h4>Mind training</h4>
-                  <p>AKA Cognitive training , a practice that can 
+                  <p>AKA Cognitive training, a practice that can 
                     transform your life. Brain cells become healthy and
                      active through training. Brain fitness takes focused 
                     work via replication, just as physical fitness. 
@@ -402,7 +408,7 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="service-card">
+                <div class="service-card" onclick="navigateToPage('memberships.html')">
                   <img src="/images/ourservices/package.svg" alt="Service 3" class="service-image">
                   <h4>Package</h4>
                   <p>We provide the most economical health packages,
@@ -422,15 +428,15 @@
         
             <div class="slide-content1">
                 <div class="card-wrapper swiper-wrapper">
-                <div class="service-card swiper-slide">
+                <div class="service-card swiper-slide"  onclick="navigateToPage('fitnes.html')">
                   <img src="/images/ourservices/fitness.svg" alt="Service 1" class="service-image">
                   <h4>Fitness</h4>
                   <p>Preserve your health and enhance your 
-                    general quality of life by being aware
+                     quality of life by being aware
                      of the advantages of physical fitness and
                      knowing how active you should be.</p>
                 </div>
-                <div class="service-card swiper-slide">
+                <div class="service-card swiper-slide"  onclick="navigateToPage('prohealth.html')">
                   <img src="/images/ourservices/prohealth.svg" alt="Service 2" class="service-image">
                   <h4>Pro Health</h4>
                   <p>Having good health is of core importance 
@@ -439,7 +445,7 @@
                      Good health and living a successful life are 
                     intimately intertwined.</p>
                 </div>
-                <div class="service-card swiper-slide">
+                <div class="service-card swiper-slide"  onclick="navigateToPage('advancecare.html')">
                   <img src="/images/ourservices/care.svg" alt="Service 3" class="service-image">
                   <h4>Advanced care</h4>
                   <p>Revolutionizing local healthcare. Healthcare 
@@ -448,10 +454,10 @@
                      When you require primary or urgent care let our 
                     qualified professionals handle it.</p>
                 </div>
-                <div class="service-card swiper-slide">
+                <div class="service-card swiper-slide"  onclick="navigateToPage('mindtraining.html')">
                   <img src="/images/ourservices/brain.svg" alt="Service 2" class="service-image">
                   <h4>Mind training</h4>
-                  <p>AKA Cognitive training ,a practice that can 
+                  <p>AKA Cognitive training, a practice that can 
                     transform your life. Brain cells become healthy and
                      active through training. Brain fitness takes focused 
                     work via replication, just as physical fitness. 
@@ -459,7 +465,7 @@
                      more frequently; brain training exercises are a 
                     great approach to maintain general brain health.</p>
                 </div>
-                <div class="service-card swiper-slide">
+                <div class="service-card swiper-slide"  onclick="navigateToPage('memberships.html')">
                   <img src="/images/ourservices/package.svg" alt="Service 3" class="service-image">
                   <h4>Package</h4>
                   <p>We provide the most economical health packages,
@@ -501,75 +507,65 @@
       <!-- Start of Our Programs -->
 
       <section id="programs" class="section">
-      <div class="team_header" ><h2 class="team-heading">OUR PROGRAMS</h2>
-        <div class="team_line" style="background-color: #164475;"></div></div>
-
-        <div class="slide-container swiper">
-        
-          <div class="slide-content">
-              <div class="card-wrapper swiper-wrapper">
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/corporate-wellness.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Corporate Wellness Program</h3>
-                    <p class="card-text">A new dimension to corporate wellness programs! Helping you create a great team culture. Specific / Measurable / Attainable / Realistic / Timely</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/community-wellness.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Community Wellness Program</h3>
-                    <p class="card-text">Community Wellness for the best healthcare experience! Partnering with  us can be cost-effective and mutually beneficial.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/institution-wellness.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Institution Wellness Program</h3>
-                    <p class="card-text">Creating healthier and happier campuses. Our advanced technology platform offers  stigma-free therapeutic solutions.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/individual-plans.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Individual Plans</h3>
-                    <p class="card-text">Seamless care at your fingertips now! The use and amalgamation of technology and healthcare is best in the field for  effective intervention.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/clubs.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Clubs</h3>
-                    <p class="card-text">Seamless care at your fingertips now! The use and amalgamation of technology and healthcare is best in the field for  effective intervention.</p>
-                  </div>
-                </div>
-                <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/community-wellness.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Community Wellness Program</h3>
-                    <p class="card-text">Community Wellness for the best healthcare experience! Partnering with  us can be cost-effective and mutually beneficial.</p>
-                  </div>
-                </div>
-                <!-- <div class="cardsw program-box swiper-slide">
-                  <img src="/images/ourprogram/7xm.xyz632961.svg" class="card-img-top" alt="Program 4">
-                  <div class="card-body">
-                    <h3 class="card-title">Program 4</h3>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div> -->
-                  
-              </div>
-          </div>
-
-          <div class="swiper-button-next-2 swiper-navBtnNext"><div class="swiper-arrow-icon">
-            <i class="fa-solid fa-chevron-right fa-lg"></i>
-            </div></div>
-            <div class="swiper-button-prev-2 swiper-navBtnPrev"><div class="swiper-arrow-icon">
-              <i class="fa-solid fa-chevron-left fa-lg"></i>
-              </div></div>
-
-          <div class="swiper-pagination"></div>
+      <div class="team_header" ><h2 class="team-heading undetline-content-home">Our programs</h2>
+        <!-- <div class="team_line" style="background-color: #164475;"></div> -->
       </div>
+      <div class="slide-container swiper">
+        <div class="slide-content">
+          <div class="card-wrapper swiper-wrapper">
+            <a href="corporate-welness-program.html" class="cardsw program-box swiper-slide">
+              <img src="/images/ourprogram/corporate-wellness.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Corporate wellness program</h3>
+                <p class="card-text">A new dimension to corporate wellness programs! Helping you create a great team culture.<br> Specific / Measurable / Realistic / Timely.</p>
+              </div>
+            </a>
+            <a href="community-wellness-program.html" class="cardsw program-box swiper-slide">
+              <img src="/images/ourprogram/community-wellness.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Community wellness program</h3>
+                <p class="card-text">Community wellness for the best healthcare experience! Partnering with us can be cost-effective and mutually beneficial.</p>
+              </div>
+            </a>
+            <a href="institution-wellness.html" class="cardsw program-box swiper-slide">
+              <img src="/images/ourprogram/institution-wellness.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Institution wellness program</h3>
+                <p class="card-text">Creating healthier and happier campuses. Our advanced technology platform offers stigma-free therapeutic solutions.</p>
+              </div>
+            </a>
+            <a href="memberships.html" class="cardsw program-box swiper-slide">
+              <img src="/images/ourprogram/individual-plans.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Individual plans</h3>
+                <p class="card-text">We provide the most economical health packages, starting from basic to premium. Our packages contain a range of tests, doctor consultations, and much more which covers all demographics including adults, males & females, children, senior citizens etc.</p>
+              </div>
+            </a>
+            <a href="clubs.html" class="cardsw program-box swiper-slide">
+              <img src="/images/ourprogram/clubs.svg" class="card-img-top" alt="Program 4">
+              <div class="card-body">
+                <h3 class="card-title">Clubs</h3>
+                <p class="card-text">Seamless care at your fingertips now! The use and amalgamation of technology and healthcare is best in the field for effective intervention.</p>
+              </div>
+            </a>
+            <!-- Add more card items with anchor tags as needed -->
+          </div>
+        </div>
+      
+        <div class="swiper-button-next-2 swiper-navBtnNext">
+          <div class="swiper-arrow-icon">
+            <i class="fa-solid fa-chevron-right fa-lg"></i>
+          </div>
+        </div>
+        <div class="swiper-button-prev-2 swiper-navBtnPrev">
+          <div class="swiper-arrow-icon">
+            <i class="fa-solid fa-chevron-left fa-lg"></i>
+          </div>
+        </div>
+      
+        <div class="swiper-pagination"></div>
+      </div>
+      
         
         
         
@@ -699,6 +695,13 @@
           weightRange.addEventListener('input', function() {
           weightValue.value = this.value;
           });
+          heightValue.addEventListener('input', function() {
+          heightRange.value = this.value;
+          });
+
+          weightValue.addEventListener('input', function() {
+          weightRange.value = this.value;
+          });
           // for calculating BMI and fetching feilds      
           const heightRange1 = document.getElementById('heightRange1');
           const heightValue1 = document.getElementById('heightValue1');
@@ -709,6 +712,13 @@
           const weightValue1 = document.getElementById('weightValue1');
           weightRange1.addEventListener('input', function() {
           weightValue1.value = this.value;
+          });
+          heightValue1.addEventListener('input', function() {
+          heightRange1.value = this.value;
+          });
+
+          weightValue1.addEventListener('input', function() {
+          weightRange1.value = this.value;
           });
 
 
@@ -723,15 +733,13 @@
   }
 });
 
-
-
-
-   
               
 
                       });
 
-
+                      function navigateToPage(url) {
+  window.location.href = url;
+}
            
          </script>
 

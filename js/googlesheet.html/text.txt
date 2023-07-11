@@ -1,124 +1,249 @@
-  <section class="" id="home">
-            <!-- <section class="midsection"> -->
-              <div class="herocontainer ">
-                  <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:-500px;" -->
-                  <div class="left col-lg-7 ">
-                    <!-- <img src="/images/about/girl background.png" alt="Image"> -->
-                    
-                    <div class="image-text"> 
-                      <p class="banner_content">
-                        The Care and Compassion <br>
-                        you <span style="    color: #00264e;
-                        margin-left: 25px;">need!</span><br>
-                          <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a>
-                      </p>  
-                    
-                      <!-- <span class="banner_content">The Care and Compassion </span>
-                      <br>
-                      <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
-                      margin-left: 25px;">need!</span><br> -->
-                    
-                    </div>
-                      <!-- <div class="image-text"> <span class="banner_content">The Care and Compassion </span>
-                        <br>
-                        <span class="banner_content">you </span><span class="banner_content" style="    color: #00264e;
-                        margin-left: 25px;">need!</span><br>
-                        <a href="#" class="main-btn mt-4 fill-btn" style="float: left;"><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #ff0000;"></i> Call now</a></div> -->
-                  </div>
-                  <!-- data-center-center="opacity:1;left:0" data-0-bottom="opacity:0;left:200px;" -->
-                  <div class="right col-lg-4" >
-                    
-                    <div class="bmi-calculator">
-                          <h2 >BMI Calculator</h2>
-                          <form name="submit-to-google-sheet">
-                            <div class="input-group">
-                              <label for="name">Name:</label>
-                              <input class="inputBox form-control rounded" type="text" id="bmiUsername" required>
-                            </div>
-                            <!-- <div class="input-group">
-                              <label for="phone">Ph.No:</label>
-                            
-                              <input id="phone" type="tel">
-                              
-                            
-                            </div> -->
-                            <div class="input-group">
-                              <label for="phone">Ph.No:</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <title>Udhaivi</title>
+  <link rel="icon" type="image/png" href="">
+  <link rel="stylesheet"  href="css/style.css">
+  <link rel="stylesheet"  href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
-                              <div class="input-group-append">
-                                <span class="input-group-text">
-                                  <select id="country-select1" class="form-select form-control inputBox rounded">
-                                    <option value="+1" data-flag="us">+1</option>
-                                    <option value="+44" data-flag="gb">+44</option>
-                                    <option value="+91" data-flag="in">+91</option>
-                                    <!-- Add more country codes and flags as needed -->
-                                  </select>
-                                </span>
-                              </div>
-                              <input type="tel" class="inputBox form-control rounded" id="bmiUserPhoneNo" placeholder="Phone Number" data-bs-toggle="tooltip" data-bs-placement="right" title="">
+	<style>
+	  .service-card h4{
+      color: #164475 !important;
+    }
+    .prohealth_header{
+      /* text-align: left; */
+      /* margin-left: 8rem; */
+      margin-top: 0;
+      color: #164475 !important;
+    }
+    .prohealth_line{
+      /* margin-left: 0; */
+      /* width: 10%; */
+      color: #92E7D5;
+      background-color: #92E7D5;
+    }
 
-                              
-                            </div>
-                            
-                            <div class="input-group">
-                              <label for="gender">Gender:</label>
-                              <select id="gender" class="form-control inputBox rounded" style="flex: 1;
-                              width: 100%;
-                              border: none;
-                              border-radius: 5px;
-                              padding: 8px;
-                              box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.161), 0px 3px 6px rgba(0, 0, 0, 0.161);
-                              border: var(--bs-border-width) solid var(--bs-border-color);
-                              " required>
-                                <option value="">Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                              </select>
-                              <label for="age">Age:</label>
-                              <input class="inputBox form-control rounded" type="number" id="age" required>
-                            </div>
-                          
-                            <div class="input-group">
-                              <label for="weight">Weight (kg):</label>
-                              <input type="range" class="slider" style="border-radius: 6px;"  id="weightRange" min="20" max="180" step="1" value="170">
-                              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="weightValue" required>
-                            </div>
-                            <div class="input-group">
-                              <label for="height">Height (cm):</label>
-                              <input type="range" class="slider" style="border-radius: 6px;"  id="heightRange" min="100" max="300" step="1" value="170">
-                              <input class="inputBox form-control rounded" style="margin-left: 13px;     border-radius: 6px;" type="number" id="heightValue" required>
-                            </div>
-                          
-                          </form>
-                          <div class="outputContainer">
-                            <button id="calculate" class="button">Calculate</button>
-                            <div class="text-row">
-                            
-                              <p>Your BMI</p>
-                              <h3 id="result">0.00</h3> 
-                            
-                            </div>
-                          </div>
-                        
-                            <div class="color-line">
-                              <div class="color yellow"></div>
-                              <div class="color green"></div>
-                              <div class="color orange"></div>
-                              <div class="color red"></div>
-                              <div class="color-point"></div>
-                            </div>
-                            <div class="box-container">
-                    <div class="box box-red" id="box-red" >Under weight < 18.5</div>
-                    <div class="box box-blue" id="box-blue">Normal weight  18.5 - 25</div>
-                    <div class="box box-green" id="box-green">Over weight
-                      25 - 30</div>
-                    <div class="box box-yellow" id="box-yellow" >Obese
-                      >30</div>
-                  </div>
-                        
-                      
-                          
-                      </div>
-                    </div>
-               </div>
-        </section>
+	  </style>
+</head>
+<body class="aboutBackround">
+  <div class="con" id="headerNav"></div>
+
+
+<section class="wellnes-horo-section"  style="margin-bottom: 4rem;" >
+  <div class="community-wellness-section">
+    <div class="left-side">
+      <h2 class="undetline-content">Community Wellness Program</h2>
+      
+      <p>Offering tenants comprehensive healthcare coverage. We successfully integrate
+        medical care with home care to give you the best care at the comfort of your
+        own home.
+         <br>
+        <br>
+        <span  style="font-weight: 700; font-size: 22px;">WHY ARE FITNESS AMENITIES IMPORTANT FOR MULTIFAMILY COMMUNITIES?
+           </span>
+            <br>
+            When potential residents are looking for multifamily housing, a new or upgraded 
+            healthcare service can be a big appeal. But why does this particular service matter
+            so much? The main two reasons for this are achieving a balanced and healthy 
+lifestyle is more important to people than ever before and that more and more 
+residents are reading online reviews prior to applying to reside at a new apartment block.
+
+<br>
+<br>
+Multifamily health services not only draw in more residents and enhance resident feedback
+online, but they also give tenants more convenience and raise property values.
+
+</p>
+    </div>
+    <div class="right-side">
+      <img src="/images/communityWellness/heropage.svg" alt="Corporate Wellness Image">
+    </div>
+  </div>
+</section>
+
+
+<!-- <div class="dotted-line"></div> -->
+
+  
+ 
+
+
+<section id="services" style="margin-bottom: 6rem;">
+  <div class="prohealth_header">
+    <h2 class="prohealth-heading undetline-content" style="color: #164475;">Services</h2>
+    <!-- <div class="prohealth_line"></div> -->
+  </div>
+
+  <div class="community-service">
+    <div class="community-service-item col-md-3">
+      <div class="community-service-icon large-icon">
+        <img src="/images/communityWellness/heart-prohealth.svg" alt="Service 1">
+      </div>
+      <h3>Pro Health</h3>
+    </div>
+    <div class="community-service-item col-md-3">
+      <div class="community-service-icon large-icon">
+        <img src="/images/communityWellness/fitness.svg" alt="Service 2">
+      </div>
+      <h3>Fitness</h3>
+    </div>
+    <div class="community-service-item col-md-3">
+      <div class="community-service-icon large-icon">
+        <img src="/images/communityWellness/advancedcare.svg" alt="Service 3">
+      </div>
+      <h3>Advanced care</h3>
+    </div>
+    <div class="community-service-item col-md-3">
+      <div class="community-service-icon large-icon">
+        <img src="/images/communityWellness/mind-training.svg" alt="Service 4">
+      </div>
+      <h3>Mind training</h3>
+    </div>
+  </div>
+</section>
+
+
+  
+
+   
+
+      <div class="prohealth_header" ><h2 class="prohealth-heading undetline-content" style="color: #164475;">We have effectively designed the programs for you to</h2>
+        <!-- <div class="prohealth_line"></div></div> -->
+
+
+
+        <div class="slider-cont1">
+        <div class="swiper-container">
+       
+          <div class="swiper-wrapper">
+            <div class="community-activity-item  swiper-slide">
+              <div class="community-activity-icon activity-large-icon">
+                <img src="/images/communityWellness/feedback.svg" alt="Service 1">
+              </div>
+              <h3>Improve resident 
+                feedback</h3>
+            </div>
+            <div class="community-activity-item  swiper-slide">
+              <div class="community-activity-icon activity-large-icon">
+                <img src="/images/communityWellness/convinence-renters.svg" alt="Service 2">
+              </div>
+              <h3>Greater convenience
+                for renters</h3>
+            </div>
+            <div class="community-activity-item  swiper-slide">
+              <div class="community-activity-icon activity-large-icon">
+                <img src="/images/communityWellness/attract-more-residents.svg" alt="Service 3">
+              </div>
+              <h3>Attract more 
+                residents</h3>
+            </div>
+            <div class="community-activity-item  swiper-slide">
+              <div class="community-activity-icon activity-large-icon">
+                <img src="/images/communityWellness/dedicated-community.svg" alt="Service 4">
+              </div>
+              <h3>Dedicated community app
+                with more insight and 
+                data tracking for the
+                convivence of resident</h3>
+            </div>
+            <div class="community-activity-item  swiper-slide">
+              <div class="community-activity-icon activity-large-icon">
+                <img src="/images/communityWellness/live-support.svg" alt="Service 4">
+              </div>
+              <h3>24/7 live support</h3>
+            </div>
+            <div class="community-activity-item  swiper-slide">
+              <div class="community-activity-icon activity-large-icon">
+                <img src="/images/communityWellness/property-value.svg" alt="Service 4">
+              </div>
+              <h3>Increase your property 
+                value and rent prices</h3>
+            </div>
+            
+            <!-- Add more cards here -->
+          </div>
+         </div>
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+
+          <div class="swiper-navCommunityBtnNext swiper-navBtnNext"><div class="swiper-arrow-icon-1">
+            <i class="fa-solid fa-chevron-right fa-lg"></i>
+            </div></div>
+            <div class="swiper-navCommunityBtnPrev swiper-navBtnPrev"><div class="swiper-arrow-icon-1">
+              <i class="fa-solid fa-chevron-left fa-lg"></i>
+              </div></div>
+
+        </div>
+        
+
+
+        <div class="request-call-button">
+          Request a Call   
+        </div>
+    
+   
+        
+        
+
+    
+        
+  <div id="footer"></div>
+<!-- Initialize Swiper -->
+<script src="/js/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    navigation: {
+      nextEl: '.swiper-navCommunityBtnNext',
+      prevEl: '.swiper-navCommunityBtnPrev',
+    },
+    slidesPerView: 'auto',  // Show as many cards as fit within the container
+    spaceBetween: 10,  // Set the desired gap between cards
+    centeredSlides: false,  // Center the active slide
+    loop: false,  // Enable infinite loop
+    loopedSlides: 4,  // Number of visible slides (should match the number of cards)
+    autoplay: {
+      delay: 3000, // Adjust the delay between automatic slides (in milliseconds)
+      disableOnInteraction: false, // Allow automatic sliding even when the user interacts with the swiper
+    },
+  });
+</script>
+</body>
+<script type="text/javascript" src="/js/app.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+        $(document).ready(function() {
+
+// for loading navbar and foorter pages
+$('navbar').css('background', '#b1e0eb');
+    $("#headerNav").load("navbar.html"); 
+    $("#footer").load("footer.html"); 
+   
+    $(".navbar-nav .nav-link").click(function() {
+      $(".navbar-collapse").collapse('hide');
+    });
+
+  
+
+          });
+
+        
+
+</script>
+</html>

@@ -2,7 +2,7 @@ const phoneInput = document.getElementById('bmiUserPhoneNo');
 const phoneInput1 = document.getElementById('bmiUserPhoneNo1');
 const phoneNumberRegex = /^[6897]\d{9}$/;
 
-// bmi validation for one 
+// bmi validation for phone 
 phoneInput.addEventListener('input', function() {
   const phoneNumber = this.value;
 
@@ -21,8 +21,9 @@ phoneInput.addEventListener('input', function() {
   const calculateButton = document.getElementById('calculate');
   calculateButton.disabled = !phoneNumberRegex.test(phoneNumber);
 
-  // Reinitialize the Bootstrap Tooltip
-  const tooltip = new bootstrap.Tooltip(phoneInput);
+  setTimeout(() => {
+    const tooltip = new bootstrap.Tooltip(phoneInput);
+  }, 2000); // Delay of 2 seconds (2000 milliseconds)
 });
 
 
@@ -30,7 +31,7 @@ phoneInput.addEventListener('input', function() {
 phoneInput1.addEventListener('input', function() {
   const phoneNumber1 = this.value;
 
-  if (phoneNumberRegex.test(phoneNumber)) {
+  if (phoneNumberRegex.test(phoneNumber1)) {
     this.classList.remove('invalid');
     this.classList.add('valid');
     this.setAttribute('data-bs-original-title', '');
@@ -42,11 +43,12 @@ phoneInput1.addEventListener('input', function() {
   
 
   // Disable the calculate button if phone number is invalid
-  const calculateButton1 = document.getElementById('calculate1');
-  calculateButton1.disabled = !phoneNumberRegex.test(phoneNumber1);
+  const calculateButton = document.getElementById('calculate1');
+  calculateButton.disabled = !phoneNumberRegex.test(phoneNumber);
 
-  // Reinitialize the Bootstrap Tooltip
-  const tooltip = new bootstrap.Tooltip(phoneInput);
+  setTimeout(() => {
+    const tooltip = new bootstrap.Tooltip(phoneInput);
+  }, 2000); // Delay of 2 seconds (2000 milliseconds)
 });
 
 // Prevent form submission if phone number is invalid
@@ -99,13 +101,62 @@ const colorPoint1 = document.querySelector('.color-point1');
 document.getElementById('calculate1').addEventListener('click', function() {
   var name = document.getElementById('bmiUsername1').value;
   var phoneNo = document.getElementById('bmiUserPhoneNo1').value;
+  var age = document.getElementById('age1').value;
+  var gender = document.getElementById('gender1').value;
   var weight = parseFloat(document.getElementById('weightValue1').value);
   var height = parseFloat(document.getElementById('heightValue1').value) / 100;
+  var heightInput = document.getElementById('heightValue1').value;
 
-  if (weight && height && name && phoneNo) {
+
+  var errorIndicators = document.getElementsByClassName("error");
+  for (var i = 0; i < errorIndicators.length; i++) {
+    errorIndicators[i].style.display = "none";
+  }
+
+  if (!name) {
+    var label = document.querySelector('label[for="bmiUsername1"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  if (!phoneNo) {
+    var label = document.querySelector('label[for="bmiUserPhoneNo1"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  if (!age) {
+    var label = document.querySelector('label[for="age1"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  // if (!phoneNo) {
+  //   var label = document.querySelector('label[for="bmiUsername"]');
+  //   var errorIndicator = label.querySelector('.error');
+  //   errorIndicator.style.display = 'inline';
+  // }
+  if (!weight) {
+    var label = document.querySelector('label[for="weightValue1"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  if (!height) {
+
+    var label = document.querySelector('label[for="heightValue1"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  
+  }
+  if (!gender) {
+    var label = document.querySelector('label[for="gender1"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+
+  if (weight && height && name && phoneNo  && gender && age) {
     var bmi = weight / (height * height);
     // var category = getBmiCategory(bmi);
-       getBmiCategory1(bmi)
+       getBmiCategory1(bmi);
+       var bmiRounded = bmi.toFixed(2);
+       submitForm(name, phoneNo, gender, age, weight, heightInput,bmiRounded,"BMI");
     // document.getElementById('result1').innerText = bmi.toFixed(2);
     // document.getElementById('bmi_Content').innerText =category;
   } else {
@@ -184,7 +235,16 @@ const colorPoint = document.querySelector('.color-point');
 // inputBox.addEventListener('click', function() {
 //   colorPoint.style.animation = 'movePoint 4s linear infinite';
 // });
+
+// var errorIndicators = document.getElementsByClassName('error');
+// for (var i = 0; i < errorIndicators.length; i++) {
+//   errorIndicators[i].classList.add('hidden');
+// }
 document.getElementById('calculate').addEventListener('click', function() {
+
+  
+
+
   var name = document.getElementById('bmiUsername').value;
   var phoneNo = document.getElementById('bmiUserPhoneNo').value;
   var weight = parseFloat(document.getElementById('weightValue').value);
@@ -194,16 +254,59 @@ document.getElementById('calculate').addEventListener('click', function() {
   var heightInput = document.getElementById('heightValue').value;
 
 
+  var errorIndicators = document.getElementsByClassName("error");
+  for (var i = 0; i < errorIndicators.length; i++) {
+    errorIndicators[i].style.display = "none";
+  }
+
+  if (!name) {
+    var label = document.querySelector('label[for="bmiUsername"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  if (!phoneNo) {
+    var label = document.querySelector('label[for="bmiUserPhoneNo"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  if (!age) {
+    var label = document.querySelector('label[for="age"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  // if (!phoneNo) {
+  //   var label = document.querySelector('label[for="bmiUsername"]');
+  //   var errorIndicator = label.querySelector('.error');
+  //   errorIndicator.style.display = 'inline';
+  // }
+  if (!weight) {
+    var label = document.querySelector('label[for="weightValue"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+  if (!heightInput) {
+
+    var label = document.querySelector('label[for="heightValue"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  
+  }
+  if (!gender) {
+    var label = document.querySelector('label[for="gender"]');
+    var errorIndicator = label.querySelector('.error');
+    errorIndicator.style.display = 'inline';
+  }
+
   // formData.append('result', result);
   // formData.append('spreadsheetId', spreadsheetId);
   // formData.append('sheetName', sheetName);
 
-  if (weight && height && name && phoneNo) {
+  if (weight && height && name && phoneNo && gender) {
     var bmi = weight / (height * height);
     // var category = getBmiCategory(bmi);
        getBmiCategory(bmi)
        var bmiRounded = bmi.toFixed(2);
-       submitForm(name, phoneNo, gender, age, weight, heightInput,bmiRounded);
+       submitForm(name, phoneNo, gender, age, weight, heightInput,bmiRounded,"BMI");
     // document.getElementById('result').innerText = bmi.toFixed(2);
     // document.getElementById('bmi_Content').innerText =category;
   } else {
@@ -212,19 +315,20 @@ document.getElementById('calculate').addEventListener('click', function() {
   }
 });
 
-
-function submitForm(name, phone, gender, age, weight, height,bmi) {
+function submitForm(name, phone, gender, age, weight, height,bmi,platform) {
   // Prepare the form data
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwgB-90FJODNzEbuHoEhDOkgpiljw9jIFmxq0Iqzv8aSJATX3sEF83kGX1Ib1hdqKilHQ/exec'
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbwgB-90FJODNzEbuHoEhDOkgpiljw9jIFmxq0Iqzv8aSJATX3sEF83kGX1Ib1hdqKilHQ/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbymeNVaKigWn5yQMNLvw3iEwPUJEQCNprXNFlAlcomA1rYO6rhg4zsG1IAxaqdRtSIN/exec';
     
   var formData = new FormData();
   formData.append('Name', name);
-  formData.append('phone', phone);
-  formData.append('gender', gender);
-  formData.append('age', age);
-  formData.append('weight', weight);
-  formData.append('height', height);
+  formData.append('Phone', phone);
+  formData.append('Gender', gender);
+  formData.append('Age', age);
+  formData.append('Weight', weight);
+  formData.append('Height', height);
   formData.append('BMI_Result', bmi);
+  formData.append('Page', platform);
   // const form = document.forms['submit-to-google-sheet']
 
     fetch(scriptURL, { method: 'POST', body: formData})
@@ -233,6 +337,30 @@ function submitForm(name, phone, gender, age, weight, height,bmi) {
 
 }
 
+
+
+
+function submitEnquiryForm(name, phone, email, message,platform) {
+  // Prepare the form data
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbwgB-90FJODNzEbuHoEhDOkgpiljw9jIFmxq0Iqzv8aSJATX3sEF83kGX1Ib1hdqKilHQ/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbymeNVaKigWn5yQMNLvw3iEwPUJEQCNprXNFlAlcomA1rYO6rhg4zsG1IAxaqdRtSIN/exec'
+    
+  var formData = new FormData();
+  formData.append('Name', name.value);
+  formData.append('Phone', phone.value);
+  formData.append('Email', email.value);
+  formData.append('Message', message.value);
+  // formData.append('Weight', weight);
+  // formData.append('Height', height);
+  // formData.append('BMI_Result', bmi);
+  formData.append('Page', platform);
+  // const form = document.forms['submit-to-google-sheet']
+
+    fetch(scriptURL, { method: 'POST', body: formData})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+
+}
 
 
 function getBmiCategory(bmi) {
@@ -339,7 +467,7 @@ document.addEventListener("DOMContentLoaded", function() {
 var swiper = new Swiper(".slide-content1", {
   slidesPerView: 3,
   spaceBetween: 25,
-  loop: true,
+  loop: false,
   centerSlide: 'true',
   fade: 'true',
   grabCursor: 'true',
@@ -365,10 +493,10 @@ var swiper = new Swiper(".slide-content1", {
   },
 });
 
-var swiper = new Swiper(".slide-content", {
+var swiper1 = new Swiper(".slide-content", {
   slidesPerView: 3,
   spaceBetween: 25,
-  loop: 10,
+  loop: false,
   centerInsufficientSlides: true,
   fadeEffect: true,
   grabCursor: true,
@@ -396,30 +524,25 @@ var swiper = new Swiper(".slide-content", {
 
 
 
+  // var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  // (function(){
+  // var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  // s1.async=true;
+  // s1.src='https://embed.tawk.to/64a6a52994cf5d49dc61e4ac/1h4lfabff';
+  // s1.charset='UTF-8';
+  // s1.setAttribute('crossorigin','*');
+  // s0.parentNode.insertBefore(s1,s0);
+  // })();
 
 
 
-// scroll to top function 
 
-var scrollToTopButton = document.getElementsByClassName(".scrollToTop");
 
-window.addEventListener("scroll", toggleScrollToTopButton);
 
-function toggleScrollToTopButton() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollToTopButton.style.display = "block";
-  } else {
-    scrollToTopButton.style.display = "none";
-  }
-}
 
-function scrollToTop() {
-  var currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-  if (currentPosition > 0) {
-    window.requestAnimationFrame(scrollToTop);
-    window.scrollTo(0, currentPosition - currentPosition / 8);
-  }
-}
+
+
+
 
 
 

@@ -14,108 +14,420 @@
 
     <style>
       .navbar {
-    background-color: #ffffff !important;
+    background-color: white !important;
     /* background: white; */
   }
 
   .membership-section {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      margin-top: 8rem;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+}
 
-    .membership-column {
-      flex-basis: 33.33%;
-      height: 300px;
-      width: 300px;
-      padding: 8px;
-      box-sizing: border-box;
-      background-color: white;
-      margin: 20px;
-      align-items: center;
-      text-align: center;
-      border-radius: 36px;
-      position: relative;
-      overflow: hidden;
-    }
+.membership-column {
+  flex-basis: 33.33%;
+  /* height: 300px; */
+  width: 300px;
+  padding: 7px 0px 29px 0px;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+  border-radius: 36px;
+  position: relative;
+  overflow: visible; /* Change from 'hidden' to 'visible' */
+}
 
-    .membership-heading {
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #7687ab;
-      font-weight: 700;
-      padding: 9px;
-    }
+.membership-image-container {
+  position: relative;
+}
 
-    .membership-image {
-      max-width: 100%;
-      height: auto;
-      transition: transform 0.3s ease;
-    }
+.dropdown-content {
+    position: relative;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #192838;
+    font-size: 14px;
+    transition: top 0.3s ease;
+    display: none;
+    text-align: left;
+    padding-left: 22px;
+    margin-top: 0.7rem;
+    animation: slideDown 0.5s ease-in-out forwards;
+    bottom: calc(100% + 10px);
+}
 
-    .membership-image:hover {
-      transform: scale(1.1);
-    }
-
-    .dropdown-content {
-      position: absolute;
-      bottom: -100%;
-      left: 0;
-      width: 100%;
-      padding: 10px;
-      background-color: rgba(0, 0, 0, 0.8);
-      color: white;
-      font-size: 14px;
-      transition: bottom 0.3s ease;
-    }
-
-    .membership-column:hover .dropdown-content {
-      bottom: 0;
-    }
-
-  /* Media query for mobile devices */
-  @media (max-width: 767px) {
-    .membership-column {
-      flex-basis: 100%;
-      height: auto;
-      width: auto;
-      margin-bottom: 20px;
-    }
+.dropdown-active {
+  display: block;
+}
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .membership-image-container:hover .dropdown-content {
+  top: 100%; 
+  display: block;
+} */
+
+
+.membership-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: #164475;
+    font-weight: 700;
+    padding: 9px;
+}
+
+
+
+
+.point-list {
+    list-style: none;
+    padding: 18px;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #192838;
+}
+
+.point-list li {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.point-list li i {
+    /* margin-right: 5px; */
+    margin-top: 0.6em;
+    margin-right: 0.5em;
+}
+
+.point-list li  span {
+    display: inline-block;
+        /* margin-top: 0.3em; */
+  }
+
+
+
+.margin-cards-bottom{
+  margin-bottom: 25px;
+}
+
+ 
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .membership-column {
+    flex-basis: 100%;
+    height: auto;
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
+
     </style>
 </head>
 <body class="aboutBackround">
-  <div class="con" id="headerNav"></div>
- 
+  <!-- <div class="con" id="headerNav"></div> -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light  custom-navcolor">
+    <a class="navbar-brand mr-auto" href="index.html">  
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="65" viewBox="0 0 236 95">
+        <defs>
+          <pattern id="pattern" width="1" height="1" viewBox="0 0 236 95">
+            <image preserveAspectRatio="none" width="236" height="95" xlink:href="data:image/png;base64,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"/>
+          </pattern>
+        </defs>
+        <rect id="Group_3" data-name="Group 3" width="236" height="95" fill="url(#pattern)"/>
+      </svg>
+      
+    
+    
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none; border: none; outline: none;
+          box-shadow: none;">
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About us</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuProgram" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Program
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuProgram">
+            <a class="dropdown-item" href="corporate-welness-program.html">Corporate wellness program</a>
+            <a class="dropdown-item" href="community-wellness-program.html">Community wellness program</a>
+            <a class="dropdown-item" href="institution-wellness.html">Institution wellness program</a>
+            <a class="dropdown-item" href="memberships.html">Individual plans</a>
+            <a class="dropdown-item" href="clubs.html">Clubs</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuServices" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuServices">
+            <a class="dropdown-item" href="prohealth.html">Pro Health</a>
+            <a class="dropdown-item" href="fitness.html">Fitness</a>
+            <a class="dropdown-item" href="advancecare.html">Advanced care</a>
+            <a class="dropdown-item" href="mindtraining.html">Mind training</a>
+            <!-- <a class="dropdown-item" href="memberships.html">Package <i class="fa-sharp fa-solid fa-crown" style="color: #ffd43b;"></i></a> -->
+          </div>
+        </li>
+        <li class="nav-item hideNumber">
+          <a class="nav-link " href="enquiry-form.html" ><i class="fa-sharp fa-solid fa-phone fa-shakeee" style="color: #132f4e;"></i> 8431848949 </a>
+        </li>
+      </ul>
+   
+    </div>
+  </nav>
+  <h2 class="membership-heading-style">Quality care made easy!</h2>
+    <p class="membership-paragraph-style container">We provide the most economical health packages, starting from basic to premium. Our packages contain a range of tests,
+      doctor consultations, and much more which covers all demographics including adults, children, and senior citizens.</p>
+  <section class="new-member-section " >
 
-  <div class="membership-section">
-    <div class="membership-column">
-      <h3 class="membership-heading">Platinum Membership</h3>
-      <img class="membership-image" src="/images/cards/card1.svg" alt="Column 1 Image">
-      <div class="dropdown-content">
-        <p>Additional details about Platinum Membership. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cumque laboriosam deserunt provident vero, quos libero quam incidunt omnis delectus similique maxime autem. Iusto, reprehenderit quia doloribus odio corrupti sint?</p>
+  
+    <div class="membership-change-cards margin-cards-bottom" style="    border: 10px solid #C5C5C5;">
+      <!-- <img class="membership-card-image" src="/images/cards/new-card-1.svg" alt="Card Image"> -->
+      
+      
+      <div class="membership-card-content">
+        <h2 class="membership-card-heading">Silver Membership</h2>
+
+        <div style="width: 100%; height: 25px; background: linear-gradient(to right, #C5C5C5, #6E6E6E, #D8D8D8,#737373,#BFBFBF);"></div>
+      
+        <!-- Card content here -->
+        <!-- <p>Card 1 content goes here.</p> -->
+        <ol class="point-list">
+     
+          <li class=""> <i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> <span>Sr. Dietician consultation (1 in 15 days)</span> 
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> <span>2 diet plans and follow-up once a month</span>
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i><span>24/7 chat support</span> 
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> <span>Access to health tracker (6 parameters)
+          </span>
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> <span>Quarterly health check-up (25 parameters)</span>
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> <span>Daily health tips</span>
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> <span>1 healthcare video per week</span>
+          
+          </li>
+       
+                    </ol>
       </div>
+      <button class="membership-card-button" onclick="window.location.href = 'enquiry-form.html';">Explore more</button>
+
     </div>
-    <div class="membership-column">
-      <h3 class="membership-heading">Gold Membership</h3>
-      <img class="membership-image" src="/images/cards/card2.svg" alt="Column 2 Image">
-      <div class="dropdown-content">
-        <p>Additional details about Gold Membership.</p>
+
+    <div class="membership-change-cards margin-cards-bottom"  style="    border: 10px solid #E3BF5C;">
+      <!-- <img class="membership-card-image" src="/images/cards/new-card-2.svg" alt="Card Image"> -->
+      <div class="membership-card-content">
+        <h2 class="membership-card-heading">Gold Membership</h2>
+        <div style="width: 100%; height: 25px; background: linear-gradient(to right, #AE8625, #F7EF8A, #D2AC47,#EDC967);"></div>
+        
+        
+        
+        <!-- Card content here -->
+        <!-- <p>Card 2 content goes here.</p> -->
+        <ol class="point-list">
+          <li> <i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Sr. Dietician consultation (3 in a month)
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 buddy coach</li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 24/7 chat support
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Access to health tracker (8 parameters)
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Quarterly health check-up (65 parameters)
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Access to 1 doctor consultation per month
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Daily health tips
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 healthcare video per week
+
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 3 diet plans and follow-up once a month
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Pro-Health video per week
+          </li>
+        </ol>
+      
       </div>
+      <button class="membership-card-button" onclick="window.location.href = 'enquiry-form.html';">Explore more</button>
     </div>
-    <div class="membership-column">
+
+    <div class="membership-change-cards  margin-cards-bottom"  style="    border: 10px solid #707070;">
+      <!-- <img class="membership-card-image" src="/images/cards/new-card-3.svg" alt="Card Image"> -->
+      <div class="membership-card-content">
+        <h2 class="membership-card-heading">Platinum Membership</h2>
+
+        <div style="width: 100%; height: 25px; background: linear-gradient(to right, #707070, #383838);"></div>
+        
+        <!-- Card content here -->
+        <!-- <p>Card 3 content goes here.</p> -->
+        <ol class="point-list">
+
+          <li> <i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Weekly Sr. Dietician consultation</li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1  buddy coach
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 24/7 chat support & unlimited calls</li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Access to health tracker (14 parameters)</li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Quarterly health check-up (85 parameters)</li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Access to 2 doctor consultations per month
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Weekly diet plans and follow-up
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Complementary diet plan for a family member
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Discount of up to 25% on referral
+
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Discount of up to 35% on subscription renewal
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Daily health tips
+
+          </li>
+          <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 4 Pro-Health video per week.
+
+          </li>
+        
+        </ol>
+      </div>
+      <button class="membership-card-button" onclick="window.location.href = 'enquiry-form.html';">Explore more</button>
+    </div>
+  </section>
+  
+
+  <!-- <div class="membership-section">
+    <div class="membership-column "  onclick="toggleDropdown(this)">
       <h3 class="membership-heading">Silver Membership</h3>
-      <img class="membership-image" src="/images/cards/card3.svg" alt="Column 3 Image">
-      <div class="dropdown-content">
-        <p>Additional details about Silver Membership.</p>
+      <div class="membership-image-container">
+        <img class="membership-image" src="/images/cards/card3.svg" alt="Column 3 Image">
+        <div class="dropdown-content" >
+          <ol class="point-list">
+     
+<li> <i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Senior dietician (2 Consultation)</li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Buddy Coach </li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Weekly 1 diet consultation</li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Weekly 1 doctor consultation
+</li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Health Tracker 8 parameters
+</li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>1 Health check 25 parameters
+</li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Free Daily Health Tips
+
+</li>
+<li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Health Care Video per week
+</li>
+          </ol>
+         
+        </div>
+      
+      </div>
+    </div>
+    <div class="membership-column" onclick="toggleDropdown(this)">
+      <h3 class="membership-heading">Gold Membership</h3>
+      <div class="membership-image-container" >
+        <img class="membership-image" src="/images/cards/card2.svg" alt="Column 2 Image">
+        <div class="dropdown-content">
+          <ol class="point-list">
+            <li> <i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Senior dietician (Weekly Consultation)</li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Buddy Coach </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Weekly 1 diet consultation</li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Weekly 1 Follow up from Dietician
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Weekly 1 doctor consultation
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Health Tracker 14 parameters
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>2 Health check 65 parameters
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Free Daily Health Tips
+
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Health Tracker 14 parameters
+            </li>
+          </ol>
+          
+        </div>
+      </div>
+    </div>
+    <div class="membership-column" onclick="toggleDropdown(this)">
+      <h3 class="membership-heading">Platinum Membership</h3>
+      <div class="membership-image-container">
+        <img class="membership-image" src="/images/cards/card1.svg" alt="Column 1 Image">
+        <div class="dropdown-content">
+          <ol class="point-list">
+
+            <li> <i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Senior dietician (Weekly Consultation)</li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 1 Buddy Coach </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 24x7 Chat Support & Unlimited calls </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Weekly 1 diet consultation</li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Weekly 1 Follow up from Dietician
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Weekly 1 doctor consultation
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Health Tracker 21 parameters
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>2 Health check 85 parameters
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i>Plus 1 *free* Diet chart for family member
+
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Discount up to 25% on Referral
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> Discount up to 35% on subscription renewal
+            </li>
+            <li><i class="fa-regular fa-circle-check fa-lg" style="color: #192838;"></i> 2 Free check at door step quarterly
+            </li>
+          </ol>
+        </div>
       </div>
     </div>
   </div>
-
+   -->
+  
+  
 
 
   <div id="footer"></div>
@@ -138,21 +450,30 @@ var s = skrollr.init();
 
 <script>
         $(document).ready(function() {
+          $('#nav-icon1').click(function(){
+		$(this).toggleClass('open');
+    
+	});
 
+          $(window).on('scroll', function() {
+    $('.navbar-collapse').collapse('hide');
+    $('#nav-icon1').removeClass('open');
+  });
 // for loading navbar and foorter pages
 $('navbar').css('background', '#b1e0eb');
     $("#headerNav").load("navbar.html"); 
     $("#footer").load("footer.html"); 
    
-    $(".navbar-nav .nav-link").click(function() {
-      $(".navbar-collapse").collapse('hide');
-    });
+
 
   
 
           });
 
-        
+          function toggleDropdown(element) {
+  const dropdownContent = element.querySelector('.dropdown-content');
+  dropdownContent.classList.toggle('dropdown-active');
+}
 
 </script>
 </html>

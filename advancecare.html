@@ -18,22 +18,24 @@
 </head>
 <body class="aboutBackround">
   <div class="con" id="headerNav"></div>
-  <div class="prohealth_header" ><h2 class="prohealth-heading" style="color: #192838;">Advanced Care</h2>
-    <div class="prohealth_line"></div></div>
   
-  <section id="prohealth" class="section">
+    <!-- <div class="prohealth_line"></div> -->
+  </div>
   
+  <section id="prohealth" class="section space-between-servce-top">
+    <div class="prohealth_header" ><h2 class="prohealth-heading undetline-content-services" style="color: #192838;">Advanced care</h2>
 	  <div class="fitness-container">
     <div class="fitness_card">
       <img class="fitness_card-img" src="/images/advancedcare/check.svg" alt="Team Member 1">
       <div class="fitness_card-content">
-        <p class="fitness_card-description">Master health check up</p>
+        <p class="fitness_card-description">Master health check-up</p>
       </div>
       <div class="fitness_card-hover-content">
-        <p class="hover-text">Master health check up</p>
+       <div class="upper-div"> 
+        <!-- <p class="hover-text">Master health <br> check-up</p> -->
         <p class="hover-paragraph">Fulﬁll all your diagnostic needs under one roof. Covering up to 92+ tests.
-        </p>
-        <a class="hover-button" href="#">Book Appointment Now <i class=" fa fa-thin fa-arrow-right"></i></a>
+        </p></div>
+        <a class="hover-button open-form-button" href="#">Book free consultation </a>
       </div>
     </div>
     <div class="fitness_card">
@@ -43,11 +45,11 @@
         </p>
       </div>
       <div class="fitness_card-hover-content">
-        <p class="hover-text">Women’s health
-        </p>
-        <p class="hover-paragraph">includes a wide range of specialties, preventive care &amp; screenings. routine gynecological examinations: pelvic examination and breast cancer screening, hormonal testing, PAP smear, Age-appropriate immunizations and many more.
-        </p>
-        <a class="hover-button" href="#">Book Appointment Now <i class=" fa fa-thin fa-arrow-right"></i></a>
+        <div class="upper-div">
+           <!-- <p class="hover-text">Women’s health   </p> -->
+        <p class="hover-paragraph">Includes a wide range of specialities, preventive care &amp; screenings. Routine gynecological examinations: pelvic examination and breast cancer screening, hormonal testing, PAP smear, age-appropriate immunizations and many more.
+        </p></div>
+        <a class="hover-button open-form-button" href="#">Book free consultation </a>
       </div>
     </div>
     <div class="fitness_card">
@@ -57,12 +59,12 @@
         </p>
       </div>
       <div class="fitness_card-hover-content">
-        <p class="hover-text">Alcohol risk assessment
-        </p>
+        <div class="upper-div">
+            <!-- <p class="hover-text">Alcohol risk assessment      </p> -->
         <p class="hover-paragraph">Alcoholism can decrease brain function, raise the chance of negative heart effects, and have many other possibly fatal bodily consequences. We provide you with coping strategies, a treatment plan, prescription recommendation and support groups.
 
-        </p>
-        <a class="hover-button" href="#">Book Appointment Now <i class=" fa fa-thin fa-arrow-right"></i></a>
+        </p></div>
+        <a class="hover-button open-form-button" href="#">Book free consultation </a>
       </div>
     </div>
   </div>
@@ -74,11 +76,11 @@
         </p>
       </div>
       <div class="fitness_card-hover-content">
-        <p class="hover-text">Otoscope
-        </p>
+        <div class="upper-div">
+            <!-- <p class="hover-text">Otoscope    </p> -->
         <p class="hover-paragraph">Assessment of the external auditory canal (EAC), middle ear and the tympanic membrane (TM). Understanding this helps in precise diagnosis, enabling targeted therapy and problem prevention.
-        </p>
-        <a class="hover-button" href="#">Book Appointment Now <i class=" fa fa-thin fa-arrow-right"></i></a>
+        </p></div>
+        <a class="hover-button open-form-button" href="#">Book free consultation </a>
       </div>
     </div>
     <div class="fitness_card">
@@ -88,11 +90,11 @@
         </p>
       </div>
       <div class="fitness_card-hover-content">
-        <p class="hover-text">Rapid vision
-        </p>
+        <div class="upper-div"> 
+            <!-- <p class="hover-text">Rapid vision  </p> -->
         <p class="hover-paragraph">We use top of the line machinery to assess the refractive status of the eye by eliminating use of any kind of eye drops. The results are obtained in a span of 5 seconds.
-        </p>
-        <a class="hover-button" href="#">Book Appointment Now <i class=" fa fa-thin fa-arrow-right"></i></a>
+        </p></div>
+        <a class="hover-button open-form-button" href="#">Book free consultation </a>
       </div>
     </div>
     <div class="fitness_card">
@@ -102,17 +104,56 @@
         </p>
         </div>
         <div class="fitness_card-hover-content">
-          <p class="hover-text">Brain simulation
-        </p>
+          <div class="upper-div">  
+            <!-- <p class="hover-text">Brain simulation </p> -->
           <p class="hover-paragraph">The medical software helps to treat an array of conditions like anxiety disorders, behavioral disorders, chronic illness, neurological problems, psychosomatic problems, head trauma and post-traumatic stress disorder.</p>
-          <a class="hover-button" href="#">Book Appointment Now <i class=" fa fa-thin fa-arrow-right"></i></a>
+      
+          </div>    <a class="hover-button open-form-button" href="#">Book free consultation </a>
         </div>
       </div>
     
   </div>
    </section>
   <div id="footer"></div>
-
+  <div class="mobile-form-container">
+    <div class="mobile-form">
+      <h2 class="mobile-form-heading">Get in touch<i class="fa-sharp fa-solid fa-circle-xmark close-form-button" style="color: #ffffff;      transform: translate3d(30px, -15px, 10px);"></i></h2>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name<span class="required">*</span></label>
+          <input type="text" id="name" name="name" class="input-field" required>
+          <div class="error-message" id="name-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile<span class="required">*</span></label>
+          <input type="tel" id="mobile" name="mobile" class="input-field" required>
+          <div class="error-message" id="mobile-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address<span class="required">*</span></label>
+          <input type="email" id="email" name="email" class="input-field" required>
+          <div class="error-message" id="email-error"></div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" class="textarea-field" rows="4"   maxlength="150" required></textarea>
+          <span id="charCount" class="charCount"></span>
+          <div class="error-message" id="message-error"></div>
+        </div>
+       <button class="open-form-button-click" onclick="submitForm(event)" type="submit">Submit</button open-form-button>
+      </form>
+      <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+      <div class="thank-you-container">
+        
+        <h2 class="undetline-content-thankyou">Thank you!  </h2>
+        <p>We will be in touch with you shortly.</p>
+        <button class="close-form-button1">Ok</button>
+      </div>
+    </div>
+  
+  </div>
    
 <!-- <script type="text/javascript" src="/js/skrollr.js  "></script>
 <script type="text/javascript">
@@ -141,9 +182,152 @@ $('navbar').css('background', '#b1e0eb');
     //   $(".navbar-collapse").collapse('hide');
     // });
 
+    // Toggle dropdown menu when clicking on dropdown toggle (mobile)
+$('.dropdown-toggle').on('click', function(e) {
+  if ($(window).width() < 992) {
+    e.stopPropagation();
+    $(this).parent().toggleClass('show');
+    $(this).siblings('.dropdown-menu').toggleClass('show');
+  }
+});
+
+// Close dropdown menu when clicking on "Programs" link (mobile)
+$('#navbarDropdownMenuProgram').on('click', function() {
+  if ($(window).width() < 992) {
+    $(this).parent().removeClass('show');
+    $(this).siblings('.dropdown-menu').removeClass('show');
+  }
+});
+$(window).on('scroll', function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+
+
   
 
           });
+          const openFormButtons = document.querySelectorAll('.open-form-button');
+const mobileFormContainer = document.querySelector('.mobile-form-container');
+const closeFormButton = document.querySelector('.close-form-button');
+const closeFormButton1 = document.querySelector('.close-form-button1');
+const contactForm = document.querySelector('.contact-form');
+const loaderContainer = document.querySelector('.loader-container');
+const thankYouContainer = document.querySelector('.thank-you-container');
+const mobileForm = document.querySelector('.mobile-form');
+const mobileFormHeading = document.querySelector('.mobile-form-heading');
+
+openFormButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    contactForm.style.display= "block"
+    mobileFormHeading.style.display= "block"
+    thankYouContainer.style.display = 'none';
+    mobileFormContainer.style.display = 'flex';
+  });
+});
+
+closeFormButton.addEventListener('click', () => {
+  mobileFormContainer.style.display = 'none';
+});
+closeFormButton1.addEventListener('click', () => {
+  mobileFormContainer.style.display = 'none';
+});
+
+var messageTextarea = document.getElementById("message");
+  var charCount = document.getElementById("charCount");
+
+  messageTextarea.addEventListener("input", function() {
+    charCount.textContent = messageTextarea.value.length + "/" + messageTextarea.getAttribute("maxlength");
+  });
+
+
+function submitForm(event) {
+  event.preventDefault(); // Prevent form submission and page reload
+
+
+  const nameField = document.getElementById('name');
+  const mobileField = document.getElementById('mobile');
+  const emailField = document.getElementById('email');
+  const messageField = document.getElementById('message');
+  const nameError = document.getElementById('name-error');
+  const mobileError = document.getElementById('mobile-error');
+  const emailError = document.getElementById('email-error');
+  const messageError = document.getElementById('message-error');
+
+
+
+
+
+
+
+  let isValid = true; // Track the overall form validity
+  if (!nameField.checkValidity()) {
+    showError(nameField, 'Please enter your name');
+    isValid = false;
+  } else {
+    hideError(nameField);
+  }
+
+  if (!mobileField.checkValidity() || !validatePhoneNumber(mobileField.value)) {
+    showError(mobileField, 'Please enter a valid mobile number');
+    isValid = false;
+  } else {
+    hideError(mobileField);
+  }
+
+  if (!emailField.checkValidity() || !validateEmail(emailField.value)) {
+    showError(emailField, 'Please enter a valid email address');
+    isValid = false;
+  } else {
+    hideError(emailField);
+  }
+
+  // if (!messageField.checkValidity()) {
+  //   showError(messageField, 'Please enter your message');
+  //   isValid = false;
+  // } 
+  // else {
+  //   hideError(messageField);
+  // }
+
+if (isValid) {
+  loaderContainer.style.display = 'flex';
+  setTimeout(() => {
+    mobileForm.style.backgroundColor = "#192838";
+    mobileForm.style.color = "white";
+    loaderContainer.style.display = 'none';
+    mobileFormHeading.style.display= "none"
+    contactForm.style.display= "none"
+    thankYouContainer.style.display = 'block';
+    submitEnquiryForm(nameField, mobileField,emailField,messageField,"Services");
+  }, 3000);
+  }
+}
+
+function showError(element, message) {
+  const errorMessage = element.nextElementSibling;
+  errorMessage.textContent = message;
+  errorMessage.classList.add('show');
+}
+
+function hideError(element) {
+  const errorMessage = element.nextElementSibling;
+  errorMessage.classList.remove('show');
+}
+function validateEmail(email) {
+  // Regular expression pattern to validate email
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailPattern.test(email);
+}
+
+function validatePhoneNumber(phoneNumber) {
+  // Regular expression pattern to validate phone number starting with 9, 8, 7, or 6 and exactly 10 digits
+  const phonePattern = /^[9876]\d{9}$/;
+  return phonePattern.test(phoneNumber);
+}
+
+
 
         
 
