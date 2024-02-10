@@ -47,11 +47,28 @@ body{
 }
 .aboutBackround{
 background-image: url("/images/logo/Pro\ health.svg");
+/* background-image: url("/images/logo/Pro\ health.jpg"); */
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center center;
 background-attachment: fixed;
 }
+
+.str0 {stroke:#FEFEFE;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil3 {fill:none}
+    .fil1 {fill:#2B2A29}
+    .fil7 {fill:#1B9ACD}
+    .fil8 {fill:#3869AE}
+    .fil13 {fill:#3E4347}
+    .fil6 {fill:#4FA75B}
+    .fil9 {fill:#5B359C}
+    .fil2 {fill:#C93F4C}
+    .fil5 {fill:#E3C330}
+    .fil4 {fill:#ED7D35}
+    .fil12 {fill:#F4C534}
+    .fil11 {fill:#FFD73B}
+    .fil0 {fill:#2B2A29;fill-rule:nonzero}
+    .fil10 {fill:#FFD93B;fill-rule:nonzero}
 
 
 
@@ -824,6 +841,7 @@ animation-iteration-count: infinite;
   justify-content: space-between;
   /* align-items: center; */
   background-image: url(/images/logo/hero\ page\ svg\ \(1\).svg);
+  /* background-image: url(/images/logo/hero\ page\ svg\ \(1\).jpg); */
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1351,8 +1369,8 @@ margin-right: 35px;
 text-align: left;
 }
 .footer-column:first-child .footer-logo img {
-width: 81px;
-height: 78px;
+  width: 60px;
+  /* height: 78px; */
 }
 
 
@@ -3537,7 +3555,7 @@ justify-content: space-between;
   font-weight: 700;
 }
 .blog-card h2{
-font-size: 30px;
+font-size: 28px;
 color: #FFA000;
 
 }
@@ -3648,7 +3666,7 @@ color: #FFA000;
 .appointment-button {
 background-color: #164475;
 color: #fff;
-padding: 12px 24px;
+padding: 15px 41px; 
 border: none;
 border-radius: 20px;
 font-weight: bold;
