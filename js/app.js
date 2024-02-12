@@ -1,3 +1,43 @@
+
+// document.getElementById("toggle-bmi-calculator1").addEventListener("click", function() {
+//   var bmiCalculator = document.getElementById("bmi-calculator");
+//   if (bmiCalculator.style.display === "none" || bmiCalculator.style.display === "") {
+//       bmiCalculator.style.display = "block";
+//   } else {
+//       bmiCalculator.style.display = "none";
+//   }
+// });
+document.addEventListener("DOMContentLoaded", function() {
+  var button = document.getElementById("toggle-bmi-calculator1");
+  var popup = document.getElementById("bmi-calculator");
+
+  // Function to toggle the visibility of the pop-up box
+  function togglePopup() {
+    if (popup.style.display === "block") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "block";
+    }
+  }
+
+  // Open the pop-up box when the button is clicked
+  button.addEventListener("click", function(event) {
+    togglePopup();
+    event.stopPropagation(); // Prevent the click event from propagating further
+  });
+
+  // Close the pop-up box when clicking outside it
+  document.addEventListener("click", function(event) {
+    var isClickInsidePopup = popup.contains(event.target);
+    var isClickOnButton = button.contains(event.target);
+
+    if (!isClickInsidePopup && !isClickOnButton) {
+      popup.style.display = "none";
+    }
+  });
+});
+
+
 const phoneInput = document.getElementById('bmiUserPhoneNo');
 const phoneInput1 = document.getElementById('bmiUserPhoneNo1');
 const phoneNumberRegex = /^[6897]\d{9}$/;
@@ -28,28 +68,28 @@ phoneInput.addEventListener('input', function() {
 
 
 
-phoneInput1.addEventListener('input', function() {
-  const phoneNumber1 = this.value;
+// phoneInput1.addEventListener('input', function() {
+//   const phoneNumber1 = this.value;
 
-  if (phoneNumberRegex.test(phoneNumber1)) {
-    this.classList.remove('invalid');
-    this.classList.add('valid');
-    this.setAttribute('data-bs-original-title', '');
-  } else {
-    this.classList.remove('valid');
-    this.classList.add('invalid');
-    this.setAttribute('data-bs-original-title', 'Please enter a valid 10-digit phone number.');
-  }
+//   if (phoneNumberRegex.test(phoneNumber1)) {
+//     this.classList.remove('invalid');
+//     this.classList.add('valid');
+//     this.setAttribute('data-bs-original-title', '');
+//   } else {
+//     this.classList.remove('valid');
+//     this.classList.add('invalid');
+//     this.setAttribute('data-bs-original-title', 'Please enter a valid 10-digit phone number.');
+//   }
   
 
-  // Disable the calculate button if phone number is invalid
-  const calculateButton = document.getElementById('calculate1');
-  calculateButton.disabled = !phoneNumberRegex.test(phoneNumber);
+//   // Disable the calculate button if phone number is invalid
+//   const calculateButton = document.getElementById('calculate1');
+//   calculateButton.disabled = !phoneNumberRegex.test(phoneNumber);
 
-  setTimeout(() => {
-    const tooltip = new bootstrap.Tooltip(phoneInput);
-  }, 2000); // Delay of 2 seconds (2000 milliseconds)
-});
+//   setTimeout(() => {
+//     const tooltip = new bootstrap.Tooltip(phoneInput);
+//   }, 2000); // Delay of 2 seconds (2000 milliseconds)
+// });
 
 // Prevent form submission if phone number is invalid
 const form = document.querySelector('.bmi-calculator form');
@@ -81,89 +121,89 @@ const crossbutton = document.getElementById('cross-button');
 
 
 
-if (window.innerWidth >1) {
-  calculator.classList.add('minimized');
-}
+// if (window.innerWidth >1) {
+//   calculator.classList.add('minimized');
+// }
 
-toggleButton.addEventListener('click', () => {
-  calculator.classList.toggle('minimized');
-  toggleButton.style.display="none";
-});
-crossbutton.addEventListener('click', () => {
-  calculator.classList.toggle('minimized');
-  toggleButton.style.display="block";
-});
-
-
-
-const colorPoint1 = document.querySelector('.color-point1');
-
-document.getElementById('calculate1').addEventListener('click', function() {
-  var name = document.getElementById('bmiUsername1').value;
-  var phoneNo = document.getElementById('bmiUserPhoneNo1').value;
-  var age = document.getElementById('age1').value;
-  var gender = document.getElementById('gender1').value;
-  var weight = parseFloat(document.getElementById('weightValue1').value);
-  var height = parseFloat(document.getElementById('heightValue1').value) / 100;
-  var heightInput = document.getElementById('heightValue1').value;
+// toggleButton.addEventListener('click', () => {
+//   calculator.classList.toggle('minimized');
+//   // toggleButton.style.display="none";
+// });
+// crossbutton.addEventListener('click', () => {
+//   // calculator.classList.toggle('minimized');
+//   toggleButton.style.display="block";
+// });
 
 
-  var errorIndicators = document.getElementsByClassName("error");
-  for (var i = 0; i < errorIndicators.length; i++) {
-    errorIndicators[i].style.display = "none";
-  }
 
-  if (!name) {
-    var label = document.querySelector('label[for="bmiUsername1"]');
-    var errorIndicator = label.querySelector('.error');
-    errorIndicator.style.display = 'inline';
-  }
-  if (!phoneNo) {
-    var label = document.querySelector('label[for="bmiUserPhoneNo1"]');
-    var errorIndicator = label.querySelector('.error');
-    errorIndicator.style.display = 'inline';
-  }
-  if (!age) {
-    var label = document.querySelector('label[for="age1"]');
-    var errorIndicator = label.querySelector('.error');
-    errorIndicator.style.display = 'inline';
-  }
-  // if (!phoneNo) {
-  //   var label = document.querySelector('label[for="bmiUsername"]');
-  //   var errorIndicator = label.querySelector('.error');
-  //   errorIndicator.style.display = 'inline';
-  // }
-  if (!weight) {
-    var label = document.querySelector('label[for="weightValue1"]');
-    var errorIndicator = label.querySelector('.error');
-    errorIndicator.style.display = 'inline';
-  }
-  if (!height) {
+// const colorPoint1 = document.querySelector('.color-point1');
 
-    var label = document.querySelector('label[for="heightValue1"]');
-    var errorIndicator = label.querySelector('.error');
-    errorIndicator.style.display = 'inline';
+// document.getElementById('calculate1').addEventListener('click', function() {
+//   var name = document.getElementById('bmiUsername1').value;
+//   var phoneNo = document.getElementById('bmiUserPhoneNo1').value;
+//   var age = document.getElementById('age1').value;
+//   var gender = document.getElementById('gender1').value;
+//   var weight = parseFloat(document.getElementById('weightValue1').value);
+//   var height = parseFloat(document.getElementById('heightValue1').value) / 100;
+//   var heightInput = document.getElementById('heightValue1').value;
+
+
+//   var errorIndicators = document.getElementsByClassName("error");
+//   for (var i = 0; i < errorIndicators.length; i++) {
+//     errorIndicators[i].style.display = "none";
+//   }
+
+//   if (!name) {
+//     var label = document.querySelector('label[for="bmiUsername1"]');
+//     var errorIndicator = label.querySelector('.error');
+//     errorIndicator.style.display = 'inline';
+//   }
+//   if (!phoneNo) {
+//     var label = document.querySelector('label[for="bmiUserPhoneNo1"]');
+//     var errorIndicator = label.querySelector('.error');
+//     errorIndicator.style.display = 'inline';
+//   }
+//   if (!age) {
+//     var label = document.querySelector('label[for="age1"]');
+//     var errorIndicator = label.querySelector('.error');
+//     errorIndicator.style.display = 'inline';
+//   }
+//   // if (!phoneNo) {
+//   //   var label = document.querySelector('label[for="bmiUsername"]');
+//   //   var errorIndicator = label.querySelector('.error');
+//   //   errorIndicator.style.display = 'inline';
+//   // }
+//   if (!weight) {
+//     var label = document.querySelector('label[for="weightValue1"]');
+//     var errorIndicator = label.querySelector('.error');
+//     errorIndicator.style.display = 'inline';
+//   }
+//   if (!height) {
+
+//     var label = document.querySelector('label[for="heightValue1"]');
+//     var errorIndicator = label.querySelector('.error');
+//     errorIndicator.style.display = 'inline';
   
-  }
-  if (!gender) {
-    var label = document.querySelector('label[for="gender1"]');
-    var errorIndicator = label.querySelector('.error');
-    errorIndicator.style.display = 'inline';
-  }
+//   }
+//   if (!gender) {
+//     var label = document.querySelector('label[for="gender1"]');
+//     var errorIndicator = label.querySelector('.error');
+//     errorIndicator.style.display = 'inline';
+//   }
 
-  if (weight && height && name && phoneNo  && gender && age) {
-    var bmi = weight / (height * height);
-    // var category = getBmiCategory(bmi);
-       getBmiCategory1(bmi);
-       var bmiRounded = bmi.toFixed(2);
-       submitForm(name, phoneNo, gender, age, weight, heightInput,bmiRounded,"BMI");
-    // document.getElementById('result1').innerText = bmi.toFixed(2);
-    // document.getElementById('bmi_Content').innerText =category;
-  } else {
-    alert("All fields are required!");
-    // document.getElementById('bmi_Content').innerText = "Please enter valid weight and height.";
-  }
-});
+//   if (weight && height && name && phoneNo  && gender && age) {
+//     var bmi = weight / (height * height);
+//     // var category = getBmiCategory(bmi);
+//        getBmiCategory1(bmi);
+//        var bmiRounded = bmi.toFixed(2);
+//        submitForm(name, phoneNo, gender, age, weight, heightInput,bmiRounded,"BMI");
+//     // document.getElementById('result1').innerText = bmi.toFixed(2);
+//     // document.getElementById('bmi_Content').innerText =category;
+//   } else {
+//     alert("All fields are required!");
+//     // document.getElementById('bmi_Content').innerText = "Please enter valid weight and height.";
+//   }
+// });
 
 function getBmiCategory1(bmi) {
   const redbox1 = document.getElementById("box-red1");
