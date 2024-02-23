@@ -182,7 +182,7 @@
   margin-bottom: 45px;
 }
 .corporate-wellness-section p {
-  font-size: 22px;
+  font-size: 20px;
 }
 .community-wellness-section h2 {
   font-size: 38px;
@@ -213,7 +213,7 @@
 
   .corporate-wellness-section .left-side {
     width: 55%;
-    margin-left: 6rem;
+    /* margin-left: 6rem; */
 
   }
 
@@ -287,7 +287,7 @@
   }
 .corporate-wellness-section .left-side {
     width: 52%;
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
 }
 }
 @media  (max-width : 1030px)
@@ -338,7 +338,7 @@
 }
     .corporate-wellness-section .left-side {
       width: 57%;
-      margin-left: 2rem;
+      /* margin-left: 2rem; */
   }
   .corporate-wellness-section .right-side {
     width: 39%;
