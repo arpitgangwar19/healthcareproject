@@ -122,6 +122,8 @@
 
   .abouttext-div h1 {
     font-size: 45px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 
@@ -142,6 +144,15 @@
 
 @media  (max-width : 1300px){
 
+  .club-wellness-section p {
+    font-size: 22px;
+}
+
+
+  .club-wellness-section h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
   .faq-hero .image-container .image-text {
     top: 6%;
     left: 65%;
@@ -198,6 +209,16 @@
 }
 
 @media  (max-width : 1225px){
+
+  .club-wellness-section .right-side {
+    width: 36%;
+    padding: 20px;
+    margin-top: 6rem;
+}
+  .club-wellness-section .left-side {
+    width: 55%;
+    margin-left: 6rem;
+}
   .enquiry-form
   {
     width: 50rem;
@@ -261,7 +282,7 @@
   font-size: 10px;
 }
 .abouttext-div p {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 
@@ -277,6 +298,10 @@
 
 {
 
+  .club-wellness-section .left-side {
+    width: 52%;
+    margin-left: 4rem;
+}
   .aboutimage-div img {
     max-width: 32rem;
     margin-top: 8rem;
@@ -292,6 +317,16 @@
 }
 @media  (max-width : 1030px)
 {
+  .club-wellness-section .right-side {
+    width: 39%;
+    padding: 20px;
+    margin-top: 14rem;
+}
+
+  .club-wellness-section .left-side {
+    width: 57%;
+    margin-left: 2rem;
+}
   .hideNumber{
     display: none;
   }
@@ -408,6 +443,20 @@ margin: 0 0 15px 0;}
     display: block !important;
 }
 }
+
+@media (max-width: 950px) {
+.abouttext-div p {
+  font-size: 18px;
+  /* line-height: 2.2; */
+  max-width: 100%;
+}
+.aboutimage-div img {
+  max-width: 27rem;
+  margin-top: 9rem;
+}
+}
+
+
 
 @media (max-width: 912px) {
 
@@ -534,6 +583,62 @@ margin: 0 0 15px 0;}
    /* Responsive styles */
    @media  (max-width : 768px){
 
+    .club-wellness-section .right-side {
+      margin-top: 0;
+  }
+  .club-wellness-section .right-side {
+    margin-top: 1.5rem;
+}
+  
+  
+    
+    .club-wellness-section p {
+      line-height: 1.3;
+      /* animation: typing-animation 4s steps(40) 1s forwards; */
+  }
+  .club-wellness-section .left-side {
+    margin-left: 1rem;
+}
+    .club-wellness-section .left-side, .club-wellness-section .right-side {
+      width: 100%;
+      padding: 10px;
+  }
+
+    .club-wellness-section .right-side {
+      margin-top: 0;
+  }
+    .undetline-content {
+      /* color: #192838; */
+      text-decoration: underline;
+      text-decoration-color: #FECB00;
+      text-underline-offset: 8px;
+  }
+
+  .col-md-3 {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+  .col-md-4 {
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  
+  .abouttext-div h1 {
+    font-size: 40px; /* Decrease font size for smaller devices */
+  }
+  
+  .abouttext-div p {
+    font-size: 18px; /* Decrease font size for smaller devices */
+    padding: 0px;
+  }
+
+
+    .abouttext-div h1 {
+      font-size: 22px;
+      margin-top: 0px;
+      margin-bottom: 5px;
+  }
     .navbar {
       padding: 0.5rem 59px 0px 3px !important;
   }
@@ -675,7 +780,7 @@ margin: 0 0 15px 0;}
   }
 
     .corporate-wellness-section .left-side {
-      margin-left: 1rem;
+      /* margin-left: 1rem; */
   }
   .corporate-wellness-section .right-side {
     margin-top: 1.5rem;
@@ -960,6 +1065,11 @@ text-align: center;
 
   @media  (max-width : 500px)
   {
+    .abouttext-div 
+  { 
+    height: 772px;
+}
+    
 
     .enquiry {
       margin-top: 300px;
@@ -990,6 +1100,21 @@ text-align: center;
 
   @media  (max-width : 400px)
 {
+
+  .club-wellness-section p {
+    font-size: 19px;
+}
+  .club-wellness-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+  .abouttext-div {
+    height: 760px;
+}
+.abouttext-div p {
+    font-size: 16px;
+}
   .logo-size{
     max-height: 40px;
   }
@@ -1148,42 +1273,8 @@ text-align: center;
 
 }
 
-@media (max-width: 950px) {
-.abouttext-div p {
-  font-size: 18px;
-  /* line-height: 2.2; */
-  max-width: 100%;
-}
-.aboutimage-div img {
-  max-width: 27rem;
-  margin-top: 9rem;
-}
-}
 
 
 
 
-@media (max-width: 769px) {
-  .col-md-3 {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-  }
-  .col-md-4 {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-  }
-  .abouttext-div {
-    height: auto; /* Remove fixed height */
-    padding: 10px; /* Adjust padding for smaller devices */
-  }
-  
-  .abouttext-div h1 {
-    font-size: 40px; /* Decrease font size for smaller devices */
-  }
-  
-  .abouttext-div p {
-    font-size: 18px; /* Decrease font size for smaller devices */
-    padding: 0px;
-  }
-}
 

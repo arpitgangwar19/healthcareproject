@@ -10,6 +10,19 @@
 document.addEventListener("DOMContentLoaded", function() {
   var button = document.getElementById("toggle-bmi-calculator1");
   var popup = document.getElementById("bmi-calculator");
+  const crossbutton1 = document.getElementById('cross-button1');
+
+
+  crossbutton1.addEventListener('click', () => {
+  popup.style.display = "none";
+});
+  function togglePopup() {
+    if (popup.style.display === "block") {
+      popup.style.display = "none";
+    } else {
+      popup.style.display = "block";
+    }
+  }
 
   // Function to toggle the visibility of the pop-up box
   function togglePopup() {
@@ -358,7 +371,8 @@ document.getElementById('calculate').addEventListener('click', function() {
 function submitForm(name, phone, gender, age, weight, height,bmi,platform) {
   // Prepare the form data
   // const scriptURL = 'https://script.google.com/macros/s/AKfycbwgB-90FJODNzEbuHoEhDOkgpiljw9jIFmxq0Iqzv8aSJATX3sEF83kGX1Ib1hdqKilHQ/exec';
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbymeNVaKigWn5yQMNLvw3iEwPUJEQCNprXNFlAlcomA1rYO6rhg4zsG1IAxaqdRtSIN/exec';
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbymeNVaKigWn5yQMNLvw3iEwPUJEQCNprXNFlAlcomA1rYO6rhg4zsG1IAxaqdRtSIN/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx2k7cPndB2vPvR49OXo_NSNwspe7Ci-Z7J3oUGFBv4EaTt8EVf4rPjCO4eumkxI7ev5A/exec';
     
   var formData = new FormData();
   formData.append('Name', name);
@@ -383,7 +397,8 @@ function submitForm(name, phone, gender, age, weight, height,bmi,platform) {
 function submitEnquiryForm(name, phone, email, message,platform) {
   // Prepare the form data
   // const scriptURL = 'https://script.google.com/macros/s/AKfycbwgB-90FJODNzEbuHoEhDOkgpiljw9jIFmxq0Iqzv8aSJATX3sEF83kGX1Ib1hdqKilHQ/exec';
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbymeNVaKigWn5yQMNLvw3iEwPUJEQCNprXNFlAlcomA1rYO6rhg4zsG1IAxaqdRtSIN/exec'
+  // const scriptURL = 'https://script.google.com/macros/s/AKfycbymeNVaKigWn5yQMNLvw3iEwPUJEQCNprXNFlAlcomA1rYO6rhg4zsG1IAxaqdRtSIN/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx2k7cPndB2vPvR49OXo_NSNwspe7Ci-Z7J3oUGFBv4EaTt8EVf4rPjCO4eumkxI7ev5A/exec';
     
   var formData = new FormData();
   formData.append('Name', name.value);
@@ -561,6 +576,7 @@ var swiper1 = new Swiper(".slide-content", {
     },
   },
 });
+
 
 
 

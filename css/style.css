@@ -46,7 +46,7 @@ body{
 
 }
 .aboutBackround{
-/* background-image: url("/images/logo/Pro\ health.svg"); */
+background-image: url("/images/logo/Pro\ health.svg");
 background-color: #000;
 background-size: cover;
 background-repeat: no-repeat;
@@ -269,11 +269,13 @@ border-radius: 5%;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+   /* background: url('/images/about/about-us-bg.png') center/cover no-repeat; */
 }
 .aboutustext{
   width: 100%;
 text-align: center;
-padding: 50px 60px 40px 60px;
+/* padding: 50px 60px 40px 60px; */
+margin-bottom: 10px;
 }
 
 .abouttext-div {
@@ -286,10 +288,10 @@ padding: 50px 60px 40px 60px;
   /* margin-left: 10rem;
   margin-right: 10rem; */
   line-height: 1;
-  background: url('/images/about/about-us-bg.png') center/cover no-repeat; /* Center and cover the background image */
+  /* Center and cover the background image */
   object-fit: cover;
   width: 100%;
-  height: 80vh
+  height: 600px;
  
 }
 
@@ -301,12 +303,12 @@ margin-bottom: 25px;
 }
 .abouttext-div p {
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 2.0;
   font-size: 25px;
   font-family: 'Segoe UI';
-  max-width: 80%; /* Set a maximum width for the text */
-  margin: 0 auto; /* Center the text horizontally */
-  padding: 0 20px; /* Add some padding to the sides */
+  max-width: 85%;
+  margin: 0 auto;
+   /* padding: 0 20px; */
 }
 
 /* .aboutimage-div {
@@ -326,7 +328,13 @@ margin-bottom: 25px;
 } */
 .aboutcontainerwrapper
 {
+  background: url('/images/about/about-us-bg.png') center/cover no-repeat;
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack content vertically */
+  padding: 20px; /* Add padding to the section */
 } 
 
 .line {
@@ -345,7 +353,7 @@ margin-bottom: 25px;
   border-radius: 25px;
   cursor: pointer;
   width: 175px;
-  font-weight: 400;
+  font-weight: 500;
   margin: auto;
   transition: transform 0.3s ease;
   border: 0.5 solid #707070;
@@ -660,17 +668,16 @@ animation-iteration-count: infinite;
 
 .box {
   flex-basis: 26%;
-  height: 100px;
-  border-radius: 8px;
-  height: 73px;
+  border-radius: 14px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 12px;
+  font-size: 10.8px;
   padding: 15px;
   margin-bottom: 10px;
-  width: 103px;
+  width: 119px;
   font-weight: 600;
 }
 
@@ -1211,7 +1218,7 @@ animation-iteration-count: infinite;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 350px;
+  max-width: 330px;
   height: auto;
   background-color: #ffffff;
   border-radius: 51px;
@@ -1329,6 +1336,18 @@ height: 41px;
 
 
  
+.close-btn {
+  position: absolute;
+  top: 18px;
+  right: 29px;
+  /* background-color: #132f4e; */
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1000;
+  line-height: 1em !important;
+}
+
 
 /* .input-group-row .input-group input[type="number"]:focus,
 .input-group-row .input-group select:focus {
@@ -2750,6 +2769,61 @@ to { width: 100%; }
 } */
 
 
+/* corporate-welness-program css  */
+
+.club-wellness-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: center; */
+  color: #164475;
+  margin-top: 65px;
+
+  }
+  .club-wellness-section img {
+    max-width: 100%;
+    height: auto;
+    /* margin-top: 1rem; */
+}
+  
+  .club-wellness-section .left-side {
+    width: 50%;
+    padding: 20px;
+    margin-left: 8rem;
+
+  }
+  
+  .club-wellness-section .right-side {
+    width: 36%;
+    padding: 20px;
+  }
+  
+  
+  .club-wellness-section h2 {
+    font-size: 45px;
+    margin-bottom: 48px;
+    font-weight: 500;
+  
+  }
+   
+
+  .corporate-wellness-section h2::after {
+  /* content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 60%;
+  height: 5px;
+  background-color: #92E7D5; */
+  }
+  
+  .club-wellness-section p {
+    font-size: 22px;
+    line-height: 1.5;
+    font-weight: 500;
+    /* animation: typing-animation 4s steps(40) 1s forwards; */
+  }
+
 
 
 .corporte-section-eap {
@@ -2938,7 +3012,7 @@ margin-bottom: 2rem;
   /* height: 800px; */
   margin-top: 10rem;
   font-family: 'Segoe UI', "Semibold";
-  font-weight: 400;
+  font-weight: 500;
   font-size: 25px;
 }
 

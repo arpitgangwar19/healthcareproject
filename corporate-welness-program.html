@@ -31,8 +31,16 @@
       color: #92E7D5;
       background-color: #92E7D5;
     }
+    .aboutBackround{
+background-image:none !important;
+}
 
-	  </style>
+
+.counting-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+  }	  </style>
 </head>
  <!-- Google tag (gtag.js) -->
  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY7GN5SVCZ"></script>
@@ -72,35 +80,27 @@
 
 <section class="corporte-section-eap container-fluid">
   <div class="corporte-section-eap-content">
-  
     <h3 class="undetline-content corporte-section-eap-subheading">Some bits and pieces of information before we talk about the importance of EAP</h3>
     <!-- <ul class="corporte-section-eap-list"> -->
       <li>
-       
-        <p class="corporte-section-eap-paragraph">In a recent report, the World Health Organization stated that <span>38 million</span> Indians suffer from anxiety disorders, and  <span>56 million</span> Indians suffer from
-          depression.</p>
-        
+        <p class="corporte-section-eap-paragraph">In a recent report, the World Health Organization stated that <span class="counting-number" data-count="38">0</span><span> million</span> Indians suffer from anxiety disorders, and <span class="counting-number" data-count="56">0</span> <span> million</span> suffer from depression.</p>
       </li>
       <li>
-          <p class="corporte-section-eap-paragraph">According to the survey <span>85%</span> of the employees are unengaged at work. Only one in four employees are engaged.</p>
+        <p class="corporte-section-eap-paragraph">According to the survey <span class="counting-number" data-count="85">0</span>% of the employees are unengaged at work. Only one in four employees are engaged.</p>
       </li>
       <li>
-
-          <p class="corporte-section-eap-paragraph">Companies with highly successful health and productivity initiatives generate <span>11%</span> more revenue per employee..</p>
+        <p class="corporte-section-eap-paragraph">Companies with highly successful health and productivity initiatives generate <span class="counting-number" data-count="11">0</span>% more revenue per employee.</p>
       </li>
       <li>
-
-        <p class="corporte-section-eap-paragraph">Wellness programs have been shown to reduce absenteeism by <span>14-19%.</span></p>
-    </li>
-    <li>
-
-      <p class="corporte-section-eap-paragraph">Roughly one in five employees <span>(18%)</span> describe their workplace as toxic.</p>
-  </li>
+        <p class="corporte-section-eap-paragraph">Wellness programs have been shown to reduce absenteeism by <span class="counting-number" data-count="19">0</span>%.</p>
+      </li>
+      <li>
+        <p class="corporte-section-eap-paragraph">Roughly one in five employees (<span class="counting-number" data-count="18">0</span>%) describe their workplace as toxic.</p>
+      </li>
     <!-- </ul> -->
-
-   
   </div>
-
+  
+  
  
 </section>
 
@@ -338,7 +338,49 @@ $('navbar').css('background', '#b1e0eb');
           function navigateServiceToPage(url) {
   window.location.href = url;
 }
-   
 
+function countUp(target, element, duration) {
+  let count = 0;
+  const increment = Math.ceil(target / (duration / 1000));
+  const updateCount = () => {
+    if (count < target) {
+      element.textContent = count++;
+      setTimeout(updateCount, 100); // Decreased interval duration to 100 milliseconds
+    } else {
+      element.textContent = target;
+      setTimeout(scrollToNext, 5000); // Pause for 5 seconds before scrolling again
+    }
+  };
+  updateCount();
+}
+
+  // Scroll to the next counting element
+  function scrollToNext() {
+    const countingElements = document.querySelectorAll('.counting-number');
+    let nextElement;
+    countingElements.forEach(element => {
+      if (!nextElement && +element.textContent === 0) {
+        nextElement = element;
+      }
+    });
+    if (nextElement) {
+      nextElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const target = +nextElement.getAttribute('data-count');
+      countUp(target, nextElement, 1000); // Adjust duration as needed
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+  const countingElements = document.querySelectorAll('.counting-number');
+  countingElements.forEach(element => {
+    const sectionTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    if (sectionTop < windowHeight) {
+      const target = +element.getAttribute('data-count');
+      countUp(target, element, 1000); // Start counting animation
+      element.classList.remove('counting-number'); // Remove the class to prevent counting again
+    }
+  });
+});
 </script>
 </html>
